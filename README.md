@@ -55,12 +55,20 @@ streamlit run app.py
 └── README.md
 ```
 
-## Accuracy
+## Benchmark Results
 
-| Model | Method | Leave-One-Out Accuracy |
-|-------|--------|----------------------|
-| LBPH (baseline) | Haar + LBP histograms | 58.7% |
-| Deep model | TBD | TBD |
+| Model | Detection | Embedding | LOO SVM Acc | LOO KNN Acc | Faces Detected | Embedding Time | Inference Time |
+|-------|-----------|-----------|-------------|-------------|----------------|----------------|----------------|
+| LBPH (baseline) | Haar cascades | LBP histograms | 58.7% | N/A | 288/290 | — | — |
+| facenet-pytorch | MTCNN | FaceNet (512-d) | 100.0% | 99.3% | 290/290 | 264.7s | — |
+| **InsightFace** | **RetinaFace** | **ArcFace (512-d)** | **100.0%** | **100.0%** | **290/290** | **157.0s** | **~0.4s/image** |
+
+**Winner: InsightFace (RetinaFace + ArcFace + SVM)** — 100% leave-one-out accuracy on 290 images across 58 students.
+
+- Embedding time: ~157s for 290 images (~0.54s/image)
+- Inference time: ~0.4s per image
+- Classifier: SVM (RBF kernel, C=10, probability calibration)
+- Confidence threshold: 0.05 (with 58 classes, correct predictions get ~8-20% probability)
 
 ## Team
 

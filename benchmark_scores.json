@@ -1,0 +1,12 @@
+{
+  "model": "InsightFace (RetinaFace + ArcFace + SVM)",
+  "students": 58,
+  "total_images": 290,
+  "faces_detected": "290/290",
+  "loo_svm_accuracy": "100.0%",
+  "loo_knn_accuracy": "100.0%",
+  "training_time_s": 145.1,
+  "inference_time_cold_s": 0.39,
+  "inference_time_warm_s": 0.48,
+  "baseline_lbph_accuracy": "58.7%"
+}

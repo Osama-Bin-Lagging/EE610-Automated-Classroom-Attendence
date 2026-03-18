@@ -1,5 +1,6 @@
 """
 app.py - Streamlit web UI for the attendance system
+Uses InsightFace (RetinaFace + ArcFace) with SVM classifier.
 """
 
 import streamlit as st
@@ -12,7 +13,7 @@ import pandas as pd
 from PIL import Image
 
 from preprocess import preprocess_dataset
-from lbph import LBPHFaceRecognizer
+from face_model import FaceRecognitionModel
 from recognize import (
     process_classroom_images,
     save_outputs,
@@ -21,6 +22,7 @@ from recognize import (
 )
 
 MODEL_PATH = "face_database.pkl"
+RAW_DATASET = "course_project_dataset"
 PROCESSED_DATASET = "processed_dataset"
 CLASS_LIST_PATH = os.path.join(PROCESSED_DATASET, "class_list.json")
 OUTPUT_DIR = "outputs"
@@ -37,10 +39,17 @@ def get_recognizer():
 
 
 def get_class_list():
-    """Load class list."""
+    """Load class list from dataset folders."""
     if os.path.exists(CLASS_LIST_PATH):
         with open(CLASS_LIST_PATH) as f:
             return json.load(f)
+    # Fallback: build from raw dataset folders
+    if os.path.isdir(RAW_DATASET):
+        return {
+            d: {"display_name": d}
+            for d in sorted(os.listdir(RAW_DATASET))
+            if os.path.isdir(os.path.join(RAW_DATASET, d))
+        }
     return None
 
 
@@ -53,13 +62,13 @@ with st.sidebar:
     if class_list:
         st.success(f"Dataset loaded: {len(class_list)} students")
     else:
-        st.warning("Dataset not preprocessed yet")
+        st.warning("Dataset not found")
 
     # Model status
     if os.path.exists(MODEL_PATH):
         st.success("Model trained")
         if get_recognizer() is None:
-            recognizer = LBPHFaceRecognizer()
+            recognizer = FaceRecognitionModel()
             recognizer.load(MODEL_PATH)
             st.session_state.recognizer = recognizer
     else:
@@ -69,7 +78,7 @@ with st.sidebar:
 
     # Preprocess button
     if st.button("1. Preprocess Dataset", use_container_width=True):
-        with st.spinner("Preprocessing images..."):
+        with st.spinner("Preprocessing images with RetinaFace..."):
             stats = preprocess_dataset()
         st.success(f"Done! {stats['success']}/{stats['total']} faces extracted")
         if stats["failed"]:
@@ -78,26 +87,27 @@ with st.sidebar:
 
     # Train button
     if st.button("2. Train Model", use_container_width=True):
-        if not os.path.exists(CLASS_LIST_PATH):
-            st.error("Preprocess dataset first!")
+        if not os.path.isdir(RAW_DATASET):
+            st.error("Dataset not found!")
         else:
-            with st.spinner("Training LBPH model..."):
-                recognizer = train_and_save(PROCESSED_DATASET, MODEL_PATH)
+            with st.spinner("Extracting embeddings & training SVM..."):
+                recognizer = train_and_save(RAW_DATASET, MODEL_PATH)
                 st.session_state.recognizer = recognizer
             st.success("Model trained!")
             st.rerun()
 
     st.divider()
 
-    # Threshold slider
+    # Threshold slider (probability-based)
+    # With 58 classes, correct predictions typically get 8-20% probability
     if get_recognizer() is not None:
         threshold = st.slider(
-            "Unknown threshold",
-            min_value=30.0,
-            max_value=80.0,
-            value=55.0,
-            step=1.0,
-            help="Higher = more lenient (fewer unknowns). Lower = stricter.",
+            "Confidence threshold",
+            min_value=0.0,
+            max_value=0.5,
+            value=0.05,
+            step=0.01,
+            help="Higher = stricter (more unknowns). With 58 students, correct predictions typically get 8-20% probability.",
         )
         st.session_state.recognizer.threshold = threshold
 
@@ -156,7 +166,7 @@ if uploaded_files:
             ]
             st.session_state.unknown_faces = [
                 cv2.cvtColor(crop, cv2.COLOR_BGR2RGB)
-                for crop, dist in unknown_faces
+                for crop, conf in unknown_faces
             ]
             st.session_state.csv_path = csv_path
             st.rerun()

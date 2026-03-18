@@ -1,7 +1,8 @@
 """
 preprocess.py - Dataset preprocessing pipeline
-Loads raw student images, fixes orientation, detects faces, crops and saves
-normalized face images for training.
+Loads raw student images, fixes orientation, detects faces using RetinaFace
+(via InsightFace), crops and saves normalized RGB face images for training.
+Optionally generates augmented images.
 """
 
 import os
@@ -21,12 +22,24 @@ except ImportError:
 
 RAW_DATASET = "course_project_dataset"
 PROCESSED_DATASET = "processed_dataset"
-FACE_SIZE = 128  # Output face crop size (128x128)
-PADDING_RATIO = 0.3  # Extra padding around detected face
+FACE_SIZE = 112  # InsightFace expects 112x112 for ArcFace
+PADDING_RATIO = 0.2  # Extra padding around detected face
 
-# Haar cascade paths (shipped with OpenCV)
-CASCADE_DEFAULT = cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
-CASCADE_ALT2 = cv2.data.haarcascades + "haarcascade_frontalface_alt2.xml"
+# Lazy-loaded InsightFace app
+_face_app = None
+
+
+def _get_face_app():
+    """Lazy-initialize InsightFace detector."""
+    global _face_app
+    if _face_app is None:
+        from insightface.app import FaceAnalysis
+        _face_app = FaceAnalysis(
+            name="buffalo_l",
+            providers=["CPUExecutionProvider"],
+        )
+        _face_app.prepare(ctx_id=0, det_size=(640, 640))
+    return _face_app
 
 
 def load_image_pil(path):
@@ -45,76 +58,51 @@ def pil_to_cv2(pil_img):
     return bgr
 
 
-def detect_face(gray, cascades):
+def detect_face_insightface(rgb_image):
     """
-    Detect the largest face in a grayscale image using Haar cascades.
-    Tries multiple cascades and preprocessing if needed.
-    Returns (x, y, w, h) or None.
+    Detect the largest face in an RGB image using RetinaFace.
+    Returns (x1, y1, x2, y2) bounding box or None.
     """
-    for cascade_path in cascades:
-        cascade = cv2.CascadeClassifier(cascade_path)
-
-        # Try direct detection
-        faces = cascade.detectMultiScale(
-            gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30)
-        )
-        if len(faces) > 0:
-            # Return largest face
-            return max(faces, key=lambda f: f[2] * f[3])
-
-        # Try with histogram equalization
-        equalized = cv2.equalizeHist(gray)
-        faces = cascade.detectMultiScale(
-            equalized, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30)
-        )
-        if len(faces) > 0:
-            return max(faces, key=lambda f: f[2] * f[3])
-
-        # Try with more lenient parameters
-        faces = cascade.detectMultiScale(
-            gray, scaleFactor=1.05, minNeighbors=3, minSize=(20, 20)
-        )
-        if len(faces) > 0:
-            return max(faces, key=lambda f: f[2] * f[3])
-
-    return None
+    app = _get_face_app()
+    faces = app.get(rgb_image)
+    if not faces:
+        return None
+    # Return largest face bbox
+    face = max(faces, key=lambda f: (f.bbox[2] - f.bbox[0]) * (f.bbox[3] - f.bbox[1]))
+    return face.bbox.astype(int)  # [x1, y1, x2, y2]
 
 
-def crop_face(img_bgr, face_rect, padding=PADDING_RATIO, output_size=FACE_SIZE):
+def crop_face_rgb(rgb_image, bbox, padding=PADDING_RATIO, output_size=FACE_SIZE):
     """
-    Crop face from image with padding, convert to grayscale,
-    resize to output_size, and apply CLAHE.
+    Crop face from RGB image with padding, resize to output_size.
+    Returns RGB numpy array.
     """
-    x, y, w, h = face_rect
-    img_h, img_w = img_bgr.shape[:2]
+    x1, y1, x2, y2 = bbox
+    h, w = rgb_image.shape[:2]
+    face_w = x2 - x1
+    face_h = y2 - y1
 
     # Add padding
-    pad_w = int(w * padding)
-    pad_h = int(h * padding)
-    x1 = max(0, x - pad_w)
-    y1 = max(0, y - pad_h)
-    x2 = min(img_w, x + w + pad_w)
-    y2 = min(img_h, y + h + pad_h)
+    pad_w = int(face_w * padding)
+    pad_h = int(face_h * padding)
+    x1 = max(0, x1 - pad_w)
+    y1 = max(0, y1 - pad_h)
+    x2 = min(w, x2 + pad_w)
+    y2 = min(h, y2 + pad_h)
 
-    face_crop = img_bgr[y1:y2, x1:x2]
+    face_crop = rgb_image[y1:y2, x1:x2]
 
-    # Convert to grayscale
-    gray = cv2.cvtColor(face_crop, cv2.COLOR_BGR2GRAY)
+    # Resize to output_size
+    face_crop = cv2.resize(face_crop, (output_size, output_size))
 
-    # Resize
-    gray = cv2.resize(gray, (output_size, output_size))
-
-    # Apply CLAHE for lighting normalization
-    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
-    gray = clahe.apply(gray)
-
-    return gray
+    return face_crop
 
 
-def preprocess_dataset():
-    """Process all student images and save face crops."""
-    cascades = [CASCADE_DEFAULT, CASCADE_ALT2]
-
+def preprocess_dataset(use_augmentation=False, n_augmented=2):
+    """
+    Process all student images and save face crops.
+    If use_augmentation=True, also generates augmented versions.
+    """
     os.makedirs(PROCESSED_DATASET, exist_ok=True)
 
     class_list = {}
@@ -144,20 +132,35 @@ def preprocess_dataset():
             try:
                 # Load with Pillow (handles HEIC + EXIF)
                 pil_img = load_image_pil(img_path)
-                bgr = pil_to_cv2(pil_img)
-                gray = cv2.cvtColor(bgr, cv2.COLOR_BGR2GRAY)
+                rgb = np.array(pil_img)
 
-                # Detect face
-                face_rect = detect_face(gray, cascades)
+                # Detect face with RetinaFace
+                bbox = detect_face_insightface(rgb)
 
-                if face_rect is not None:
-                    face_crop = crop_face(bgr, face_rect)
+                if bbox is not None:
+                    face_crop = crop_face_rgb(rgb, bbox)
                     face_count += 1
                     out_path = os.path.join(
                         student_proc_path, f"face_{face_count}.jpg"
                     )
-                    cv2.imwrite(out_path, face_crop)
+                    # Save as RGB (convert to BGR for cv2.imwrite)
+                    cv2.imwrite(out_path, cv2.cvtColor(face_crop, cv2.COLOR_RGB2BGR))
                     stats["success"] += 1
+
+                    # Generate augmented versions
+                    if use_augmentation:
+                        from augment import generate_augmented_images
+                        augmented = generate_augmented_images(
+                            Image.fromarray(face_crop), n_augmented=n_augmented
+                        )
+                        for aug_img in augmented:
+                            face_count += 1
+                            aug_path = os.path.join(
+                                student_proc_path, f"face_{face_count}.jpg"
+                            )
+                            aug_rgb = np.array(aug_img)
+                            cv2.imwrite(aug_path, cv2.cvtColor(aug_rgb, cv2.COLOR_RGB2BGR))
+                            stats["success"] += 1
                 else:
                     stats["failed"].append(f"{student_name}/{img_file}")
                     print(f"  NO FACE: {student_name}/{img_file}")
