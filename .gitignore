@@ -2,7 +2,6 @@ venv/
 __pycache__/
 *.pyc
 *.pyo
-processed_dataset/
 outputs/
 face_database.pkl
 .DS_Store
