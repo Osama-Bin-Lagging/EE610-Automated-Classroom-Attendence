@@ -83,6 +83,7 @@ streamlit run app.py
 | ![](assets/pos_manit_raw.jpg) | ![](assets/pos_manit_crop.jpg) | Manit Jhajharia | Manit Jhajharia | 13.5% |
 | ![](assets/pos_aboli_raw.jpg) | ![](assets/pos_aboli_crop.jpg) | Aboli G. Malshikare | Aboli G. Malshikare | 12.2% |
 | ![](assets/pos_chhavi_raw.jpg) | ![](assets/pos_chhavi_crop.jpg) | Chhavi Yadav | Chhavi Yadav | 13.5% |
+| ![](assets/pos_shreya_raw.jpg) | ![](assets/pos_shreya_crop.jpg) | Shreya Nigam | Shreya Nigam | 13.4% |
 
 ### Negative Examples (FaceNet KNN — 2 misclassifications)
 
