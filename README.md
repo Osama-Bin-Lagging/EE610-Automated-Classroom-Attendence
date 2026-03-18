@@ -84,6 +84,7 @@ streamlit run app.py
 | ![](assets/pos_aboli_raw.jpg) | ![](assets/pos_aboli_crop.jpg) | Aboli G. Malshikare | Aboli G. Malshikare | 12.2% |
 | ![](assets/pos_chhavi_raw.jpg) | ![](assets/pos_chhavi_crop.jpg) | Chhavi Yadav | Chhavi Yadav | 13.5% |
 | ![](assets/pos_shreya_raw.jpg) | ![](assets/pos_shreya_crop.jpg) | Shreya Nigam | Shreya Nigam | 13.4% |
+| ![](assets/pos_yashasvee_raw.jpg) | ![](assets/pos_yashasvee_crop.jpg) | Yashasvee V. Taiwade | Yashasvee V. Taiwade | 13.7% |
 
 ### Negative Examples (FaceNet KNN — 2 misclassifications)
 
@@ -100,6 +101,7 @@ Arjun Singh's side-profile images were misclassified as Devesh Soni by facenet-p
 - Aboli Ganesh Malshikare (23B1211)
 - Shreya Nigam (23B1258)
 - Chhavi Yadav (23B3923)
+- Yashasvee Vijay Taiwade (23B2232)
 
 ## Course
 
