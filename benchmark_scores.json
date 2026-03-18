@@ -1,12 +1,31 @@
 {
-  "model": "InsightFace (RetinaFace + ArcFace + SVM)",
+  "winner": "InsightFace (RetinaFace + ArcFace + SVM)",
   "students": 58,
   "total_images": 290,
-  "faces_detected": "290/290",
-  "loo_svm_accuracy": "100.0%",
-  "loo_knn_accuracy": "100.0%",
-  "training_time_s": 145.1,
-  "inference_time_cold_s": 0.39,
-  "inference_time_warm_s": 0.48,
-  "baseline_lbph_accuracy": "58.7%"
+  "results": {
+    "insightface": {
+      "detector": "RetinaFace",
+      "embedding": "ArcFace (512-d)",
+      "faces_detected": "290/290",
+      "loo_svm_accuracy": "100.0%",
+      "loo_knn_accuracy": "100.0%",
+      "embedding_time_290_imgs_s": 157.0,
+      "inference_time_per_image_ms": 349
+    },
+    "facenet_pytorch": {
+      "detector": "MTCNN",
+      "embedding": "FaceNet (512-d)",
+      "faces_detected": "290/290",
+      "loo_svm_accuracy": "100.0%",
+      "loo_knn_accuracy": "99.3%",
+      "embedding_time_290_imgs_s": 264.7,
+      "inference_time_per_image_ms": 630
+    },
+    "lbph_baseline": {
+      "detector": "Haar cascades",
+      "embedding": "LBP histograms",
+      "faces_detected": "288/290",
+      "loo_accuracy": "58.7%"
+    }
+  }
 }
