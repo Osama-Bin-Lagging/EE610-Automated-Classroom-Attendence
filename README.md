@@ -55,6 +55,7 @@ streamlit run app.py
 ├── recognize.py            # Classroom image recognition engine
 ├── augment.py              # Data augmentation pipeline
 ├── benchmark.py            # Model benchmarking script
+├── visualize_embeddings.py  # Interactive 3D embedding visualization
 ├── lbph.py                 # Original LBPH baseline (kept for reference)
 ├── requirements.txt        # Python dependencies
 ├── course_project_dataset/ # Raw student images (58 students x 5 images)
@@ -94,6 +95,34 @@ Arjun Singh's side-profile images were misclassified as Devesh Soni by facenet-p
 |:---------:|:------------:|:-----:|:----------------------:|:------------:|
 | ![](assets/neg_arjun_img2_raw.jpg) | ![](assets/neg_arjun_img2_crop.jpg) | Arjun Singh | Devesh Soni | ![](assets/neg_devesh_crop.jpg) |
 | ![](assets/neg_arjun_img3_raw.jpg) | ![](assets/neg_arjun_img3_crop.jpg) | Arjun Singh | Devesh Soni | ![](assets/neg_devesh_crop.jpg) |
+
+## Embedding Visualization
+
+512-d ArcFace embeddings reduced to 3D using three dimensionality reduction methods. Each color = one student (58 students, 290 embeddings).
+
+| t-SNE | PCA | UMAP |
+|:-----:|:---:|:----:|
+| ![t-SNE](assets/embeddings_3d_insightface_tsne.gif) | ![PCA](assets/embeddings_3d_insightface_pca.gif) | ![UMAP](assets/embeddings_3d_insightface_umap.gif) |
+| [Interactive](https://osama-bin-lagging.github.io/EE610-Automated-Classroom-Attendence/assets/embeddings_3d_insightface_tsne.html) | [Interactive](https://osama-bin-lagging.github.io/EE610-Automated-Classroom-Attendence/assets/embeddings_3d_insightface_pca.html) | [Interactive](https://osama-bin-lagging.github.io/EE610-Automated-Classroom-Attendence/assets/embeddings_3d_insightface_umap.html) |
+
+### Reduction Quality Metrics
+
+| Method | Silhouette Score | Trustworthiness | 3D k-NN Accuracy |
+|--------|:----------------:|:---------------:|:----------------:|
+| **t-SNE** | **0.5695** | **0.9615** | **100.0%** |
+| PCA | 0.2935 | 0.8808 | 73.8% |
+| UMAP | 0.2678 | 0.9600 | 77.2% |
+
+- **Silhouette score**: cluster separation quality (-1 to 1, higher = better separated classes)
+- **Trustworthiness**: how well local neighborhoods from 512-d are preserved in 3D (0 to 1)
+- **3D k-NN accuracy**: leave-one-out k-NN classification in the reduced 3D space
+
+**t-SNE is the clear winner** — highest cluster separation, best local structure preservation, and perfect 3D k-NN accuracy.
+
+Generate with:
+```bash
+python visualize_embeddings.py --method all
+```
 
 ## Team
 

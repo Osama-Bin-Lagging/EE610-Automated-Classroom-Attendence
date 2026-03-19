@@ -53,6 +53,8 @@ class FaceRecognitionModel:
         self.svm = None
         self.label_encoder = None
         self.labels = []
+        self.embeddings = None      # raw embeddings array (N x 512)
+        self.embedding_labels = []  # per-embedding student labels
 
     def detect_faces(self, rgb_image):
         """
@@ -95,6 +97,10 @@ class FaceRecognitionModel:
 
         X = np.array(X)
         y = np.array(y)
+
+        # Store raw embeddings for visualization
+        self.embeddings = X
+        self.embedding_labels = list(y)
 
         self.label_encoder = LabelEncoder()
         y_encoded = self.label_encoder.fit_transform(y)
@@ -162,12 +168,14 @@ class FaceRecognitionModel:
         return label, confidence
 
     def save(self, path):
-        """Save trained model (SVM + label encoder) to disk."""
+        """Save trained model + raw embeddings to disk."""
         data = {
             "svm": self.svm,
             "label_encoder": self.label_encoder,
             "labels": self.labels,
             "threshold": self.threshold,
+            "embeddings": self.embeddings,
+            "embedding_labels": self.embedding_labels,
         }
         with open(path, "wb") as f:
             pickle.dump(data, f)
@@ -181,6 +189,8 @@ class FaceRecognitionModel:
         self.label_encoder = data["label_encoder"]
         self.labels = data["labels"]
         self.threshold = data.get("threshold", 0.5)
+        self.embeddings = data.get("embeddings")
+        self.embedding_labels = data.get("embedding_labels", [])
         print(f"Model loaded: {len(self.labels)} students")
 
     def leave_one_out_test(self, dataset_path=None):
