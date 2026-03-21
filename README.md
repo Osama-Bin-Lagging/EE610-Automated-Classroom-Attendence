@@ -64,18 +64,59 @@ streamlit run app.py
 
 ## Benchmark Results
 
-| Model | Detection | Embedding | LOO SVM Acc | LOO KNN Acc | Faces Detected | Embedding Time (290 imgs) | Inference Time (per image) |
-|-------|-----------|-----------|-------------|-------------|----------------|---------------------------|---------------------------|
-| LBPH (baseline) | Haar cascades | LBP histograms | 58.7% | N/A | 288/290 | — | — |
-| facenet-pytorch | MTCNN | FaceNet (512-d) | 100.0% | 99.3% | 290/290 | 264.7s | ~630ms |
-| **InsightFace** | **RetinaFace** | **ArcFace (512-d)** | **100.0%** | **100.0%** | **290/290** | **157.0s** | **~349ms** |
+Leave-one-out cross-validation on 290 images (58 students × 5 images). Classifiers: SVM (RBF, C=10) and KNN (k=3, cosine).
 
-**Winner: InsightFace (RetinaFace + ArcFace + SVM)** — 100% leave-one-out accuracy on 290 images across 58 students.
+### Tier 1: Deep Face Embeddings
 
-- Embedding time: ~157s for 290 images (~0.54s/image)
-- Inference time: ~349ms per image (detect + embed + SVM predict, CPU)
-- Classifier: SVM (RBF kernel, C=10, probability calibration)
+Models trained specifically for face recognition on large-scale face datasets (MS1MV2, VGGFace2, etc.).
+
+| Model | Detector | Embedding | Dim | LOO SVM | LOO KNN | Faces | Time |
+|-------|----------|-----------|:---:|:-------:|:-------:|:-----:|:----:|
+| **InsightFace** | **RetinaFace** | **ArcFace** | **512** | **100.0%** | **100.0%** | **290/290** | **392s** |
+| **facenet-pytorch** | **MTCNN** | **FaceNet** | **512** | **100.0%** | **99.3%** | **290/290** | **800s** |
+| DeepFace ArcFace | RetinaFace | ArcFace | 512 | 77.6% | 79.3% | 290/290 | 45s |
+| DeepFace GhostFaceNet | RetinaFace | GhostFaceNet | 512 | 69.7% | 60.3% | 290/290 | 43s |
+
+- **InsightFace**: ONNX-optimized ArcFace (ResNet-50 backbone) with built-in face alignment. 99.83% on LFW benchmark. Our deployed model.
+- **facenet-pytorch**: Google's FaceNet (InceptionResNetV1) trained on VGGFace2. 99.65% on LFW. MTCNN detector is slower than RetinaFace.
+- **DeepFace ArcFace**: Same ArcFace architecture accessed via the DeepFace wrapper — no face alignment applied to pre-cropped faces, explaining the ~22% accuracy drop vs InsightFace's native pipeline.
+- **DeepFace GhostFaceNet**: Lightweight model using GhostNet backbone (99.73% LFW). Poor performance here likely due to missing alignment in the DeepFace skip-detector path.
+
+### Tier 2: Generic Deep Features (not face-specific)
+
+Frozen ImageNet-pretrained CNNs used as feature extractors — no face-specific training.
+
+| Model | Detector | Backbone | Dim | LOO SVM | LOO KNN | Faces | Time |
+|-------|----------|----------|:---:|:-------:|:-------:|:-----:|:----:|
+| EfficientNet-B0 | RetinaFace | ImageNet | 1280 | 89.3% | 69.3% | 290/290 | 24s |
+| ResNet-50 | RetinaFace | ImageNet | 2048 | 86.2% | 66.5% | 290/290 | 57s |
+
+- **EfficientNet-B0**: Compact architecture (5.3M params) with compound scaling. Penultimate layer features (1280-d) generalize surprisingly well to faces.
+- **ResNet-50**: Classic residual network (25.6M params). Penultimate 2048-d features are more redundant, slightly worse than EfficientNet despite being 5x larger.
+
+### Tier 3: Classical CV (hand-crafted features)
+
+Traditional computer vision methods — no learned representations.
+
+| Model | Detector | Features | Dim | LOO SVM | LOO KNN | Faces | Time |
+|-------|----------|----------|:---:|:-------:|:-------:|:-----:|:----:|
+| HOG | RetinaFace | HOG descriptors | 6084 | 55.5% | 50.7% | 290/290 | 1s |
+| Eigenfaces | RetinaFace | PCA | 150 | 52.8% | 44.1% | 290/290 | 1s |
+| LBPH | RetinaFace | LBP histograms | 640 | 50.7% | 42.1% | 290/290 | 1s |
+| Fisherfaces | RetinaFace | PCA + LDA | 57 | 2.8% | 6.9% | 290/290 | <1s |
+
+- **HOG**: Histogram of Oriented Gradients — captures edge/shape patterns. Best classical method here, but 6084-d is high for the limited training data.
+- **Eigenfaces** (Turk & Pentland, 1991): PCA on flattened grayscale pixels. Captures global variance but conflates lighting with identity.
+- **LBPH**: Local Binary Pattern histograms — encodes local texture. Robust to monotonic lighting changes but discards spatial structure.
+- **Fisherfaces** (Belhumeur et al., 1997): LDA after PCA — maximizes between-class variance. Collapses to 57-d (n_classes - 1), severely underfitting with only 4 training samples per class in LOO.
+
+**Winner: InsightFace (RetinaFace + ArcFace + SVM)** — 100% LOO accuracy, 2x faster than facenet-pytorch.
+
+- Classifiers: SVM (RBF kernel, C=10) and KNN (k=3, cosine distance)
 - Confidence threshold: 0.05 (with 58 classes, correct predictions get ~8-20% probability)
+- Face alignment is critical — InsightFace's native alignment pipeline yields 100% vs 77.6% for the same ArcFace model without alignment (DeepFace)
+- Generic ImageNet backbones reach ~89% without any face-specific training — strong baseline
+- Classical methods plateau at ~50-55% — insufficient for real-world use with 58+ classes
 
 ### Positive Examples (InsightFace + SVM — all correct)
 
