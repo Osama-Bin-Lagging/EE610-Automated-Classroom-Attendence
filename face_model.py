@@ -5,6 +5,7 @@ Wraps RetinaFace detection + ArcFace embeddings with SVM classifier.
 
 import os
 import pickle
+import cv2
 import numpy as np
 from PIL import Image, ImageOps
 from sklearn.svm import SVC
@@ -64,6 +65,93 @@ class FaceRecognitionModel:
         app = _get_face_app()
         faces = app.get(rgb_image)
         return faces
+
+    def detect_faces_enhanced(self, rgb_image):
+        """
+        High-recall face detection: union of RetinaFace (low threshold) +
+        Haar cascade candidates verified by RetinaFace.
+        Returns list of InsightFace face objects with embeddings.
+        """
+        app = _get_face_app()
+
+        # 1. RetinaFace at low threshold (0.1)
+        old_thresh = app.det_model.det_thresh
+        app.det_model.det_thresh = 0.1
+        rf_faces = app.get(rgb_image)
+        app.det_model.det_thresh = old_thresh
+
+        rf_boxes = [f.bbox.tolist() for f in rf_faces]
+
+        # 2. Haar aggressive detection
+        gray = cv2.cvtColor(rgb_image, cv2.COLOR_RGB2GRAY)
+        gray = cv2.equalizeHist(gray)
+        cascade = cv2.CascadeClassifier(
+            cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
+        )
+        haar_dets = cascade.detectMultiScale(
+            gray, scaleFactor=1.05, minNeighbors=3, minSize=(15, 15)
+        )
+        haar_boxes = [[x, y, x+w, y+h] for (x, y, w, h) in haar_dets] if len(haar_dets) > 0 else []
+
+        # 3. Find Haar boxes NOT already covered by RF
+        def _center_dist(b1, b2):
+            c1 = ((b1[0]+b1[2])/2, (b1[1]+b1[3])/2)
+            c2 = ((b2[0]+b2[2])/2, (b2[1]+b2[3])/2)
+            return ((c1[0]-c2[0])**2 + (c1[1]-c2[1])**2) ** 0.5
+
+        haar_only = []
+        for hb in haar_boxes:
+            covered = False
+            for rb in rf_boxes:
+                if _center_dist(hb, rb) < min(hb[2]-hb[0], hb[3]-hb[1]) * 0.5:
+                    covered = True
+                    break
+            if not covered:
+                haar_only.append(hb)
+
+        # 4. Verify Haar-only with RetinaFace (crop + 100% pad)
+        h, w = rgb_image.shape[:2]
+        haar_verified = []
+        for box in haar_only:
+            x1, y1, x2, y2 = [int(c) for c in box]
+            bw, bh = x2 - x1, y2 - y1
+            cx1 = max(0, x1 - bw)
+            cy1 = max(0, y1 - bh)
+            cx2 = min(w, x2 + bw)
+            cy2 = min(h, y2 + bh)
+            crop = rgb_image[cy1:cy2, cx1:cx2]
+            if crop.size == 0:
+                continue
+            faces = app.get(crop)
+            if faces:
+                best = min(faces, key=lambda f: (
+                    ((f.bbox[0]+f.bbox[2])/2 - (cx2-cx1)/2)**2 +
+                    ((f.bbox[1]+f.bbox[3])/2 - (cy2-cy1)/2)**2
+                ))
+                best.bbox[0] += cx1
+                best.bbox[1] += cy1
+                best.bbox[2] += cx1
+                best.bbox[3] += cy1
+                haar_verified.append(best)
+
+        # 5. Combine and dedup
+        all_faces = list(rf_faces) + haar_verified
+        if len(all_faces) <= 1:
+            return all_faces
+
+        keep = []
+        used = set()
+        for i, f in enumerate(all_faces):
+            if i in used:
+                continue
+            keep.append(f)
+            for j in range(i+1, len(all_faces)):
+                if j in used:
+                    continue
+                size = min(f.bbox[2]-f.bbox[0], f.bbox[3]-f.bbox[1])
+                if _center_dist(f.bbox.tolist(), all_faces[j].bbox.tolist()) < size * 0.3:
+                    used.add(j)
+        return keep
 
     def get_embedding(self, rgb_image):
         """

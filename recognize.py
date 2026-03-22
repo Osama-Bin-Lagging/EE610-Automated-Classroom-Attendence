@@ -48,8 +48,8 @@ def process_classroom_images(image_paths, recognizer, class_list):
         bgr = cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR)
         annotated = bgr.copy()
 
-        # Detect all faces with InsightFace
-        faces = recognizer.detect_faces(rgb)
+        # Detect all faces with enhanced detection (RF + Haar union)
+        faces = recognizer.detect_faces_enhanced(rgb)
         print(f"  {filename}: {len(faces)} faces detected")
 
         for face in faces:

@@ -54,7 +54,8 @@ streamlit run app.py
 ├── face_model.py           # Deep face recognition model wrapper
 ├── recognize.py            # Classroom image recognition engine
 ├── augment.py              # Data augmentation pipeline
-├── benchmark.py            # Model benchmarking script
+├── benchmark.py            # Model benchmarking script (recognition)
+├── benchmark_detection.py  # Face detection strategy benchmark
 ├── visualize_embeddings.py  # Interactive 3D embedding visualization
 ├── lbph.py                 # Original LBPH baseline (kept for reference)
 ├── requirements.txt        # Python dependencies
@@ -136,6 +137,67 @@ Arjun Singh's side-profile images were misclassified as Devesh Soni by facenet-p
 |:---------:|:------------:|:-----:|:----------------------:|:------------:|
 | ![](assets/neg_arjun_img2_raw.jpg) | ![](assets/neg_arjun_img2_crop.jpg) | Arjun Singh | Devesh Soni | ![](assets/neg_devesh_crop.jpg) |
 | ![](assets/neg_arjun_img3_raw.jpg) | ![](assets/neg_arjun_img3_crop.jpg) | Arjun Singh | Devesh Soni | ![](assets/neg_devesh_crop.jpg) |
+
+## Face Detection Benchmark
+
+The recognition pipeline's bottleneck is **face detection**, not recognition (100% LOO accuracy). On 4K classroom photos with ~49 students, the default RetinaFace detector misses ~40% of faces. We benchmarked 10 detection strategies on 12 validation classroom images against ground truth attendance (47 present, 11 absent out of 58 enrolled students).
+
+| # | Strategy | Avg Faces/img | Recall | Precision | F1 | Time/img |
+|---|----------|:---:|:---:|:---:|:---:|:---:|
+| 1 | RF Default (baseline) | 24.5 | 93.6% | 91.7% | 92.6% | 21.1s |
+| 2 | RF Low-Thresh (0.1) | 40.0 | 93.6% | 91.7% | 92.6% | 32.2s |
+| 3 | RF Tiled (2×2, 0.1) | 40.0 | 95.7% | 91.8% | 93.8% | 44.6s |
+| 4 | MTCNN | 28.3 | 95.7% | 91.8% | 93.8% | 69.6s |
+| 5 | Haar Default | 29.2 | 93.6% | 91.7% | 92.6% | 1.5s |
+| 6 | **Haar Aggressive** | **55.9** | **95.7%** | **91.8%** | **93.8%** | **3.9s** |
+| 7 | Haar + Profile | 60.4 | 95.7% | 91.8% | 93.8% | 9.1s |
+| 8 | Haar→RF Cascade | 29.6 | 95.7% | 90.0% | 92.8% | 14.2s |
+| 9 | RF + Haar Union | 40.5 | 93.6% | 91.7% | 92.6% | 17.3s |
+| 10 | RF Tiled + Haar | 40.2 | 95.7% | 91.8% | 93.8% | 24.5s |
+
+- **Recall** = fraction of present students correctly identified across all 12 images
+- **Precision** = fraction of predicted-present students who are actually present
+- Five strategies tie at **95.7% recall / 93.8% F1** (45/47 present correctly identified)
+- **Haar Aggressive is the speed winner** — matches top recall at 3.9s/img (10× faster than RF Tiled, 18× faster than MTCNN)
+- The union/cascade approaches did not outperform simpler methods when aggregating across 12 images
+- RF Default baseline is surprisingly strong at 93.6% recall across 12 images
+
+Run the benchmark:
+```bash
+python benchmark_detection.py                              # all strategies
+python benchmark_detection.py --strategy "Haar Aggressive"  # single strategy
+python benchmark_detection.py --annotate                    # save annotated images
+```
+
+## Face Detection Benchmark
+
+The bottleneck for classroom attendance is **face localization**, not recognition. High-resolution classroom photos (4K–5.7K) contain 49 students, but RetinaFace at default settings only detects 21–30 faces per image. We benchmarked 10 detection strategies on 12 validation classroom images against ground truth attendance (47 present, 11 absent out of 58 enrolled students).
+
+| # | Strategy | Avg Faces/img | Recall | Precision | F1 | Time/img |
+|---|----------|:---:|:---:|:---:|:---:|:---:|
+| 1 | RF Default (baseline) | 24 | 93.6% | 91.7% | 92.6% | 21s |
+| 2 | RF Low-Thresh (0.1) | 40 | 93.6% | 91.7% | 92.6% | 32s |
+| 3 | RF Tiled (2×2, 0.1) | 40 | 95.7% | 91.8% | 93.8% | 45s |
+| 4 | MTCNN | 28 | 95.7% | 91.8% | 93.8% | 70s |
+| 5 | Haar Default | 29 | 93.6% | 91.7% | 92.6% | 1.5s |
+| 6 | **Haar Aggressive** | **56** | **95.7%** | **91.8%** | **93.8%** | **3.9s** |
+| 7 | Haar + Profile | 60 | 95.7% | 91.8% | 93.8% | 9.1s |
+| 8 | Haar→RF Cascade | 30 | 95.7% | 90.0% | 92.8% | 14s |
+| 9 | RF + Haar Union | 41 | 93.6% | 91.7% | 92.6% | 17s |
+| 10 | RF Tiled + Haar Union | 40 | 95.7% | 91.8% | 93.8% | 24s |
+
+- **Recall**: fraction of actually-present students correctly marked present (45/47 for top strategies)
+- **Precision**: fraction of predicted-present that are actually present
+- Attendance is accumulated across all 12 images — a student is marked present if identified in any image
+- Embeddings extracted via ArcFace, classified by the trained SVM (threshold=0.02 for classroom conditions)
+
+**Winner: Haar Aggressive** — matches the best recall (95.7%) at 3.9s/img, 5× faster than RF Tiled and 18× faster than MTCNN.
+
+```bash
+python benchmark_detection.py                              # all 10 strategies
+python benchmark_detection.py --strategy "Haar Aggressive"  # single strategy
+python benchmark_detection.py --annotate                    # save annotated images
+```
 
 ## Embedding Visualization
 
