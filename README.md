@@ -199,6 +199,26 @@ python benchmark_detection.py --strategy "Haar Aggressive"  # single strategy
 python benchmark_detection.py --annotate                    # save annotated images
 ```
 
+## Detection Results (det_score >= 0.3 filtering)
+
+Bounding box overlays on 12 validation classroom images after filtering false detections with `det_score < 0.3`. Green = recognized student, red = unknown/low-confidence. Images 1-4 are back-of-head angles (0 recognitions).
+
+| Image 5 | Image 6 |
+|:-------:|:-------:|
+| ![](assets/bbox_image_5.jpg) | ![](assets/bbox_image_6.jpg) |
+
+| Image 7 | Image 8 |
+|:-------:|:-------:|
+| ![](assets/bbox_image_7.jpg) | ![](assets/bbox_image_8.jpg) |
+
+| Image 9 | Image 10 |
+|:-------:|:--------:|
+| ![](assets/bbox_image_9.jpg) | ![](assets/bbox_image_10.jpg) |
+
+| Image 11 | Image 12 |
+|:--------:|:--------:|
+| ![](assets/bbox_image_11.jpg) | ![](assets/bbox_image_12.jpg) |
+
 ## Embedding Visualization
 
 512-d ArcFace embeddings reduced to 3D using three dimensionality reduction methods. Each color = one student (58 students, 290 embeddings).
@@ -226,6 +246,109 @@ Generate with:
 ```bash
 python visualize_embeddings.py --method all
 ```
+
+## Accuracy Improvement Benchmarks
+
+Standalone experiments to push classroom recall beyond the baseline. Each benchmark script imports from the existing pipeline without modifying it.
+
+**Baseline**: 100% LOO accuracy, 80.9% classroom recall (38/47 present), 100% precision.
+
+### Data Augmentation (`bench_augmentation.py`)
+
+| n_aug | Embeddings | Aug Success | CV Accuracy | Recall | Precision | F1 |
+|:-----:|:----------:|:-----------:|:-----------:|:------:|:---------:|:--:|
+| 0 (baseline) | 290 | — | 100% (LOO) | 83.0% | 100% | 90.7% |
+| 2 | 870 | 100% | 100% (5-fold) | **91.5%** | **100%** | **95.6%** |
+
+Augmenting from 5→15 images/student (2 augmentations per original) improves classroom recall by **+8.5%** — the single biggest improvement across all benchmarks.
+
+### Failure Analysis (`bench_failure_analysis.py`)
+
+Of 9 missed students, **6 are detected but classified "Unknown"** (face is there, SVM confidence too low) and **3 are never detected** (no matching face found in any image).
+
+| Category | Students | Diagnosis |
+|----------|----------|-----------|
+| Detected but Unknown | Ankit Raj, K.P. Lakshmeesh, Pulkit, Samyak Parakh, Shaik Rehna Afroz, Vishwam Hemang Patel | Cosine similarity 0.5–0.7 to enrollment centroid — face found but SVM threshold rejects |
+| Never detected | Divig Bansal, Kamalesh Barman, Moon Aman Milind | Max cosine similarity <0.28 — likely occluded, turned away, or too small |
+
+Images 1–4 yield 0 recognitions (different classroom angle or back-of-head views).
+
+### Ensemble: InsightFace + FaceNet (`bench_ensemble.py`)
+
+| Strategy | LOO | Recall | Precision | F1 |
+|----------|:---:|:------:|:---------:|:--:|
+| InsightFace only | 100% | 80.9% | 100% | 89.4% |
+| FaceNet only | 100% | 78.7% | 100% | 88.1% |
+| **Avg probabilities** | **100%** | **83.0%** | **100%** | **90.7%** |
+| **Max confidence** | **100%** | **83.0%** | **100%** | **90.7%** |
+
+Ensembling recovers 1 extra student (+2.1% recall) by combining models with different failure modes.
+
+### Temporal Aggregation (`bench_temporal.py`)
+
+| Strategy | Recall | Precision | F1 |
+|----------|:------:|:---------:|:--:|
+| Baseline (present in any 1 image) | 80.9% | 100% | 89.4% |
+| k-of-n, k=2 | 72.3% | 100% | 83.9% |
+| k-of-n, k=3 | 66.0% | 100% | 79.5% |
+| k-of-n, k=4 | 55.3% | 100% | 71.2% |
+
+Stricter agreement requirements hurt recall — most students are only reliably detected in a few images.
+
+### Quality-Aware Filtering (`bench_quality.py`)
+
+| Strategy | Recall | Precision | F1 |
+|----------|:------:|:---------:|:--:|
+| Baseline (no filter) | 80.9% | 100% | 89.4% |
+| Quality-weighted (w=2.0) | 72.3% | 100% | 84.0% |
+| Best-quality per identity | 80.9% | 100% | 89.4% |
+
+Quality filtering does not help — the missed students are "Unknown" due to low SVM confidence, not bad detections.
+
+### Enrollment Degradation (`bench_enrollment.py`)
+
+| Images/student | LOO | Recall | F1 |
+|:--------------:|:---:|:------:|:--:|
+| 5 | 100% | 83.0% | 90.7% |
+| 4 | 100% | 71.9% | 83.6% |
+| 3 | 100% | 71.9% | 83.6% |
+| 2 | 100% | 71.9% | 83.6% |
+
+LOO remains perfect even at 2 images/student, but classroom recall drops sharply below 5.
+
+### Hard Negative Mining (`bench_hard_negatives.py`)
+
+Top-3 most confusable student pairs by centroid cosine similarity:
+1. Gogineni V.S. ↔ Jadhav S.S. (0.382)
+2. Akarsh Saxena ↔ Manaswi Goyal (0.349)
+3. Baral P.S. ↔ Rownak Tiwari (0.344)
+
+| Metric | Before | After targeted augmentation |
+|--------|:------:|:---------------------------:|
+| LOO accuracy | 100% | 99.9% |
+| LOO margin (avg) | 0.072 | 0.433 |
+| Classroom recall | 80.9% | 83.0% |
+
+Targeted augmentation of confusable pairs improved classroom recall by +2.1% and increased decision margin 6×, at the cost of 1 LOO error (1189/1190).
+
+### Test-Time Augmentation (`bench_tta.py`)
+
+| Method | TP | FP | FN | Recall | Precision | F1 |
+|--------|:--:|:--:|:--:|:------:|:---------:|:--:|
+| Baseline (single embedding) | 38 | 0 | 9 | 80.9% | 100% | 89.4% |
+| TTA (3 versions averaged) | 7 | 0 | 40 | 14.9% | 100% | 25.9% |
+
+TTA **hurts** recall significantly — only 61.5% of augmented crops yield valid face detections, and averaging distorted embeddings degrades classification quality.
+
+### Self-Training / Pseudo-Labeling (`bench_self_training.py`)
+
+| Pseudo-label threshold | Extra labels | Held-out recall | Held-out F1 |
+|:----------------------:|:------------:|:---------------:|:-----------:|
+| 0.05 | 5 | 80.9% | 89.4% |
+| 0.10 | 5 | 80.9% | 89.4% |
+| 0.15 | 0 | 80.9% | 89.4% |
+
+Pseudo-labeling provides minimal benefit — too few high-confidence classroom detections to meaningfully expand the training set.
 
 ## Team
 

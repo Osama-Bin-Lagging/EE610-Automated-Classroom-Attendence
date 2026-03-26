@@ -9,3 +9,4 @@ face_database.pkl
 dist/
 build/
 .env
+adaface_repo/
