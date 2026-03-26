@@ -1,0 +1,420 @@
+{
+  "metrics": {
+    "tp": 38,
+    "fp": 0,
+    "fn": 9,
+    "precision": 1.0,
+    "recall": 0.8085106382978723,
+    "f1": 0.8941176470588235,
+    "predicted_present": [
+      "Abhishek Abhishek",
+      "Amresh Jha",
+      "Anish Mayanache",
+      "Atharva Uday Jaltare",
+      "Ayush Ashish Kumar",
+      "Ayush Singh",
+      "Baral Prathmesh Santosh",
+      "Chhavi Yadav",
+      "Devesh Soni",
+      "Devtanu Barman",
+      "Ganesh Yadawate",
+      "Gurbani Jeet Sunil",
+      "Jadhav Jay Karbhari",
+      "Jadhav Shubham Sudhakar",
+      "Jyoti Jyoti",
+      "Lohitaksh Mahajan",
+      "Maitreya Shelare",
+      "Manas Patil",
+      "Manaswi Goyal",
+      "Manit Jhajharia",
+      "Mihir Gajanan Wani",
+      "Nistala Sreechandana",
+      "Pratham Manish Shah",
+      "Pyla Ramya",
+      "Rajeswar Banerjee",
+      "Rishabh Bhardwaj",
+      "Rownak Tiwari",
+      "Sameer Anand Jha",
+      "Santosh Singh",
+      "Saurabh Gupta",
+      "Shaurya Goyal",
+      "Shreeram Anil Jadhav",
+      "Shreya Nigam",
+      "Shrutija Swain",
+      "Soumya Gour",
+      "Suraj Adhikari",
+      "Tarshit Sehgal",
+      "Yashasvee Vijay Taiwade"
+    ],
+    "missed": [
+      "Ankit Raj",
+      "Divig Bansal",
+      "K. P. Lakshmeesh",
+      "Kamalesh Barman",
+      "Moon Aman Milind",
+      "Pulkit Pulkit",
+      "Samyak Parakh",
+      "Shaik Rehna Afroz",
+      "Vishwam Hemang Patel"
+    ],
+    "false_positives": []
+  },
+  "per_image": [
+    {
+      "image": "Image_1.JPG",
+      "total_faces": 38,
+      "recognized": 0,
+      "unknown": 38
+    },
+    {
+      "image": "Image_10.JPG",
+      "total_faces": 30,
+      "recognized": 19,
+      "unknown": 11
+    },
+    {
+      "image": "Image_11.JPG",
+      "total_faces": 55,
+      "recognized": 21,
+      "unknown": 34
+    },
+    {
+      "image": "Image_12.JPG",
+      "total_faces": 56,
+      "recognized": 20,
+      "unknown": 36
+    },
+    {
+      "image": "Image_2.JPG",
+      "total_faces": 28,
+      "recognized": 0,
+      "unknown": 28
+    },
+    {
+      "image": "Image_3.JPG",
+      "total_faces": 36,
+      "recognized": 0,
+      "unknown": 36
+    },
+    {
+      "image": "Image_4.JPG",
+      "total_faces": 60,
+      "recognized": 0,
+      "unknown": 60
+    },
+    {
+      "image": "Image_5.JPG",
+      "total_faces": 40,
+      "recognized": 19,
+      "unknown": 21
+    },
+    {
+      "image": "Image_6.JPG",
+      "total_faces": 51,
+      "recognized": 23,
+      "unknown": 28
+    },
+    {
+      "image": "Image_7.JPG",
+      "total_faces": 39,
+      "recognized": 18,
+      "unknown": 21
+    },
+    {
+      "image": "Image_8.JPG",
+      "total_faces": 25,
+      "recognized": 18,
+      "unknown": 7
+    },
+    {
+      "image": "Image_9.JPG",
+      "total_faces": 28,
+      "recognized": 18,
+      "unknown": 10
+    }
+  ],
+  "student_detection_counts": {
+    "Abhishek Abhishek": {
+      "images_detected_in": 7,
+      "total_detections": 7,
+      "avg_confidence": 0.07150754779084435,
+      "is_missed": false
+    },
+    "Amresh Jha": {
+      "images_detected_in": 4,
+      "total_detections": 4,
+      "avg_confidence": 0.07571414552917986,
+      "is_missed": false
+    },
+    "Anish Mayanache": {
+      "images_detected_in": 6,
+      "total_detections": 6,
+      "avg_confidence": 0.06024980180991338,
+      "is_missed": false
+    },
+    "Ankit Raj": {
+      "images_detected_in": 0,
+      "total_detections": 0,
+      "avg_confidence": 0,
+      "is_missed": true
+    },
+    "Atharva Uday Jaltare": {
+      "images_detected_in": 3,
+      "total_detections": 3,
+      "avg_confidence": 0.06556968650672723,
+      "is_missed": false
+    },
+    "Ayush Ashish Kumar": {
+      "images_detected_in": 3,
+      "total_detections": 3,
+      "avg_confidence": 0.06611639303684506,
+      "is_missed": false
+    },
+    "Ayush Singh": {
+      "images_detected_in": 5,
+      "total_detections": 5,
+      "avg_confidence": 0.05950860399044881,
+      "is_missed": false
+    },
+    "Baral Prathmesh Santosh": {
+      "images_detected_in": 3,
+      "total_detections": 3,
+      "avg_confidence": 0.06410734011172015,
+      "is_missed": false
+    },
+    "Chhavi Yadav": {
+      "images_detected_in": 2,
+      "total_detections": 2,
+      "avg_confidence": 0.05650578983728226,
+      "is_missed": false
+    },
+    "Devesh Soni": {
+      "images_detected_in": 1,
+      "total_detections": 1,
+      "avg_confidence": 0.057171504645571476,
+      "is_missed": false
+    },
+    "Devtanu Barman": {
+      "images_detected_in": 5,
+      "total_detections": 5,
+      "avg_confidence": 0.08823094187902714,
+      "is_missed": false
+    },
+    "Divig Bansal": {
+      "images_detected_in": 0,
+      "total_detections": 0,
+      "avg_confidence": 0,
+      "is_missed": true
+    },
+    "Ganesh Yadawate": {
+      "images_detected_in": 4,
+      "total_detections": 4,
+      "avg_confidence": 0.07256793743012432,
+      "is_missed": false
+    },
+    "Gurbani Jeet Sunil": {
+      "images_detected_in": 8,
+      "total_detections": 8,
+      "avg_confidence": 0.08371282004261381,
+      "is_missed": false
+    },
+    "Jadhav Jay Karbhari": {
+      "images_detected_in": 6,
+      "total_detections": 6,
+      "avg_confidence": 0.0628354528696911,
+      "is_missed": false
+    },
+    "Jadhav Shubham Sudhakar": {
+      "images_detected_in": 4,
+      "total_detections": 4,
+      "avg_confidence": 0.05572608882630234,
+      "is_missed": false
+    },
+    "Jyoti Jyoti": {
+      "images_detected_in": 6,
+      "total_detections": 6,
+      "avg_confidence": 0.05497742206340726,
+      "is_missed": false
+    },
+    "K. P. Lakshmeesh": {
+      "images_detected_in": 0,
+      "total_detections": 0,
+      "avg_confidence": 0,
+      "is_missed": true
+    },
+    "Kamalesh Barman": {
+      "images_detected_in": 0,
+      "total_detections": 0,
+      "avg_confidence": 0,
+      "is_missed": true
+    },
+    "Lohitaksh Mahajan": {
+      "images_detected_in": 1,
+      "total_detections": 1,
+      "avg_confidence": 0.052519804729759034,
+      "is_missed": false
+    },
+    "Maitreya Shelare": {
+      "images_detected_in": 4,
+      "total_detections": 4,
+      "avg_confidence": 0.055473810519206225,
+      "is_missed": false
+    },
+    "Manas Patil": {
+      "images_detected_in": 4,
+      "total_detections": 4,
+      "avg_confidence": 0.05376265847969319,
+      "is_missed": false
+    },
+    "Manaswi Goyal": {
+      "images_detected_in": 2,
+      "total_detections": 2,
+      "avg_confidence": 0.0578069777585625,
+      "is_missed": false
+    },
+    "Manit Jhajharia": {
+      "images_detected_in": 5,
+      "total_detections": 5,
+      "avg_confidence": 0.07090378133923714,
+      "is_missed": false
+    },
+    "Mihir Gajanan Wani": {
+      "images_detected_in": 1,
+      "total_detections": 1,
+      "avg_confidence": 0.0518110874751448,
+      "is_missed": false
+    },
+    "Moon Aman Milind": {
+      "images_detected_in": 0,
+      "total_detections": 0,
+      "avg_confidence": 0,
+      "is_missed": true
+    },
+    "Nistala Sreechandana": {
+      "images_detected_in": 4,
+      "total_detections": 4,
+      "avg_confidence": 0.058932712828057024,
+      "is_missed": false
+    },
+    "Pratham Manish Shah": {
+      "images_detected_in": 4,
+      "total_detections": 4,
+      "avg_confidence": 0.08111405888934671,
+      "is_missed": false
+    },
+    "Pulkit Pulkit": {
+      "images_detected_in": 0,
+      "total_detections": 0,
+      "avg_confidence": 0,
+      "is_missed": true
+    },
+    "Pyla Ramya": {
+      "images_detected_in": 1,
+      "total_detections": 1,
+      "avg_confidence": 0.05120032406753807,
+      "is_missed": false
+    },
+    "Rajeswar Banerjee": {
+      "images_detected_in": 4,
+      "total_detections": 4,
+      "avg_confidence": 0.05870747337769578,
+      "is_missed": false
+    },
+    "Rishabh Bhardwaj": {
+      "images_detected_in": 4,
+      "total_detections": 4,
+      "avg_confidence": 0.058797182655271965,
+      "is_missed": false
+    },
+    "Rownak Tiwari": {
+      "images_detected_in": 4,
+      "total_detections": 4,
+      "avg_confidence": 0.0573394051477511,
+      "is_missed": false
+    },
+    "Sameer Anand Jha": {
+      "images_detected_in": 4,
+      "total_detections": 4,
+      "avg_confidence": 0.0713993375803032,
+      "is_missed": false
+    },
+    "Samyak Parakh": {
+      "images_detected_in": 0,
+      "total_detections": 0,
+      "avg_confidence": 0,
+      "is_missed": true
+    },
+    "Santosh Singh": {
+      "images_detected_in": 6,
+      "total_detections": 6,
+      "avg_confidence": 0.07954791249406518,
+      "is_missed": false
+    },
+    "Saurabh Gupta": {
+      "images_detected_in": 3,
+      "total_detections": 3,
+      "avg_confidence": 0.0751551995351948,
+      "is_missed": false
+    },
+    "Shaik Rehna Afroz": {
+      "images_detected_in": 0,
+      "total_detections": 0,
+      "avg_confidence": 0,
+      "is_missed": true
+    },
+    "Shaurya Goyal": {
+      "images_detected_in": 6,
+      "total_detections": 6,
+      "avg_confidence": 0.06854602393385865,
+      "is_missed": false
+    },
+    "Shreeram Anil Jadhav": {
+      "images_detected_in": 6,
+      "total_detections": 6,
+      "avg_confidence": 0.058366656319291076,
+      "is_missed": false
+    },
+    "Shreya Nigam": {
+      "images_detected_in": 4,
+      "total_detections": 4,
+      "avg_confidence": 0.07708468936524213,
+      "is_missed": false
+    },
+    "Shrutija Swain": {
+      "images_detected_in": 5,
+      "total_detections": 5,
+      "avg_confidence": 0.0801803664466523,
+      "is_missed": false
+    },
+    "Soumya Gour": {
+      "images_detected_in": 3,
+      "total_detections": 3,
+      "avg_confidence": 0.056389395561282286,
+      "is_missed": false
+    },
+    "Suraj Adhikari": {
+      "images_detected_in": 5,
+      "total_detections": 5,
+      "avg_confidence": 0.07388680753711152,
+      "is_missed": false
+    },
+    "Tarshit Sehgal": {
+      "images_detected_in": 7,
+      "total_detections": 7,
+      "avg_confidence": 0.07776272986326507,
+      "is_missed": false
+    },
+    "Vishwam Hemang Patel": {
+      "images_detected_in": 0,
+      "total_detections": 0,
+      "avg_confidence": 0,
+      "is_missed": true
+    },
+    "Yashasvee Vijay Taiwade": {
+      "images_detected_in": 2,
+      "total_detections": 2,
+      "avg_confidence": 0.052299555572064976,
+      "is_missed": false
+    }
+  }
+}

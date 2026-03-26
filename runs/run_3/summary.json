@@ -1,0 +1,86 @@
+{
+  "config": {
+    "threshold": 0.03,
+    "det_score_min": 0.3,
+    "n_augmentation": 2,
+    "model_path": "/Users/manitjhajharia/Desktop/Sem 6/EE610/Project/face_database_aug.pkl",
+    "n_enrolled_students": 58
+  },
+  "input_images": [
+    "Image_1.JPG",
+    "Image_10.JPG",
+    "Image_11.JPG",
+    "Image_12.JPG",
+    "Image_2.JPG",
+    "Image_3.JPG",
+    "Image_4.JPG",
+    "Image_5.JPG",
+    "Image_6.JPG",
+    "Image_7.JPG",
+    "Image_8.JPG",
+    "Image_9.JPG"
+  ],
+  "totals": {
+    "faces_detected": 330,
+    "students_present": 46,
+    "students_absent": 12,
+    "unknown_person_groups": 34
+  },
+  "per_image": {
+    "Image_1.JPG": {
+      "faces_detected": 30,
+      "recognized": 15
+    },
+    "Image_10.JPG": {
+      "faces_detected": 22,
+      "recognized": 21
+    },
+    "Image_11.JPG": {
+      "faces_detected": 31,
+      "recognized": 29
+    },
+    "Image_12.JPG": {
+      "faces_detected": 33,
+      "recognized": 29
+    },
+    "Image_2.JPG": {
+      "faces_detected": 21,
+      "recognized": 10
+    },
+    "Image_3.JPG": {
+      "faces_detected": 29,
+      "recognized": 15
+    },
+    "Image_4.JPG": {
+      "faces_detected": 32,
+      "recognized": 19
+    },
+    "Image_5.JPG": {
+      "faces_detected": 27,
+      "recognized": 26
+    },
+    "Image_6.JPG": {
+      "faces_detected": 33,
+      "recognized": 32
+    },
+    "Image_7.JPG": {
+      "faces_detected": 26,
+      "recognized": 24
+    },
+    "Image_8.JPG": {
+      "faces_detected": 22,
+      "recognized": 21
+    },
+    "Image_9.JPG": {
+      "faces_detected": 24,
+      "recognized": 21
+    }
+  },
+  "reid_stats": {
+    "total_person_sets": 89,
+    "labeled": 55,
+    "unlabeled": 34,
+    "total_faces": 330,
+    "embedding_threshold": 0.43559028313638765
+  }
+}

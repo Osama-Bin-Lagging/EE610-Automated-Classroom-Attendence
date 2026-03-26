@@ -1,0 +1,94 @@
+======================================================================
+HARD NEGATIVE MINING BENCHMARK
+======================================================================
+  58 students
+
+======================================================================
+PHASE 1: PAIRWISE CENTROID SIMILARITY
+======================================================================
+
+Top-10 most confusable pairs:
+  Student A                 Student B                 Similarity
+-----------------------------------------------------------------
+  Gogineni Venkat Sumanth   Jadhav Shubham Sudhakar       0.3819
+  Akarsh Saxena             Manaswi Goyal                 0.3491
+  Baral Prathmesh Santosh   Rownak Tiwari                 0.3440
+  Aboli Ganesh Malshikare   Rajeswar Banerjee             0.3387
+  Jadhav Shubham Sudhakar   Mihir Gajanan Wani            0.3239
+  Rownak Tiwari             Santosh Singh                 0.3236
+  Srushti Rajwade           Yashasvee Vijay Taiwade       0.3235
+  K. P. Lakshmeesh          Krunal Vaghela                0.3212
+  Moon Aman Milind          Saurabh Gupta                 0.3192
+  Ajinkya Prashant Pawar    Pulkit Pulkit                 0.3173
+
+======================================================================
+PHASE 2: LOO WITH RUNNER-UP ANALYSIS
+======================================================================
+
+  LOO Accuracy: 290/290 = 100.0%
+  Average margin: 0.0723, Min: 0.0225
+
+  Top-10 runner-up confusions:
+  True Student              Runner-up                  Count
+  ------------------------------------------------------------
+  Akarsh Saxena             Aman Russell                   5
+  Arjun Singh               Saurabh Gupta                  5
+  Atharva Uday Jaltare      Arjun Singh                    5
+  Deepak Kumar              Saurabh Gupta                  5
+  Devesh Soni               Arjun Singh                    5
+  Devtanu Barman            Aman Russell                   5
+  Jadhav Jay Karbhari       Arjun Singh                    5
+  Jadhav Shubham Sudhakar   Gogineni Venkat Sumanth        5
+  Jyoti Jyoti               Nistala Sreechandana           5
+  Kamalesh Barman           Aman Russell                   5
+
+======================================================================
+PHASE 3: TARGETED AUGMENTATION FOR CONFUSABLE PAIRS
+======================================================================
+  Targeting 18 students
+Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+find model: /Users/manitjhajharia/.insightface/models/buffalo_l/1k3d68.onnx landmark_3d_68 ['None', 3, 192, 192] 0.0 1.0
+Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+find model: /Users/manitjhajharia/.insightface/models/buffalo_l/2d106det.onnx landmark_2d_106 ['None', 3, 192, 192] 0.0 1.0
+Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+find model: /Users/manitjhajharia/.insightface/models/buffalo_l/det_10g.onnx detection [1, 3, '?', '?'] 127.5 128.0
+Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+find model: /Users/manitjhajharia/.insightface/models/buffalo_l/genderage.onnx genderage ['None', 3, 96, 96] 0.0 1.0
+Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+find model: /Users/manitjhajharia/.insightface/models/buffalo_l/w600k_r50.onnx recognition ['None', 3, 112, 112] 127.5 127.5
+set det-size: (640, 640)
+    Santosh Singh: +50 augmented
+    Akarsh Saxena: +50 augmented
+    Srushti Rajwade: +50 augmented
+    Krunal Vaghela: +50 augmented
+    Pulkit Pulkit: +50 augmented
+    Rajeswar Banerjee: +50 augmented
+    Gogineni Venkat Sumanth: +50 augmented
+    Ajinkya Prashant Pawar: +50 augmented
+    K. P. Lakshmeesh: +50 augmented
+    Aboli Ganesh Malshikare: +50 augmented
+    Manaswi Goyal: +50 augmented
+    Saurabh Gupta: +50 augmented
+    Yashasvee Vijay Taiwade: +50 augmented
+    Jadhav Shubham Sudhakar: +50 augmented
+    Baral Prathmesh Santosh: +50 augmented
+    Mihir Gajanan Wani: +50 augmented
+    Rownak Tiwari: +50 augmented
+    Moon Aman Milind: +50 augmented
+
+  Re-running LOO with targeted augmentation...
+  LOO after aug: 1189/1190 = 99.9%
+  Margin after aug: 0.4333
+Trained on 58 students, 290 total embeddings
+Trained on 58 students, 1190 total embeddings
+
+  Classroom before: Recall=80.9% F1=89.4%
+  Classroom after:  Recall=83.0% F1=89.7%
+
+======================================================================
+HARD NEGATIVE MINING SUMMARY
+======================================================================
+  LOO before: 100.0% (margin=0.0723)
+  LOO after:  99.9% (margin=0.4333)
+
+Results saved to /Users/manitjhajharia/Desktop/Sem 6/EE610/Project/results/bench_hard_negatives.json

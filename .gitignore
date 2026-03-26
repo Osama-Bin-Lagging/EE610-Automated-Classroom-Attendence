@@ -4,6 +4,7 @@ __pycache__/
 *.pyo
 outputs/
 face_database.pkl
+face_database_aug.pkl
 .DS_Store
 *.egg-info/
 dist/

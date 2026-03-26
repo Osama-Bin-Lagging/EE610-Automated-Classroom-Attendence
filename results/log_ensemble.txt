@@ -1,0 +1,48 @@
+======================================================================
+ENSEMBLE BENCHMARK: InsightFace + FaceNet
+======================================================================
+Loading student images for FaceNet...
+
+Extracting FaceNet embeddings...
+  FaceNet: 290/290 faces detected
+  Common students: 58
+
+LOO: InsightFace only...
+  100.0%
+LOO: FaceNet only...
+  100.0%
+LOO: Concat (1024-d)...
+  100.0%
+LOO: Avg probabilities...
+  100.0%
+LOO: Max confidence...
+  100.0%
+Trained on 58 students, 290 total embeddings
+Trained on 58 students, 290 total embeddings
+
+Classroom evaluation:
+  insight_only... Recall=80.9% Prec=100.0% F1=89.4%
+  facenet_only... Recall=78.7% Prec=100.0% F1=88.1%
+  avg_probs... Recall=83.0% Prec=100.0% F1=90.7%
+  max_conf... Recall=83.0% Prec=100.0% F1=90.7%
+
+================================================================================
+ENSEMBLE RESULTS
+================================================================================
+
+  LOO Accuracy:
+    insight_loo          100.0%
+    facenet_loo          100.0%
+    concat_loo           100.0%
+    avg_probs_loo        100.0%
+    max_conf_loo         100.0%
+
+  Strategy               TP   FP   FN   Recall     Prec       F1
+  -------------------------------------------------------
+  insight_only           38    0    9   80.9%  100.0%   89.4%
+  facenet_only           37    0   10   78.7%  100.0%   88.1%
+  avg_probs              39    0    8   83.0%  100.0%   90.7%
+  max_conf               39    0    8   83.0%  100.0%   90.7%
+================================================================================
+
+Results saved to /Users/manitjhajharia/Desktop/Sem 6/EE610/Project/results/bench_ensemble.json

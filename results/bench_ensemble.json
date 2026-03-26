@@ -1,0 +1,43 @@
+{
+  "loo": {
+    "insightface": 1.0,
+    "facenet": 1.0,
+    "concat_1024d": 1.0,
+    "avg_probs": 1.0,
+    "max_conf": 1.0
+  },
+  "classroom": {
+    "insight_only": {
+      "tp": 38,
+      "fp": 0,
+      "fn": 9,
+      "precision": 1.0,
+      "recall": 0.8085106382978723,
+      "f1": 0.8941176470588235
+    },
+    "facenet_only": {
+      "tp": 37,
+      "fp": 0,
+      "fn": 10,
+      "precision": 1.0,
+      "recall": 0.7872340425531915,
+      "f1": 0.880952380952381
+    },
+    "avg_probs": {
+      "tp": 39,
+      "fp": 0,
+      "fn": 8,
+      "precision": 1.0,
+      "recall": 0.8297872340425532,
+      "f1": 0.9069767441860465
+    },
+    "max_conf": {
+      "tp": 39,
+      "fp": 0,
+      "fn": 8,
+      "precision": 1.0,
+      "recall": 0.8297872340425532,
+      "f1": 0.9069767441860465
+    }
+  }
+}

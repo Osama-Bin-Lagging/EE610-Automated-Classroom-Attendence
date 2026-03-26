@@ -1,0 +1,78 @@
+{
+  "baseline": {
+    "loo_accuracy": 1.0,
+    "classroom": {
+      "tp": 39,
+      "fp": 0,
+      "fn": 8,
+      "precision": 1.0,
+      "recall": 0.8297872340425532,
+      "f1": 0.9069767441860465
+    }
+  },
+  "thresholds": [
+    {
+      "threshold": 0.08,
+      "n_pseudo_labels": 30,
+      "n_unique_students": 9,
+      "leave_1_image_out": {
+        "tp": 38,
+        "fp": 0,
+        "fn": 9,
+        "precision": 1.0,
+        "recall": 0.8085106382978723,
+        "f1": 0.8941176470588235
+      },
+      "optimistic_circular": {
+        "tp": 38,
+        "fp": 0,
+        "fn": 9,
+        "precision": 1.0,
+        "recall": 0.8085106382978723,
+        "f1": 0.8941176470588235
+      }
+    },
+    {
+      "threshold": 0.1,
+      "n_pseudo_labels": 5,
+      "n_unique_students": 1,
+      "leave_1_image_out": {
+        "tp": 38,
+        "fp": 0,
+        "fn": 9,
+        "precision": 1.0,
+        "recall": 0.8085106382978723,
+        "f1": 0.8941176470588235
+      },
+      "optimistic_circular": {
+        "tp": 37,
+        "fp": 0,
+        "fn": 10,
+        "precision": 1.0,
+        "recall": 0.7872340425531915,
+        "f1": 0.880952380952381
+      }
+    },
+    {
+      "threshold": 0.15,
+      "n_pseudo_labels": 0,
+      "n_unique_students": 0,
+      "leave_1_image_out": {
+        "tp": 38,
+        "fp": 0,
+        "fn": 9,
+        "precision": 1.0,
+        "recall": 0.8085106382978723,
+        "f1": 0.8941176470588235
+      },
+      "optimistic_circular": {
+        "tp": 38,
+        "fp": 0,
+        "fn": 9,
+        "precision": 1.0,
+        "recall": 0.8085106382978723,
+        "f1": 0.8941176470588235
+      }
+    }
+  ]
+}

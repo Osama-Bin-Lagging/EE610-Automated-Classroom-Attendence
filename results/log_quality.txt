@@ -1,0 +1,51 @@
+======================================================================
+FACE QUALITY-AWARE FILTERING BENCHMARK
+======================================================================
+Model loaded: 58 students
+  Image_1.JPG: 38 faces
+  Image_10.JPG: 30 faces
+  Image_11.JPG: 55 faces
+  Image_12.JPG: 56 faces
+  Image_2.JPG: 28 faces
+  Image_3.JPG: 36 faces
+  Image_4.JPG: 60 faces
+  Image_5.JPG: 40 faces
+  Image_6.JPG: 51 faces
+  Image_7.JPG: 39 faces
+  Image_8.JPG: 25 faces
+  Image_9.JPG: 28 faces
+
+Total faces: 486, Recognized: 156
+
+Quality: min=0.263 median=0.604 max=0.767 mean=0.572
+Correct recognitions avg quality: 0.690
+
+Baseline: Recall=80.9% Prec=100.0% F1=89.4%
+Quality >= 0.1: Recall=80.9% Prec=100.0% F1=89.4% (38 students)
+Quality >= 0.2: Recall=80.9% Prec=100.0% F1=89.4% (38 students)
+Quality >= 0.3: Recall=80.9% Prec=100.0% F1=89.4% (38 students)
+Quality >= 0.4: Recall=80.9% Prec=100.0% F1=89.4% (38 students)
+Quality >= 0.5: Recall=80.9% Prec=100.0% F1=89.4% (38 students)
+Quality-weighted (w=0.5): Recall=80.9% Prec=100.0% F1=89.4%
+Quality-weighted (w=1.0): Recall=80.9% Prec=100.0% F1=89.4%
+Quality-weighted (w=2.0): Recall=72.3% Prec=100.0% F1=84.0%
+Best-quality-per-ID: Recall=80.9% Prec=100.0% F1=89.4%
+
+================================================================================
+QUALITY FILTERING RESULTS
+================================================================================
+Strategy                         TP   FP   FN   Recall     Prec       F1
+----------------------------------------------------------------------
+baseline                         38    0    9   80.9%  100.0%   89.4%
+quality_thresh_0.1               38    0    9   80.9%  100.0%   89.4%
+quality_thresh_0.2               38    0    9   80.9%  100.0%   89.4%
+quality_thresh_0.3               38    0    9   80.9%  100.0%   89.4%
+quality_thresh_0.4               38    0    9   80.9%  100.0%   89.4%
+quality_thresh_0.5               38    0    9   80.9%  100.0%   89.4%
+quality_weighted_w0.5            38    0    9   80.9%  100.0%   89.4%
+quality_weighted_w1.0            38    0    9   80.9%  100.0%   89.4%
+quality_weighted_w2.0            34    0   13   72.3%  100.0%   84.0%
+best_quality_per_id              38    0    9   80.9%  100.0%   89.4%
+================================================================================
+
+Results saved to /Users/manitjhajharia/Desktop/Sem 6/EE610/Project/results/bench_quality.json

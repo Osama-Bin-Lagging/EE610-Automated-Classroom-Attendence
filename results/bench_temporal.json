@@ -1,0 +1,151 @@
+{
+  "strategies": {
+    "baseline_any1": {
+      "tp": 38,
+      "fp": 0,
+      "fn": 9,
+      "precision": 1.0,
+      "recall": 0.8085106382978723,
+      "f1": 0.8941176470588235
+    },
+    "embedding_avg": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 47,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0
+    },
+    "conf_weighted_t0.05": {
+      "tp": 38,
+      "fp": 0,
+      "fn": 9,
+      "precision": 1.0,
+      "recall": 0.8085106382978723,
+      "f1": 0.8941176470588235
+    },
+    "conf_weighted_t0.1": {
+      "tp": 34,
+      "fp": 0,
+      "fn": 13,
+      "precision": 1.0,
+      "recall": 0.723404255319149,
+      "f1": 0.8395061728395062
+    },
+    "conf_weighted_t0.2": {
+      "tp": 27,
+      "fp": 0,
+      "fn": 20,
+      "precision": 1.0,
+      "recall": 0.574468085106383,
+      "f1": 0.7297297297297298
+    },
+    "conf_weighted_t0.5": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 44,
+      "precision": 1.0,
+      "recall": 0.06382978723404255,
+      "f1": 0.12
+    },
+    "k_of_n_k1": {
+      "tp": 38,
+      "fp": 0,
+      "fn": 9,
+      "precision": 1.0,
+      "recall": 0.8085106382978723,
+      "f1": 0.8941176470588235
+    },
+    "k_of_n_k2": {
+      "tp": 34,
+      "fp": 0,
+      "fn": 13,
+      "precision": 1.0,
+      "recall": 0.723404255319149,
+      "f1": 0.8395061728395062
+    },
+    "k_of_n_k3": {
+      "tp": 31,
+      "fp": 0,
+      "fn": 16,
+      "precision": 1.0,
+      "recall": 0.6595744680851063,
+      "f1": 0.7948717948717948
+    },
+    "k_of_n_k4": {
+      "tp": 26,
+      "fp": 0,
+      "fn": 21,
+      "precision": 1.0,
+      "recall": 0.5531914893617021,
+      "f1": 0.7123287671232876
+    }
+  },
+  "greedy_image_order": [
+    {
+      "step": 1,
+      "image": "Image_6.JPG",
+      "new_students": 23,
+      "cumulative_recall": 0.48936170212765956
+    },
+    {
+      "step": 2,
+      "image": "Image_10.JPG",
+      "new_students": 10,
+      "cumulative_recall": 0.7021276595744681
+    },
+    {
+      "step": 3,
+      "image": "Image_5.JPG",
+      "new_students": 4,
+      "cumulative_recall": 0.7872340425531915
+    },
+    {
+      "step": 4,
+      "image": "Image_12.JPG",
+      "new_students": 1,
+      "cumulative_recall": 0.8085106382978723
+    }
+  ],
+  "min_images_95_recall": null,
+  "per_student_detection_count": {
+    "Shreya Nigam": 4,
+    "Tarshit Sehgal": 7,
+    "Baral Prathmesh Santosh": 3,
+    "Jyoti Jyoti": 6,
+    "Pratham Manish Shah": 4,
+    "Ayush Ashish Kumar": 3,
+    "Anish Mayanache": 6,
+    "Shaurya Goyal": 6,
+    "Santosh Singh": 6,
+    "Rishabh Bhardwaj": 4,
+    "Atharva Uday Jaltare": 3,
+    "Soumya Gour": 3,
+    "Shreeram Anil Jadhav": 6,
+    "Gurbani Jeet Sunil": 8,
+    "Jadhav Jay Karbhari": 6,
+    "Abhishek Abhishek": 7,
+    "Maitreya Shelare": 4,
+    "Saurabh Gupta": 3,
+    "Mihir Gajanan Wani": 1,
+    "Shrutija Swain": 5,
+    "Rownak Tiwari": 4,
+    "Manit Jhajharia": 5,
+    "Ganesh Yadawate": 4,
+    "Suraj Adhikari": 5,
+    "Sameer Anand Jha": 4,
+    "Rajeswar Banerjee": 4,
+    "Manas Patil": 4,
+    "Amresh Jha": 4,
+    "Devtanu Barman": 5,
+    "Jadhav Shubham Sudhakar": 4,
+    "Ayush Singh": 5,
+    "Nistala Sreechandana": 4,
+    "Chhavi Yadav": 2,
+    "Devesh Soni": 1,
+    "Manaswi Goyal": 2,
+    "Lohitaksh Mahajan": 1,
+    "Pyla Ramya": 1,
+    "Yashasvee Vijay Taiwade": 2
+  }
+}

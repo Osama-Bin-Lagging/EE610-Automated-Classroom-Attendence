@@ -1,0 +1,265 @@
+======================================================================
+FAILURE ANALYSIS BENCHMARK
+======================================================================
+Model loaded: 58 students
+Ground truth: 47 present, 11 absent
+
+Classroom Results:
+  TP=38  FP=0  FN=9
+  Precision=100.0%  Recall=80.9%  F1=89.4%
+  Missed students: ['Ankit Raj', 'Divig Bansal', 'K. P. Lakshmeesh', 'Kamalesh Barman', 'Moon Aman Milind', 'Pulkit Pulkit', 'Samyak Parakh', 'Shaik Rehna Afroz', 'Vishwam Hemang Patel']
+
+----------------------------------------------------------------------
+PER-STUDENT DETECTION MATRIX
+----------------------------------------------------------------------
+
+Student                         #Imgs  AvgConf   AvgArea   AvgDet
+-----------------------------------------------------------------
+Abhishek Abhishek                   7    7.2%      7899    0.73
+Amresh Jha                          4    7.6%      9697    0.68
+Anish Mayanache                     6    6.0%     16925    0.85
+Ankit Raj                           0    0.0%         0    0.00 *** MISSED
+Atharva Uday Jaltare                3    6.6%     11533    0.82
+Ayush Ashish Kumar                  3    6.6%     37032    0.86
+Ayush Singh                         5    6.0%      7751    0.71
+Baral Prathmesh Santosh             3    6.4%     22153    0.88
+Chhavi Yadav                        2    5.7%     11120    0.86
+Devesh Soni                         1    5.7%     18426    0.85
+Devtanu Barman                      5    8.8%      7917    0.67
+Divig Bansal                        0    0.0%         0    0.00 *** MISSED
+Ganesh Yadawate                     4    7.3%     15014    0.84
+Gurbani Jeet Sunil                  8    8.4%      9746    0.75
+Jadhav Jay Karbhari                 6    6.3%     10559    0.79
+Jadhav Shubham Sudhakar             4    5.6%      5244    0.57
+Jyoti Jyoti                         6    5.5%     24453    0.87
+K. P. Lakshmeesh                    0    0.0%         0    0.00 *** MISSED
+Kamalesh Barman                     0    0.0%         0    0.00 *** MISSED
+Lohitaksh Mahajan                   1    5.3%     13617    0.80
+Maitreya Shelare                    4    5.5%      7235    0.71
+Manas Patil                         4    5.4%      7016    0.67
+Manaswi Goyal                       2    5.8%      8655    0.70
+Manit Jhajharia                     5    7.1%     20866    0.87
+Mihir Gajanan Wani                  1    5.2%      7743    0.53
+Moon Aman Milind                    0    0.0%         0    0.00 *** MISSED
+Nistala Sreechandana                4    5.9%      7533    0.50
+Pratham Manish Shah                 4    8.1%     29818    0.86
+Pulkit Pulkit                       0    0.0%         0    0.00 *** MISSED
+Pyla Ramya                          1    5.1%      6147    0.77
+Rajeswar Banerjee                   4    5.9%     10004    0.81
+Rishabh Bhardwaj                    4    5.9%     15352    0.86
+Rownak Tiwari                       4    5.7%     33008    0.87
+Sameer Anand Jha                    4    7.1%     15760    0.82
+Samyak Parakh                       0    0.0%         0    0.00 *** MISSED
+Santosh Singh                       6    8.0%     14887    0.85
+Saurabh Gupta                       3    7.5%     10779    0.75
+Shaik Rehna Afroz                   0    0.0%         0    0.00 *** MISSED
+Shaurya Goyal                       6    6.9%     10827    0.77
+Shreeram Anil Jadhav                6    5.8%     11081    0.75
+Shreya Nigam                        4    7.7%     77966    0.90
+Shrutija Swain                      5    8.0%     53326    0.90
+Soumya Gour                         3    5.6%     16674    0.82
+Suraj Adhikari                      5    7.4%     13186    0.82
+Tarshit Sehgal                      7    7.8%     69206    0.89
+Vishwam Hemang Patel                0    0.0%         0    0.00 *** MISSED
+Yashasvee Vijay Taiwade             2    5.2%      7573    0.76
+
+======================================================================
+DEEP DIVE: MISSED STUDENTS
+======================================================================
+
+--- Ankit Raj ---
+  Enrollment embeddings: 5
+
+  Top-10 nearest faces (by cosine sim to enrollment centroid):
+  Img                Sim Predicted                   Conf     Area
+  Image_9.JPG     0.664 Unknown                    4.3%     7902 <-- LIKELY MATCH
+  Image_10.JPG    0.635 Unknown                    4.0%     7409 <-- LIKELY MATCH
+  Image_7.JPG     0.619 Unknown                    3.6%     5186 <-- LIKELY MATCH
+  Image_8.JPG     0.606 Unknown                    3.7%     6984 <-- LIKELY MATCH
+  Image_11.JPG    0.598 Unknown                    3.5%     7940 <-- LIKELY MATCH
+  Image_12.JPG    0.562 Unknown                    3.2%    11666 <-- LIKELY MATCH
+  Image_6.JPG     0.539 Unknown                    3.1%     7264 <-- LIKELY MATCH
+  Image_12.JPG    0.287 Rajeswar Banerjee          5.6%     9844
+  Image_5.JPG     0.271 Rajeswar Banerjee          6.4%    11113
+  Image_6.JPG     0.265 Rajeswar Banerjee          6.3%     9972
+
+  DIAGNOSIS: Face likely DETECTED but MISCLASSIFIED as 'Unknown' (sim=0.664)
+
+--- Divig Bansal ---
+  Enrollment embeddings: 5
+
+  Top-10 nearest faces (by cosine sim to enrollment centroid):
+  Img                Sim Predicted                   Conf     Area
+  Image_8.JPG     0.246 Jadhav Jay Karbhari        6.3%     9155
+  Image_7.JPG     0.245 Jadhav Jay Karbhari        6.1%     8169
+  Image_6.JPG     0.237 Jadhav Jay Karbhari        6.7%    13585
+  Image_10.JPG    0.237 Jadhav Jay Karbhari        6.8%     9190
+  Image_2.JPG     0.226 Unknown                    2.6%    11539
+  Image_12.JPG    0.208 Amresh Jha                 7.7%     8999
+  Image_6.JPG     0.199 Unknown                    3.9%     9641
+  Image_9.JPG     0.198 Jadhav Jay Karbhari        6.7%     9658
+  Image_11.JPG    0.194 Jadhav Jay Karbhari        5.2%    13598
+  Image_5.JPG     0.172 Unknown                    4.6%    12508
+
+  DIAGNOSIS: Face likely NEVER DETECTED (max sim=0.246)
+
+--- K. P. Lakshmeesh ---
+  Enrollment embeddings: 5
+
+  Top-10 nearest faces (by cosine sim to enrollment centroid):
+  Img                Sim Predicted                   Conf     Area
+  Image_11.JPG    0.562 Unknown                    4.0%     5589 <-- LIKELY MATCH
+  Image_5.JPG     0.558 Unknown                    4.1%     4972 <-- LIKELY MATCH
+  Image_12.JPG    0.553 Unknown                    3.8%     5435 <-- LIKELY MATCH
+  Image_6.JPG     0.497 Unknown                    3.5%     7074 <-- LIKELY MATCH
+  Image_4.JPG     0.261 Unknown                    2.4%     2025
+  Image_6.JPG     0.241 Rajeswar Banerjee          6.3%     9972
+  Image_7.JPG     0.225 Devtanu Barman             8.4%    10485
+  Image_11.JPG    0.212 Unknown                    2.7%     7680
+  Image_5.JPG     0.209 Devtanu Barman             9.1%     8912
+  Image_5.JPG     0.203 Rajeswar Banerjee          6.4%    11113
+
+  DIAGNOSIS: Face likely DETECTED but MISCLASSIFIED as 'Unknown' (sim=0.562)
+
+--- Kamalesh Barman ---
+  Enrollment embeddings: 5
+
+  Top-10 nearest faces (by cosine sim to enrollment centroid):
+  Img                Sim Predicted                   Conf     Area
+  Image_6.JPG     0.184 Sameer Anand Jha           6.2%    19028
+  Image_5.JPG     0.184 Sameer Anand Jha           6.9%    14594
+  Image_7.JPG     0.169 Unknown                    2.7%    11807
+  Image_7.JPG     0.167 Santosh Singh              8.0%    12585
+  Image_5.JPG     0.166 Unknown                    4.1%     4972
+  Image_6.JPG     0.162 Devtanu Barman             9.0%     6202
+  Image_11.JPG    0.160 Santosh Singh              8.4%    17336
+  Image_11.JPG    0.156 Shrutija Swain             8.2%    49009
+  Image_5.JPG     0.155 Devtanu Barman             9.1%     8912
+  Image_4.JPG     0.154 Unknown                    3.1%     2618
+
+  DIAGNOSIS: Face likely NEVER DETECTED (max sim=0.184)
+
+--- Moon Aman Milind ---
+  Enrollment embeddings: 5
+
+  Top-10 nearest faces (by cosine sim to enrollment centroid):
+  Img                Sim Predicted                   Conf     Area
+  Image_8.JPG     0.277 Saurabh Gupta              7.2%    10433
+  Image_9.JPG     0.267 Saurabh Gupta              7.3%    11185
+  Image_10.JPG    0.234 Saurabh Gupta              8.1%    10720
+  Image_1.JPG     0.223 Unknown                    2.7%    15407
+  Image_5.JPG     0.199 Unknown                    4.1%     4972
+  Image_12.JPG    0.195 Unknown                    3.8%     5435
+  Image_5.JPG     0.187 Yashasvee Vijay Taiwade    5.2%     5916
+  Image_11.JPG    0.185 Unknown                    4.0%     5589
+  Image_6.JPG     0.180 Yashasvee Vijay Taiwade    5.3%     9230
+  Image_6.JPG     0.167 Unknown                    3.5%     7074
+
+  DIAGNOSIS: Face likely NEVER DETECTED (max sim=0.277)
+
+--- Pulkit Pulkit ---
+  Enrollment embeddings: 5
+
+  Top-10 nearest faces (by cosine sim to enrollment centroid):
+  Img                Sim Predicted                   Conf     Area
+  Image_5.JPG     0.698 Unknown                    4.8%     6348 <-- LIKELY MATCH
+  Image_11.JPG    0.688 Unknown                    4.6%     4735 <-- LIKELY MATCH
+  Image_12.JPG    0.686 Unknown                    4.5%     5340 <-- LIKELY MATCH
+  Image_7.JPG     0.684 Unknown                    4.6%     7678 <-- LIKELY MATCH
+  Image_6.JPG     0.680 Unknown                    4.3%     4874 <-- LIKELY MATCH
+  Image_4.JPG     0.273 Unknown                    2.4%      715
+  Image_8.JPG     0.261 Rishabh Bhardwaj           5.6%    14446
+  Image_7.JPG     0.218 Rishabh Bhardwaj           6.1%    17767
+  Image_9.JPG     0.214 Rishabh Bhardwaj           5.2%    14800
+  Image_11.JPG    0.210 Rownak Tiwari              5.5%    36625
+
+  DIAGNOSIS: Face likely DETECTED but MISCLASSIFIED as 'Unknown' (sim=0.698)
+
+--- Samyak Parakh ---
+  Enrollment embeddings: 5
+
+  Top-10 nearest faces (by cosine sim to enrollment centroid):
+  Img                Sim Predicted                   Conf     Area
+  Image_5.JPG     0.709 Unknown                    4.6%    12508 <-- LIKELY MATCH
+  Image_12.JPG    0.705 Unknown                    4.5%    11281 <-- LIKELY MATCH
+  Image_11.JPG    0.677 Unknown                    4.0%    10011 <-- LIKELY MATCH
+  Image_7.JPG     0.674 Unknown                    4.1%    13865 <-- LIKELY MATCH
+  Image_6.JPG     0.662 Unknown                    3.9%     9641 <-- LIKELY MATCH
+  Image_3.JPG     0.268 Unknown                    2.5%     4643
+  Image_4.JPG     0.258 Unknown                    2.5%     1733
+  Image_11.JPG    0.255 Rajeswar Banerjee          5.2%     9086
+  Image_2.JPG     0.252 Unknown                    2.9%     7483
+  Image_1.JPG     0.221 Unknown                    2.7%     6277
+
+  DIAGNOSIS: Face likely DETECTED but MISCLASSIFIED as 'Unknown' (sim=0.709)
+
+--- Shaik Rehna Afroz ---
+  Enrollment embeddings: 5
+
+  Top-10 nearest faces (by cosine sim to enrollment centroid):
+  Img                Sim Predicted                   Conf     Area
+  Image_5.JPG     0.667 Unknown                    3.8%     4689 <-- LIKELY MATCH
+  Image_6.JPG     0.575 Unknown                    3.0%     5306 <-- LIKELY MATCH
+  Image_12.JPG    0.549 Unknown                    2.8%     3830 <-- LIKELY MATCH
+  Image_11.JPG    0.411 Unknown                    2.3%     5509 <-- LIKELY MATCH
+  Image_12.JPG    0.343 Unknown                    3.8%     5435 <-- LIKELY MATCH
+  Image_11.JPG    0.285 Unknown                    4.0%     5589
+  Image_5.JPG     0.272 Unknown                    4.1%     4972
+  Image_5.JPG     0.234 Pyla Ramya                 5.1%     6147
+  Image_6.JPG     0.233 Unknown                    4.2%     7567
+  Image_5.JPG     0.218 Yashasvee Vijay Taiwade    5.2%     5916
+
+  DIAGNOSIS: Face likely DETECTED but MISCLASSIFIED as 'Unknown' (sim=0.667)
+
+--- Vishwam Hemang Patel ---
+  Enrollment embeddings: 5
+
+  Top-10 nearest faces (by cosine sim to enrollment centroid):
+  Img                Sim Predicted                   Conf     Area
+  Image_8.JPG     0.568 Unknown                    3.5%     8400 <-- LIKELY MATCH
+  Image_7.JPG     0.546 Unknown                    3.3%     9685 <-- LIKELY MATCH
+  Image_9.JPG     0.546 Unknown                    3.3%     6921 <-- LIKELY MATCH
+  Image_10.JPG    0.517 Unknown                    3.0%     7031 <-- LIKELY MATCH
+  Image_8.JPG     0.197 Baral Prathmesh Santosh    6.5%    23470
+  Image_10.JPG    0.191 Atharva Uday Jaltare       6.9%    11240
+  Image_9.JPG     0.180 Baral Prathmesh Santosh    6.5%    21791
+  Image_10.JPG    0.177 Rishabh Bhardwaj           6.6%    14396
+  Image_9.JPG     0.174 Atharva Uday Jaltare       6.7%    12268
+  Image_8.JPG     0.163 Atharva Uday Jaltare       6.1%    11092
+
+  DIAGNOSIS: Face likely DETECTED but MISCLASSIFIED as 'Unknown' (sim=0.568)
+
+======================================================================
+SAVING ANNOTATED IMAGES
+======================================================================
+  Saved Image_1.JPG (38 faces)
+  Saved Image_10.JPG (30 faces)
+  Saved Image_11.JPG (55 faces)
+  Saved Image_12.JPG (56 faces)
+  Saved Image_2.JPG (28 faces)
+  Saved Image_3.JPG (36 faces)
+  Saved Image_4.JPG (60 faces)
+  Saved Image_5.JPG (40 faces)
+  Saved Image_6.JPG (51 faces)
+  Saved Image_7.JPG (39 faces)
+  Saved Image_8.JPG (25 faces)
+  Saved Image_9.JPG (28 faces)
+
+----------------------------------------------------------------------
+PER-IMAGE FACE COUNTS
+----------------------------------------------------------------------
+  Image_1.JPG     total= 38  recognized=  0  unknown= 38  unique_students=  0
+  Image_10.JPG    total= 30  recognized= 19  unknown= 11  unique_students= 19
+  Image_11.JPG    total= 55  recognized= 21  unknown= 34  unique_students= 21
+  Image_12.JPG    total= 56  recognized= 20  unknown= 36  unique_students= 20
+  Image_2.JPG     total= 28  recognized=  0  unknown= 28  unique_students=  0
+  Image_3.JPG     total= 36  recognized=  0  unknown= 36  unique_students=  0
+  Image_4.JPG     total= 60  recognized=  0  unknown= 60  unique_students=  0
+  Image_5.JPG     total= 40  recognized= 19  unknown= 21  unique_students= 19
+  Image_6.JPG     total= 51  recognized= 23  unknown= 28  unique_students= 23
+  Image_7.JPG     total= 39  recognized= 18  unknown= 21  unique_students= 18
+  Image_8.JPG     total= 25  recognized= 18  unknown=  7  unique_students= 18
+  Image_9.JPG     total= 28  recognized= 18  unknown= 10  unique_students= 18
+
+Results saved to /Users/manitjhajharia/Desktop/Sem 6/EE610/Project/results/bench_failure_analysis.json
+Annotated images saved to /Users/manitjhajharia/Desktop/Sem 6/EE610/Project/results/failure_analysis/

@@ -1,0 +1,96 @@
+======================================================================
+ENROLLMENT COUNT DEGRADATION BENCHMARK
+======================================================================
+  58 students, min embeddings per student: 5
+
+============================================================
+  k = 1 enrollment images per student
+============================================================
+Trained on 58 students, 58 total embeddings
+  Trial 1: Classroom Recall=0.0% Precision=0.0% F1=0.0%
+Trained on 58 students, 58 total embeddings
+  Trial 2: Classroom Recall=0.0% Precision=0.0% F1=0.0%
+Trained on 58 students, 58 total embeddings
+  Trial 3: Classroom Recall=0.0% Precision=0.0% F1=0.0%
+Trained on 58 students, 58 total embeddings
+  Trial 4: Classroom Recall=0.0% Precision=0.0% F1=0.0%
+Trained on 58 students, 58 total embeddings
+  Trial 5: Classroom Recall=0.0% Precision=0.0% F1=0.0%
+
+============================================================
+  k = 2 enrollment images per student
+============================================================
+  Trial 1: LOO accuracy = 100.0%
+Trained on 58 students, 116 total embeddings
+  Trial 1: Classroom Recall=68.1% Precision=100.0% F1=81.0%
+  Trial 2: LOO accuracy = 100.0%
+Trained on 58 students, 116 total embeddings
+  Trial 2: Classroom Recall=53.2% Precision=100.0% F1=69.4%
+  Trial 3: LOO accuracy = 100.0%
+Trained on 58 students, 116 total embeddings
+  Trial 3: Classroom Recall=66.0% Precision=100.0% F1=79.5%
+  Trial 4: LOO accuracy = 100.0%
+Trained on 58 students, 116 total embeddings
+  Trial 4: Classroom Recall=57.4% Precision=100.0% F1=73.0%
+  Trial 5: LOO accuracy = 100.0%
+Trained on 58 students, 116 total embeddings
+  Trial 5: Classroom Recall=57.4% Precision=96.4% F1=72.0%
+
+============================================================
+  k = 3 enrollment images per student
+============================================================
+  Trial 1: LOO accuracy = 100.0%
+Trained on 58 students, 174 total embeddings
+  Trial 1: Classroom Recall=55.3% Precision=100.0% F1=71.2%
+  Trial 2: LOO accuracy = 100.0%
+Trained on 58 students, 174 total embeddings
+  Trial 2: Classroom Recall=55.3% Precision=100.0% F1=71.2%
+  Trial 3: LOO accuracy = 100.0%
+Trained on 58 students, 174 total embeddings
+  Trial 3: Classroom Recall=61.7% Precision=100.0% F1=76.3%
+  Trial 4: LOO accuracy = 100.0%
+Trained on 58 students, 174 total embeddings
+  Trial 4: Classroom Recall=55.3% Precision=100.0% F1=71.2%
+  Trial 5: LOO accuracy = 100.0%
+Trained on 58 students, 174 total embeddings
+  Trial 5: Classroom Recall=46.8% Precision=100.0% F1=63.8%
+
+============================================================
+  k = 4 enrollment images per student
+============================================================
+  Trial 1: LOO accuracy = 100.0%
+Trained on 58 students, 232 total embeddings
+  Trial 1: Classroom Recall=68.1% Precision=100.0% F1=81.0%
+  Trial 2: LOO accuracy = 100.0%
+Trained on 58 students, 232 total embeddings
+  Trial 2: Classroom Recall=74.5% Precision=100.0% F1=85.4%
+  Trial 3: LOO accuracy = 100.0%
+Trained on 58 students, 232 total embeddings
+  Trial 3: Classroom Recall=72.3% Precision=100.0% F1=84.0%
+  Trial 4: LOO accuracy = 100.0%
+Trained on 58 students, 232 total embeddings
+  Trial 4: Classroom Recall=74.5% Precision=100.0% F1=85.4%
+  Trial 5: LOO accuracy = 100.0%
+Trained on 58 students, 232 total embeddings
+  Trial 5: Classroom Recall=70.2% Precision=100.0% F1=82.5%
+
+============================================================
+  k = 5 enrollment images per student
+============================================================
+  Trial 1: LOO accuracy = 100.0%
+Trained on 58 students, 290 total embeddings
+  Trial 1: Classroom Recall=83.0% Precision=100.0% F1=90.7%
+
+==========================================================================================
+ENROLLMENT DEGRADATION RESULTS
+==========================================================================================
+  k       LOO Acc          Recall       Precision              F1
+-----------------------------------------------------------------
+  1     N/A (k=1)       0.0%±0.0%       0.0%±0.0%       0.0%±0.0%
+  2   100.0%±0.0%      60.4%±5.6%      99.3%±1.4%      75.0%±4.5%
+  3   100.0%±0.0%      54.9%±4.7%     100.0%±0.0%      70.8%±4.0%
+  4   100.0%±0.0%      71.9%±2.5%     100.0%±0.0%      83.6%±1.7%
+  5   100.0%±0.0%      83.0%±0.0%     100.0%±0.0%      90.7%±0.0%
+==========================================================================================
+
+Results saved to /Users/manitjhajharia/Desktop/Sem 6/EE610/Project/results/bench_enrollment.json

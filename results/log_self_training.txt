@@ -1,0 +1,92 @@
+======================================================================
+SELF-TRAINING / PSEUDO-LABELING BENCHMARK
+======================================================================
+  58 students, 290 enrollment embeddings
+Trained on 58 students, 290 total embeddings
+
+Baseline classroom eval...
+  Recall=83.0% Prec=100.0% F1=90.7%
+
+LOO on enrollment embeddings...
+  LOO accuracy: 100.0%
+
+============================================================
+  Pseudo-label threshold: 0.08
+============================================================
+  Pseudo-labels: 30 (9 unique students)
+  Running leave-1-image-out CV...
+Trained on 58 students, 320 total embeddings
+Trained on 58 students, 315 total embeddings
+Trained on 58 students, 315 total embeddings
+Trained on 58 students, 316 total embeddings
+Trained on 58 students, 320 total embeddings
+Trained on 58 students, 320 total embeddings
+Trained on 58 students, 320 total embeddings
+Trained on 58 students, 318 total embeddings
+Trained on 58 students, 317 total embeddings
+Trained on 58 students, 315 total embeddings
+Trained on 58 students, 318 total embeddings
+Trained on 58 students, 316 total embeddings
+  L1IO: Recall=80.9% Prec=100.0% F1=89.4%
+  Optimistic eval (circular)...
+Trained on 58 students, 320 total embeddings
+  Optimistic: Recall=80.9% F1=89.4%
+
+============================================================
+  Pseudo-label threshold: 0.1
+============================================================
+  Pseudo-labels: 5 (1 unique students)
+  Running leave-1-image-out CV...
+Trained on 58 students, 295 total embeddings
+Trained on 58 students, 295 total embeddings
+Trained on 58 students, 294 total embeddings
+Trained on 58 students, 294 total embeddings
+Trained on 58 students, 295 total embeddings
+Trained on 58 students, 295 total embeddings
+Trained on 58 students, 295 total embeddings
+Trained on 58 students, 294 total embeddings
+Trained on 58 students, 294 total embeddings
+Trained on 58 students, 294 total embeddings
+Trained on 58 students, 295 total embeddings
+Trained on 58 students, 295 total embeddings
+  L1IO: Recall=80.9% Prec=100.0% F1=89.4%
+  Optimistic eval (circular)...
+Trained on 58 students, 295 total embeddings
+  Optimistic: Recall=78.7% F1=88.1%
+
+============================================================
+  Pseudo-label threshold: 0.15
+============================================================
+  Pseudo-labels: 0 (0 unique students)
+  Running leave-1-image-out CV...
+Trained on 58 students, 290 total embeddings
+Trained on 58 students, 290 total embeddings
+Trained on 58 students, 290 total embeddings
+Trained on 58 students, 290 total embeddings
+Trained on 58 students, 290 total embeddings
+Trained on 58 students, 290 total embeddings
+Trained on 58 students, 290 total embeddings
+Trained on 58 students, 290 total embeddings
+Trained on 58 students, 290 total embeddings
+Trained on 58 students, 290 total embeddings
+Trained on 58 students, 290 total embeddings
+Trained on 58 students, 290 total embeddings
+  L1IO: Recall=80.9% Prec=100.0% F1=89.4%
+  Optimistic eval (circular)...
+Trained on 58 students, 290 total embeddings
+  Optimistic: Recall=80.9% F1=89.4%
+
+==========================================================================================
+SELF-TRAINING RESULTS
+==========================================================================================
+
+  Baseline: LOO=100.0%, Recall=83.0% F1=90.7%
+
+  Thresh  #Pseudo  L1IO Recall    L1IO F1   Opt Recall     Opt F1
+  -----------------------------------------------------------------
+    0.08       30       80.9%     89.4%       80.9%     89.4%
+    0.10        5       80.9%     89.4%       78.7%     88.1%
+    0.15        0       80.9%     89.4%       80.9%     89.4%
+==========================================================================================
+
+Results saved to /Users/manitjhajharia/Desktop/Sem 6/EE610/Project/results/bench_self_training.json

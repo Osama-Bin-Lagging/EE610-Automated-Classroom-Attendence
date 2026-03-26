@@ -1,0 +1,93 @@
+======================================================================
+CACHING DETECTIONS
+======================================================================
+
+[1/2] Extracting enrollment embeddings...
+Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+find model: /Users/manitjhajharia/.insightface/models/buffalo_l/1k3d68.onnx landmark_3d_68 ['None', 3, 192, 192] 0.0 1.0
+Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+find model: /Users/manitjhajharia/.insightface/models/buffalo_l/2d106det.onnx landmark_2d_106 ['None', 3, 192, 192] 0.0 1.0
+Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+find model: /Users/manitjhajharia/.insightface/models/buffalo_l/det_10g.onnx detection [1, 3, '?', '?'] 127.5 128.0
+Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+find model: /Users/manitjhajharia/.insightface/models/buffalo_l/genderage.onnx genderage ['None', 3, 96, 96] 0.0 1.0
+Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+find model: /Users/manitjhajharia/.insightface/models/buffalo_l/w600k_r50.onnx recognition ['None', 3, 112, 112] 127.5 127.5
+set det-size: (640, 640)
+[OK] Abhishek Abhishek: 5/5 faces
+[OK] Aboli Ganesh Malshikare: 5/5 faces
+[OK] Ajinkya Prashant Pawar: 5/5 faces
+[OK] Akarsh Saxena: 5/5 faces
+[OK] Aman Russell: 5/5 faces
+[OK] Amresh Jha: 5/5 faces
+[OK] Anish Mayanache: 5/5 faces
+[OK] Ankit Raj: 5/5 faces
+[OK] Arjun Singh: 5/5 faces
+[OK] Atharva Uday Jaltare: 5/5 faces
+[OK] Ayush Ashish Kumar: 5/5 faces
+[OK] Ayush Singh: 5/5 faces
+[OK] Baral Prathmesh Santosh: 5/5 faces
+[OK] Chhavi Yadav: 5/5 faces
+[OK] Deepak Kumar: 5/5 faces
+[OK] Devesh Soni: 5/5 faces
+[OK] Devtanu Barman: 5/5 faces
+[OK] Divig Bansal: 5/5 faces
+[OK] Ganesh Yadawate: 5/5 faces
+[OK] Gogineni Venkat Sumanth: 5/5 faces
+[OK] Gurbani Jeet Sunil: 5/5 faces
+[OK] Jadhav Jay Karbhari: 5/5 faces
+[OK] Jadhav Shubham Sudhakar: 5/5 faces
+[OK] Jyoti Jyoti: 5/5 faces
+[OK] K. P. Lakshmeesh: 5/5 faces
+[OK] Kamalesh Barman: 5/5 faces
+[OK] Krunal Vaghela: 5/5 faces
+[OK] Lohitaksh Mahajan: 5/5 faces
+[OK] Maitreya Shelare: 5/5 faces
+[OK] Manas Patil: 5/5 faces
+[OK] Manaswi Goyal: 5/5 faces
+[OK] Manit Jhajharia: 5/5 faces
+[OK] Mihir Gajanan Wani: 5/5 faces
+[OK] Moon Aman Milind: 5/5 faces
+[OK] Nistala Sreechandana: 5/5 faces
+[OK] Nithin Jonnalagadda: 5/5 faces
+[OK] Pratham Manish Shah: 5/5 faces
+[OK] Pulkit Pulkit: 5/5 faces
+[OK] Pyla Ramya: 5/5 faces
+[OK] Rajeswar Banerjee: 5/5 faces
+[OK] Rishabh Bhardwaj: 5/5 faces
+[OK] Rownak Tiwari: 5/5 faces
+[OK] Sameer Anand Jha: 5/5 faces
+[OK] Samyak Parakh: 5/5 faces
+[OK] Santosh Singh: 5/5 faces
+[OK] Saurabh Gupta: 5/5 faces
+[OK] Shaik Rehna Afroz: 5/5 faces
+[OK] Shaurya Goyal: 5/5 faces
+[OK] Shreeram Anil Jadhav: 5/5 faces
+[OK] Shreya Nigam: 5/5 faces
+[OK] Shrutija Swain: 5/5 faces
+[OK] Soumya Gour: 5/5 faces
+[OK] Srushti Rajwade: 5/5 faces
+[OK] Suraj Adhikari: 5/5 faces
+[OK] Tarshit Sehgal: 5/5 faces
+[OK] Vedagya Bhalotia: 5/5 faces
+[OK] Vishwam Hemang Patel: 5/5 faces
+[OK] Yashasvee Vijay Taiwade: 5/5 faces
+  58 students, 290 embeddings
+
+[2/2] Running detect_faces_enhanced on val images...
+  Image_1.JPG: 38 faces
+  Image_10.JPG: 30 faces
+  Image_11.JPG: 55 faces
+  Image_12.JPG: 56 faces
+  Image_2.JPG: 28 faces
+  Image_3.JPG: 36 faces
+  Image_4.JPG: 60 faces
+  Image_5.JPG: 40 faces
+  Image_6.JPG: 51 faces
+  Image_7.JPG: 39 faces
+  Image_8.JPG: 25 faces
+  Image_9.JPG: 28 faces
+
+  Total: 486 faces across 12 images
+
+Cache saved to /Users/manitjhajharia/Desktop/Sem 6/EE610/Project/results/detection_cache.pkl (1.6 MB)

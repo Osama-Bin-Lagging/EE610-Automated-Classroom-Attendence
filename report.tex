@@ -1,0 +1,76 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{parskip}
+
+\titleformat{\section}{\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.5em}{}
+
+\title{\textbf{EE610 -- Automated Classroom Attendance System} \\ \large Progress Report}
+\author{
+Manit Jhajharia (23B1265) \\
+Aboli Ganesh Malshikare (23B1211) \\
+Shreya Nigam (23B1258) \\
+Chhavi Yadav (23B3923) \\
+Yashasvee Vijay Taiwade (23B2232)
+}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Project Overview}
+
+We are building an automated face-recognition-based attendance system for classroom settings. The system processes classroom photographs to identify students and generate attendance records. Our dataset consists of 58 students with 5 enrollment images each (290 total), and we validate on 12 real classroom photographs containing approximately 49 students per image.
+
+\section{Work Completed}
+
+\subsection{Dataset Preprocessing}
+Raw student images are processed through an automated pipeline that detects faces using RetinaFace, applies alignment, and crops them to standardized 112$\times$112 RGB face images for training. A data augmentation pipeline applies geometric and photometric transformations to improve training robustness.
+
+\subsection{Recognition Model Benchmarking}
+We benchmarked 10 face recognition approaches across three tiers using leave-one-out cross-validation with SVM (RBF, C=10) and KNN (k=3, cosine) classifiers:
+
+\begin{itemize}[nosep]
+    \item \textbf{Deep face embeddings:} InsightFace (ArcFace), facenet-pytorch (FaceNet), DeepFace ArcFace, DeepFace GhostFaceNet
+    \item \textbf{Generic deep features:} EfficientNet-B0, ResNet-50 (ImageNet-pretrained, not face-specific)
+    \item \textbf{Classical CV:} HOG descriptors, Eigenfaces (PCA), LBPH, Fisherfaces (PCA+LDA)
+\end{itemize}
+
+InsightFace achieved 100\% LOO accuracy with both SVM and KNN. Generic deep features reached up to 89.3\%, while classical methods plateaued around 50--55\%. A key finding was that face alignment is critical --- the same ArcFace architecture drops from 100\% to 77.6\% without proper alignment.
+
+\subsection{Face Detection Benchmarking}
+The bottleneck for classroom attendance is face localization, not recognition. On 4K classroom photos, the default RetinaFace detector misses roughly 40\% of faces. We benchmarked 10 detection strategies on 12 validation images against ground truth attendance:
+
+\begin{itemize}[nosep]
+    \item \textbf{RetinaFace variants:} default, low-threshold, tiled (2$\times$2 overlapping patches)
+    \item \textbf{Haar cascade variants:} default, aggressive, with profile cascade
+    \item \textbf{MTCNN:} facenet-pytorch implementation
+    \item \textbf{Cascade/union approaches:} Haar$\rightarrow$RetinaFace verification, RF+Haar union, RF Tiled+Haar union
+\end{itemize}
+
+Five strategies achieved the top recall of 95.7\% (45/47 present students identified). Among these, Haar Aggressive was the fastest at 3.9s/image, compared to 45s for RF Tiled and 70s for MTCNN.
+
+\subsection{Embedding Visualization}
+512-dimensional ArcFace embeddings were projected to 3D using t-SNE, PCA, and UMAP, with quantitative evaluation via silhouette score, trustworthiness, and 3D k-NN accuracy. t-SNE produced the best cluster separation with 100\% k-NN accuracy in the reduced space.
+
+\subsection{Web Interface}
+A Streamlit-based web application provides an end-to-end interface for uploading classroom images, training the model, running recognition, and viewing attendance results.
+
+\section{Individual Contributions}
+
+\textbf{Manit Jhajharia} --- Designed the core face recognition pipeline --- SVM classifier on ArcFace embeddings with tuned confidence thresholds. Benchmarked InsightFace and facenet-pytorch. Developed union and cascade detection strategies combining multiple detectors with deduplication. Set up the validation framework with ground truth attendance matching.
+
+\textbf{Aboli Ganesh Malshikare} --- Built the dataset preprocessing pipeline --- automated face detection, alignment, cropping, and normalization of raw student photos into standardized face crops for training. Evaluated the DeepFace framework's ArcFace and GhostFaceNet models. Benchmarked Haar cascade detectors at various sensitivity levels for classroom face localization.
+
+\textbf{Shreya Nigam} --- Developed the Streamlit web interface for the full attendance workflow --- image upload, model training, classroom recognition, and results display. Investigated transfer learning from ImageNet-pretrained models (EfficientNet-B0 and ResNet-50) as feature extractors. Benchmarked the MTCNN detector for classroom face detection.
+
+\textbf{Chhavi Yadav} --- Created the interactive 3D embedding visualization system using t-SNE, PCA, and UMAP dimensionality reduction, with quantitative quality metrics to compare reduction methods. Evaluated HOG descriptors and Eigenfaces for face recognition. Established the RetinaFace detection baselines at default and low-threshold settings.
+
+\textbf{Yashasvee Vijay Taiwade} --- Implemented the data augmentation pipeline with geometric and photometric transformations for improved training robustness. Built the LBPH baseline and evaluated Fisherfaces (PCA+LDA), analyzing failure modes with limited training samples. Benchmarked tiled RetinaFace detection for high-resolution classroom images.
+
+\vfill
+\noindent\textit{Repository:} \texttt{github.com/Osama-Bin-Lagging/EE610-Automated-Classroom-Attendence}
+
+\end{document}

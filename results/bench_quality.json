@@ -1,0 +1,4466 @@
+{
+  "strategies": {
+    "baseline": {
+      "tp": 38,
+      "fp": 0,
+      "fn": 9,
+      "precision": 1.0,
+      "recall": 0.8085106382978723,
+      "f1": 0.8941176470588235
+    },
+    "quality_thresh_0.1": {
+      "tp": 38,
+      "fp": 0,
+      "fn": 9,
+      "precision": 1.0,
+      "recall": 0.8085106382978723,
+      "f1": 0.8941176470588235
+    },
+    "quality_thresh_0.2": {
+      "tp": 38,
+      "fp": 0,
+      "fn": 9,
+      "precision": 1.0,
+      "recall": 0.8085106382978723,
+      "f1": 0.8941176470588235
+    },
+    "quality_thresh_0.3": {
+      "tp": 38,
+      "fp": 0,
+      "fn": 9,
+      "precision": 1.0,
+      "recall": 0.8085106382978723,
+      "f1": 0.8941176470588235
+    },
+    "quality_thresh_0.4": {
+      "tp": 38,
+      "fp": 0,
+      "fn": 9,
+      "precision": 1.0,
+      "recall": 0.8085106382978723,
+      "f1": 0.8941176470588235
+    },
+    "quality_thresh_0.5": {
+      "tp": 38,
+      "fp": 0,
+      "fn": 9,
+      "precision": 1.0,
+      "recall": 0.8085106382978723,
+      "f1": 0.8941176470588235
+    },
+    "quality_weighted_w0.5": {
+      "tp": 38,
+      "fp": 0,
+      "fn": 9,
+      "precision": 1.0,
+      "recall": 0.8085106382978723,
+      "f1": 0.8941176470588235
+    },
+    "quality_weighted_w1.0": {
+      "tp": 38,
+      "fp": 0,
+      "fn": 9,
+      "precision": 1.0,
+      "recall": 0.8085106382978723,
+      "f1": 0.8941176470588235
+    },
+    "quality_weighted_w2.0": {
+      "tp": 34,
+      "fp": 0,
+      "fn": 13,
+      "precision": 1.0,
+      "recall": 0.723404255319149,
+      "f1": 0.8395061728395062
+    },
+    "best_quality_per_id": {
+      "tp": 38,
+      "fp": 0,
+      "fn": 9,
+      "precision": 1.0,
+      "recall": 0.8085106382978723,
+      "f1": 0.8941176470588235
+    }
+  },
+  "quality_stats": {
+    "min": 0.2634290719010776,
+    "max": 0.7672302863503379,
+    "mean": 0.5717803774311024,
+    "median": 0.6037190403393878
+  },
+  "per_face_quality": [
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.0338211490750652,
+      "quality": 0.6957728254666,
+      "area": 15429.620901793242,
+      "sharpness": 154.89176041490975,
+      "det_score": 0.8929953575134277
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.0325550181918126,
+      "quality": 0.6170815836345838,
+      "area": 14435.063827872276,
+      "sharpness": 43.42834795219685,
+      "det_score": 0.8736587166786194
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.024183385865614308,
+      "quality": 0.6790647023522757,
+      "area": 11012.67202809453,
+      "sharpness": 149.41195817169842,
+      "det_score": 0.8734064102172852
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.02540199815308344,
+      "quality": 0.6495145243556956,
+      "area": 18828.068968262523,
+      "sharpness": 63.631069566379836,
+      "det_score": 0.8634956479072571
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.02997463510118136,
+      "quality": 0.6647020921257137,
+      "area": 9246.95905059576,
+      "sharpness": 191.21730730490438,
+      "det_score": 0.8460319638252258
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.02665170280318102,
+      "quality": 0.6328819678816433,
+      "area": 4553.159795880318,
+      "sharpness": 187.68265088385604,
+      "det_score": 0.8294957876205444
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.027000989752034445,
+      "quality": 0.6348124616042359,
+      "area": 6276.671805024147,
+      "sharpness": 144.05515042347412,
+      "det_score": 0.8266043663024902
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.025840114187977537,
+      "quality": 0.6101124016179025,
+      "area": 4347.637069299817,
+      "sharpness": 145.74476288875664,
+      "det_score": 0.8255270719528198
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.034982160161250705,
+      "quality": 0.639516264760279,
+      "area": 6091.425497576594,
+      "sharpness": 187.5133878668686,
+      "det_score": 0.82010817527771
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.024926797664834383,
+      "quality": 0.6655483705318981,
+      "area": 8971.18605208397,
+      "sharpness": 204.0457614691358,
+      "det_score": 0.804179310798645
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.025927149858788003,
+      "quality": 0.6441289663421002,
+      "area": 5172.08814740181,
+      "sharpness": 216.8899198548753,
+      "det_score": 0.8028557896614075
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.024503843582602505,
+      "quality": 0.6053551356605582,
+      "area": 5553.184068094939,
+      "sharpness": 118.48217223822712,
+      "det_score": 0.8017905950546265
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.023905807561903882,
+      "quality": 0.6220628772333838,
+      "area": 4459.860152244568,
+      "sharpness": 212.74031666353912,
+      "det_score": 0.7930692434310913
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.02847588041009649,
+      "quality": 0.622703177566379,
+      "area": 4935.010883241892,
+      "sharpness": 189.77760237342548,
+      "det_score": 0.7815868258476257
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.024371254660456327,
+      "quality": 0.6208572939264027,
+      "area": 3220.1380106806755,
+      "sharpness": 310.1406263336381,
+      "det_score": 0.7540257573127747
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.026514670162625792,
+      "quality": 0.6171597009313223,
+      "area": 6024.422645688057,
+      "sharpness": 209.03355008749435,
+      "det_score": 0.7513749599456787
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.026597795640917084,
+      "quality": 0.6438116010125144,
+      "area": 15407.0074608922,
+      "sharpness": 149.61679957254432,
+      "det_score": 0.7373066544532776
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.023975652504578747,
+      "quality": 0.587431212707946,
+      "area": 2736.07964015007,
+      "sharpness": 252.12141543017512,
+      "det_score": 0.729665219783783
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.024171540726543542,
+      "quality": 0.5833067306856121,
+      "area": 6239.596805721521,
+      "sharpness": 146.56458405473649,
+      "det_score": 0.6971219778060913
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.028214753873242557,
+      "quality": 0.5847654542151631,
+      "area": 2879.9368858337402,
+      "sharpness": 277.2936609848492,
+      "det_score": 0.6939581036567688
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.025157214468276762,
+      "quality": 0.587806380180217,
+      "area": 3289.3391887396574,
+      "sharpness": 314.9963812291975,
+      "det_score": 0.6756471991539001
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.025019204862804463,
+      "quality": 0.5724724761924902,
+      "area": 2898.398230433464,
+      "sharpness": 287.78756643036263,
+      "det_score": 0.6699255704879761
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.02338807815760188,
+      "quality": 0.5562713258668008,
+      "area": 2446.549780279398,
+      "sharpness": 301.7558238073465,
+      "det_score": 0.6343295574188232
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.024981267000664147,
+      "quality": 0.5687680561997464,
+      "area": 5031.371652603149,
+      "sharpness": 169.13874886228385,
+      "det_score": 0.6323290467262268
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.0277881988080256,
+      "quality": 0.5548098113037387,
+      "area": 3240.3264822363853,
+      "sharpness": 254.16328518970622,
+      "det_score": 0.6227079629898071
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.026846958578804207,
+      "quality": 0.5379133110046261,
+      "area": 3432.037042081356,
+      "sharpness": 217.2707161053722,
+      "det_score": 0.5904968976974487
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.0247166889211899,
+      "quality": 0.5220618562856691,
+      "area": 2453.6178003549576,
+      "sharpness": 236.14224115906538,
+      "det_score": 0.5802481174468994
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.026046876256757934,
+      "quality": 0.5179797986788677,
+      "area": 2139.53864094615,
+      "sharpness": 293.3280826491817,
+      "det_score": 0.5574257373809814
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.02573359804938649,
+      "quality": 0.48021569947344633,
+      "area": 5204.240577327553,
+      "sharpness": 158.00043985908042,
+      "det_score": 0.4568198323249817
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.026250280025563445,
+      "quality": 0.39328039141035603,
+      "area": 3164.4131775740534,
+      "sharpness": 88.0119364381666,
+      "det_score": 0.33617231249809265
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.024769368304028132,
+      "quality": 0.32713394072186597,
+      "area": 3417.630155682564,
+      "sharpness": 85.72362083582607,
+      "det_score": 0.1760680377483368
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.02630615200702902,
+      "quality": 0.3681808768689509,
+      "area": 5182.781968832016,
+      "sharpness": 123.34460117103404,
+      "det_score": 0.16608035564422607
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.02691679346316474,
+      "quality": 0.4163295566881041,
+      "area": 4617.647245466709,
+      "sharpness": 331.8957578496234,
+      "det_score": 0.1624290645122528
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.026999881436816756,
+      "quality": 0.3770002905684056,
+      "area": 4829.222682990134,
+      "sharpness": 140.74353752932407,
+      "det_score": 0.15626299381256104
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.024910505527718927,
+      "quality": 0.36643230789170705,
+      "area": 3919.4123581945896,
+      "sharpness": 151.38972281393822,
+      "det_score": 0.14675644040107727
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.025768360503395014,
+      "quality": 0.4044371643524015,
+      "area": 4365.461097754538,
+      "sharpness": 245.83820331355676,
+      "det_score": 0.13835197687149048
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.026007506881457802,
+      "quality": 0.3690569313591232,
+      "area": 4111.579108303413,
+      "sharpness": 203.5070097274242,
+      "det_score": 0.11612129211425781
+    },
+    {
+      "img_file": "Image_1.JPG",
+      "label": "Unknown",
+      "confidence": 0.028551044317633455,
+      "quality": 0.33176476573042635,
+      "area": 4465.840047642589,
+      "sharpness": 136.24212640903886,
+      "det_score": 0.10143280029296875
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Shreya Nigam",
+      "confidence": 0.07910808196251691,
+      "quality": 0.7228508162834432,
+      "area": 74278.59727799892,
+      "sharpness": 70.11407865159181,
+      "det_score": 0.8959890007972717
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Tarshit Sehgal",
+      "confidence": 0.07815707973525378,
+      "quality": 0.7116452760252033,
+      "area": 71246.21991729736,
+      "sharpness": 63.41806962499872,
+      "det_score": 0.878134548664093
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Baral Prathmesh Santosh",
+      "confidence": 0.062171368586217926,
+      "quality": 0.7046245014071233,
+      "area": 21196.818719170988,
+      "sharpness": 123.33106135654572,
+      "det_score": 0.8760926723480225
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Jyoti Jyoti",
+      "confidence": 0.059120350520890125,
+      "quality": 0.6996292665895076,
+      "area": 21302.660670280457,
+      "sharpness": 129.65370174004138,
+      "det_score": 0.8742892742156982
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Pratham Manish Shah",
+      "confidence": 0.08310206388163055,
+      "quality": 0.7400251734757305,
+      "area": 28708.73263168335,
+      "sharpness": 253.34239001188982,
+      "det_score": 0.8651275634765625
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Ayush Ashish Kumar",
+      "confidence": 0.06929867749624721,
+      "quality": 0.7183587423386399,
+      "area": 36284.43085299432,
+      "sharpness": 128.45697526026814,
+      "det_score": 0.8634313344955444
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Anish Mayanache",
+      "confidence": 0.059662330498002875,
+      "quality": 0.7240715477601273,
+      "area": 14322.955918729305,
+      "sharpness": 307.8905235566443,
+      "det_score": 0.8502999544143677
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Shaurya Goyal",
+      "confidence": 0.0678596997262769,
+      "quality": 0.721943622956229,
+      "area": 10823.379082024097,
+      "sharpness": 370.4253454305705,
+      "det_score": 0.8378907442092896
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Santosh Singh",
+      "confidence": 0.0781474098102553,
+      "quality": 0.6819690186857236,
+      "area": 13604.59324491024,
+      "sharpness": 162.97857032984666,
+      "det_score": 0.8338099718093872
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Rishabh Bhardwaj",
+      "confidence": 0.06630087692438366,
+      "quality": 0.7406363525079168,
+      "area": 14395.659059286118,
+      "sharpness": 408.0802839434877,
+      "det_score": 0.8327504396438599
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Atharva Uday Jaltare",
+      "confidence": 0.0693353181175204,
+      "quality": 0.7408874726782089,
+      "area": 11239.880705624819,
+      "sharpness": 548.7187926862166,
+      "det_score": 0.8325942158699036
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Soumya Gour",
+      "confidence": 0.06585417357846658,
+      "quality": 0.6922417795276056,
+      "area": 16756.769578427076,
+      "sharpness": 166.22060439652483,
+      "det_score": 0.817916989326477
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Shreeram Anil Jadhav",
+      "confidence": 0.05835268158630359,
+      "quality": 0.7230610614826228,
+      "area": 10612.478489160538,
+      "sharpness": 433.4968168390097,
+      "det_score": 0.8174850940704346
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Gurbani Jeet Sunil",
+      "confidence": 0.08718187056338607,
+      "quality": 0.7190292097208776,
+      "area": 11066.039205312729,
+      "sharpness": 386.4479443785281,
+      "det_score": 0.8166230916976929
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Jadhav Jay Karbhari",
+      "confidence": 0.06750621945111021,
+      "quality": 0.6765390815204951,
+      "area": 9189.750614762306,
+      "sharpness": 298.4253455232664,
+      "det_score": 0.7772223353385925
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Abhishek Abhishek",
+      "confidence": 0.07779717117686392,
+      "quality": 0.6869232629880093,
+      "area": 8136.513361573219,
+      "sharpness": 374.00499462570764,
+      "det_score": 0.7769478559494019
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Maitreya Shelare",
+      "confidence": 0.05302243591280451,
+      "quality": 0.7033369276021592,
+      "area": 6307.497459679842,
+      "sharpness": 804.4419812670582,
+      "det_score": 0.7383511066436768
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Saurabh Gupta",
+      "confidence": 0.08079765238146178,
+      "quality": 0.6610045720029593,
+      "area": 10719.867906585336,
+      "sharpness": 246.631901616867,
+      "det_score": 0.7336490750312805
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Unknown",
+      "confidence": 0.030072912396453863,
+      "quality": 0.684225102820329,
+      "area": 7031.115816950798,
+      "sharpness": 566.2689677954413,
+      "det_score": 0.7286830544471741
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Unknown",
+      "confidence": 0.02384120769189942,
+      "quality": 0.6814699756753265,
+      "area": 10625.203310877085,
+      "sharpness": 467.8218602933418,
+      "det_score": 0.7157938480377197
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Unknown",
+      "confidence": 0.03979353410944867,
+      "quality": 0.6826207083788869,
+      "area": 7408.910534620285,
+      "sharpness": 597.4382227526795,
+      "det_score": 0.687035083770752
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Mihir Gajanan Wani",
+      "confidence": 0.0518110874751448,
+      "quality": 0.607196243421271,
+      "area": 7742.918841540813,
+      "sharpness": 535.670034122288,
+      "det_score": 0.5316362380981445
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Unknown",
+      "confidence": 0.02685870552141293,
+      "quality": 0.47018681072787455,
+      "area": 10744.905853271484,
+      "sharpness": 401.8186024175802,
+      "det_score": 0.18046188354492188
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Unknown",
+      "confidence": 0.02598851861444595,
+      "quality": 0.5314150095329799,
+      "area": 9268.59031099081,
+      "sharpness": 1227.4919828034517,
+      "det_score": 0.14409181475639343
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Unknown",
+      "confidence": 0.024139950279504364,
+      "quality": 0.40479096242871004,
+      "area": 5782.974089980125,
+      "sharpness": 280.59391003460206,
+      "det_score": 0.12658831477165222
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Unknown",
+      "confidence": 0.02704318225361684,
+      "quality": 0.42605655734332315,
+      "area": 7259.677211344242,
+      "sharpness": 315.4998487614225,
+      "det_score": 0.11786463856697083
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Unknown",
+      "confidence": 0.027944938004501114,
+      "quality": 0.4807104751142662,
+      "area": 10372.021813750267,
+      "sharpness": 575.9994507954176,
+      "det_score": 0.11729148030281067
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Unknown",
+      "confidence": 0.02527367075946947,
+      "quality": 0.49083366792126737,
+      "area": 9315.238504827023,
+      "sharpness": 773.2280621054323,
+      "det_score": 0.10501867532730103
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Unknown",
+      "confidence": 0.024771535120176564,
+      "quality": 0.47808393556687784,
+      "area": 15175.904881000519,
+      "sharpness": 499.6407875122389,
+      "det_score": 0.10057783126831055
+    },
+    {
+      "img_file": "Image_10.JPG",
+      "label": "Unknown",
+      "confidence": 0.024552859525051002,
+      "quality": 0.4392570184642355,
+      "area": 8181.455399930477,
+      "sharpness": 369.61332606449446,
+      "det_score": 0.10047218203544617
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Shrutija Swain",
+      "confidence": 0.08204768866352155,
+      "quality": 0.6912026720935707,
+      "area": 49009.06564760208,
+      "sharpness": 45.84626787551117,
+      "det_score": 0.9158374071121216
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Tarshit Sehgal",
+      "confidence": 0.0751167162333305,
+      "quality": 0.7078372916133662,
+      "area": 70130.44695237279,
+      "sharpness": 57.77114025257464,
+      "det_score": 0.8911892175674438
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Rownak Tiwari",
+      "confidence": 0.055434252179855294,
+      "quality": 0.7005292091486126,
+      "area": 36625.03789126873,
+      "sharpness": 79.61900852314169,
+      "det_score": 0.8755842447280884
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Santosh Singh",
+      "confidence": 0.08410043782988781,
+      "quality": 0.6930364404765947,
+      "area": 17335.80125374347,
+      "sharpness": 123.2331621359826,
+      "det_score": 0.8694985508918762
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Manit Jhajharia",
+      "confidence": 0.07169301930979151,
+      "quality": 0.7011202393844698,
+      "area": 17603.22163796425,
+      "sharpness": 166.5818831078915,
+      "det_score": 0.863524317741394
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Ganesh Yadawate",
+      "confidence": 0.07041017200711357,
+      "quality": 0.7137663979773685,
+      "area": 15408.820892751217,
+      "sharpness": 228.47373491007843,
+      "det_score": 0.856371283531189
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Suraj Adhikari",
+      "confidence": 0.08464558457063162,
+      "quality": 0.7165208659169761,
+      "area": 12148.8982783854,
+      "sharpness": 320.9698493145957,
+      "det_score": 0.8553960919380188
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Anish Mayanache",
+      "confidence": 0.06290566255976376,
+      "quality": 0.6984868109504819,
+      "area": 23333.632304430008,
+      "sharpness": 123.75291420960266,
+      "det_score": 0.8527668714523315
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Jyoti Jyoti",
+      "confidence": 0.05245264271717863,
+      "quality": 0.6975820105392245,
+      "area": 32209.378312267363,
+      "sharpness": 97.8273659507604,
+      "det_score": 0.8504492044448853
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Jadhav Jay Karbhari",
+      "confidence": 0.05170190413995377,
+      "quality": 0.7033988483685336,
+      "area": 13597.636939510703,
+      "sharpness": 209.0494816217032,
+      "det_score": 0.846815824508667
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Sameer Anand Jha",
+      "confidence": 0.07890187907842058,
+      "quality": 0.6935433005405333,
+      "area": 16224.533512294292,
+      "sharpness": 181.9002762619058,
+      "det_score": 0.8453426957130432
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Rajeswar Banerjee",
+      "confidence": 0.05222025731856288,
+      "quality": 0.7615261566536128,
+      "area": 9086.077860355377,
+      "sharpness": 850.4567599754208,
+      "det_score": 0.8394206166267395
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.04791448881695583,
+      "quality": 0.739560693030926,
+      "area": 12328.891067504883,
+      "sharpness": 532.6825335077709,
+      "det_score": 0.8150560259819031
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Gurbani Jeet Sunil",
+      "confidence": 0.07441434636215016,
+      "quality": 0.7263890649744058,
+      "area": 9463.006188631058,
+      "sharpness": 594.8835899270138,
+      "det_score": 0.8008875846862793
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.035486455905167205,
+      "quality": 0.6988671036339162,
+      "area": 7940.1799121797085,
+      "sharpness": 513.540943100577,
+      "det_score": 0.7624757885932922
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.040119491320745826,
+      "quality": 0.7194830319158246,
+      "area": 10011.421301752329,
+      "sharpness": 580.0837839183728,
+      "det_score": 0.7576924562454224
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.039999523430700866,
+      "quality": 0.6587986269490711,
+      "area": 5589.326539516449,
+      "sharpness": 487.24481912059923,
+      "det_score": 0.7255010604858398
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.035187846999729405,
+      "quality": 0.6008288758522294,
+      "area": 7125.963016033173,
+      "sharpness": 167.28853735180056,
+      "det_score": 0.724333643913269
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.026699480247128878,
+      "quality": 0.6571526081167877,
+      "area": 7680.385720252991,
+      "sharpness": 368.2527119666661,
+      "det_score": 0.7129772305488586
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Shreeram Anil Jadhav",
+      "confidence": 0.05117805265964844,
+      "quality": 0.6540140516766568,
+      "area": 13569.20044845203,
+      "sharpness": 235.4036435400901,
+      "det_score": 0.6926976442337036
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Manas Patil",
+      "confidence": 0.05215667627069861,
+      "quality": 0.6584775451096546,
+      "area": 6891.614718228579,
+      "sharpness": 506.4989831071896,
+      "det_score": 0.689971387386322
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Amresh Jha",
+      "confidence": 0.08177280627387613,
+      "quality": 0.6609686752794792,
+      "area": 9935.162295222282,
+      "sharpness": 401.1837261157856,
+      "det_score": 0.6899077296257019
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Abhishek Abhishek",
+      "confidence": 0.07198382895044753,
+      "quality": 0.631725803682492,
+      "area": 7509.935464337468,
+      "sharpness": 346.94171987106216,
+      "det_score": 0.6730942726135254
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Devtanu Barman",
+      "confidence": 0.08844806199609079,
+      "quality": 0.6148548664003128,
+      "area": 5948.178058683872,
+      "sharpness": 335.6650183630286,
+      "det_score": 0.6524104475975037
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Jadhav Shubham Sudhakar",
+      "confidence": 0.05272296473673827,
+      "quality": 0.6236570469714466,
+      "area": 4481.736597418785,
+      "sharpness": 576.4718024081659,
+      "det_score": 0.6347284317016602
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Ayush Singh",
+      "confidence": 0.055906228060980216,
+      "quality": 0.6465683527129312,
+      "area": 6282.151470661163,
+      "sharpness": 593.2050688959922,
+      "det_score": 0.6323350667953491
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Nistala Sreechandana",
+      "confidence": 0.05950343105601239,
+      "quality": 0.6250588325607443,
+      "area": 8111.092392683029,
+      "sharpness": 663.3853959017499,
+      "det_score": 0.5341785550117493
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.02508679268063446,
+      "quality": 0.5326268768343297,
+      "area": 8499.69993364811,
+      "sharpness": 202.47166053294885,
+      "det_score": 0.4365536868572235
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.025229056127780435,
+      "quality": 0.5234554005868032,
+      "area": 5096.307937383652,
+      "sharpness": 349.84069695093876,
+      "det_score": 0.43648582696914673
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.022576241843964368,
+      "quality": 0.4708104908617365,
+      "area": 5508.869629144669,
+      "sharpness": 199.85578734889802,
+      "det_score": 0.3677141070365906
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.0340525921493157,
+      "quality": 0.5396118051899261,
+      "area": 9690.797216266394,
+      "sharpness": 378.88609711156624,
+      "det_score": 0.3554069995880127
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.025239036865795494,
+      "quality": 0.524180412151861,
+      "area": 6874.16981947422,
+      "sharpness": 629.2242720544884,
+      "det_score": 0.2900041341781616
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.025093979449339526,
+      "quality": 0.4733262334731933,
+      "area": 6554.9536509513855,
+      "sharpness": 307.28982326023015,
+      "det_score": 0.2876051068305969
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.02323135049284422,
+      "quality": 0.42243816110265625,
+      "area": 4298.303569972515,
+      "sharpness": 209.43502370194213,
+      "det_score": 0.2713559865951538
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.023834723229520398,
+      "quality": 0.39605738985812194,
+      "area": 5062.695678651333,
+      "sharpness": 134.59984867094988,
+      "det_score": 0.253342866897583
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.02587888491023503,
+      "quality": 0.47264143399511493,
+      "area": 9370.755048528314,
+      "sharpness": 300.9130505183433,
+      "det_score": 0.244476318359375
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.025709812035790598,
+      "quality": 0.4933317036804447,
+      "area": 6318.323131471872,
+      "sharpness": 504.4223889011136,
+      "det_score": 0.23879393935203552
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.023967727523808772,
+      "quality": 0.5652371021952192,
+      "area": 3827.4573143720627,
+      "sharpness": 2526.028433822065,
+      "det_score": 0.22594863176345825
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.02634757220511329,
+      "quality": 0.5081005457809038,
+      "area": 5042.065036654472,
+      "sharpness": 869.4880820777361,
+      "det_score": 0.22240179777145386
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.02500322287508704,
+      "quality": 0.44455728513945003,
+      "area": 5672.857747077942,
+      "sharpness": 317.82121746052627,
+      "det_score": 0.20590126514434814
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.046257373306502744,
+      "quality": 0.5196799817536333,
+      "area": 4735.054042190313,
+      "sharpness": 1159.5746524607378,
+      "det_score": 0.2032197117805481
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.023755835187104807,
+      "quality": 0.47420163422963524,
+      "area": 4435.041557192802,
+      "sharpness": 737.9456432949825,
+      "det_score": 0.1888030469417572
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.024590560280244422,
+      "quality": 0.39307715983548935,
+      "area": 14511.899358034134,
+      "sharpness": 82.73292610236916,
+      "det_score": 0.1733923852443695
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.02503384414346993,
+      "quality": 0.39431885623585916,
+      "area": 6075.774786815047,
+      "sharpness": 177.01066052711195,
+      "det_score": 0.15203207731246948
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.02602896615804558,
+      "quality": 0.48932742542852403,
+      "area": 6455.327478051186,
+      "sharpness": 906.6838550168594,
+      "det_score": 0.15164342522621155
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.024185391402360073,
+      "quality": 0.4097137381106931,
+      "area": 4555.940116882324,
+      "sharpness": 304.3671247973372,
+      "det_score": 0.14660492539405823
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.02491823124547786,
+      "quality": 0.4543356259657413,
+      "area": 6008.162275463343,
+      "sharpness": 493.3585626531113,
+      "det_score": 0.14215785264968872
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.02411056208682365,
+      "quality": 0.419658720585682,
+      "area": 6419.392193555832,
+      "sharpness": 300.49956002752737,
+      "det_score": 0.1415313482284546
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.024525087132694724,
+      "quality": 0.3988975591056497,
+      "area": 3841.011553823948,
+      "sharpness": 326.41970931171136,
+      "det_score": 0.1378982961177826
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.023598482388847934,
+      "quality": 0.3609507109947521,
+      "area": 16259.766053617,
+      "sharpness": 67.53562470187815,
+      "det_score": 0.13359099626541138
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.024036186386322263,
+      "quality": 0.46040585123656946,
+      "area": 2889.6004705131054,
+      "sharpness": 1227.457860266976,
+      "det_score": 0.12171602249145508
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.025793951383556914,
+      "quality": 0.4612368990206214,
+      "area": 7827.432215213776,
+      "sharpness": 611.7880844643181,
+      "det_score": 0.11547887325286865
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.02434548367381711,
+      "quality": 0.39798046279142024,
+      "area": 8880.554874658585,
+      "sharpness": 217.24305229144585,
+      "det_score": 0.1080036461353302
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.02422195059695197,
+      "quality": 0.41334101208679447,
+      "area": 5280.935187935829,
+      "sharpness": 426.8603269371073,
+      "det_score": 0.10531744360923767
+    },
+    {
+      "img_file": "Image_11.JPG",
+      "label": "Unknown",
+      "confidence": 0.02392457274283468,
+      "quality": 0.4110235632239329,
+      "area": 5857.43308916688,
+      "sharpness": 348.7273010928323,
+      "det_score": 0.10477963089942932
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Shrutija Swain",
+      "confidence": 0.08082697799263791,
+      "quality": 0.699933489811774,
+      "area": 57283.82152488828,
+      "sharpness": 49.84467965108949,
+      "det_score": 0.9016685485839844
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Tarshit Sehgal",
+      "confidence": 0.08046105023614156,
+      "quality": 0.7287911968773426,
+      "area": 85927.33974222466,
+      "sharpness": 64.40204001248945,
+      "det_score": 0.8888980150222778
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Rownak Tiwari",
+      "confidence": 0.058698728382991616,
+      "quality": 0.723969008836018,
+      "area": 30031.58578711748,
+      "sharpness": 152.62132750058618,
+      "det_score": 0.867708683013916
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Chhavi Yadav",
+      "confidence": 0.05414600064295911,
+      "quality": 0.7282641874255364,
+      "area": 12011.697886943817,
+      "sharpness": 331.4018765407383,
+      "det_score": 0.8604922294616699
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Manit Jhajharia",
+      "confidence": 0.06928155935993591,
+      "quality": 0.6917785411884029,
+      "area": 20359.446933448315,
+      "sharpness": 144.05382604835913,
+      "det_score": 0.8570103645324707
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Devesh Soni",
+      "confidence": 0.057171504645571476,
+      "quality": 0.7076617944572722,
+      "area": 18425.52191925049,
+      "sharpness": 185.66407167567567,
+      "det_score": 0.8537589907646179
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Ganesh Yadawate",
+      "confidence": 0.07375297772357502,
+      "quality": 0.7074244523132156,
+      "area": 13861.240822792053,
+      "sharpness": 285.9152916432587,
+      "det_score": 0.8245261907577515
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.0448255890171921,
+      "quality": 0.7305123899361882,
+      "area": 11280.79066479206,
+      "sharpness": 421.97896332224866,
+      "det_score": 0.8206520080566406
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Gurbani Jeet Sunil",
+      "confidence": 0.0907640742365236,
+      "quality": 0.7180047886966964,
+      "area": 10840.852327607572,
+      "sharpness": 421.03049288172696,
+      "det_score": 0.8115848302841187
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Rajeswar Banerjee",
+      "confidence": 0.055905952214122645,
+      "quality": 0.7648754605110275,
+      "area": 9844.029302001,
+      "sharpness": 986.2931360797661,
+      "det_score": 0.8062294125556946
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Sameer Anand Jha",
+      "confidence": 0.07581455101386605,
+      "quality": 0.6677250283238717,
+      "area": 13194.871720314026,
+      "sharpness": 202.64163968220402,
+      "det_score": 0.7884784936904907
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Shaurya Goyal",
+      "confidence": 0.07160674148234143,
+      "quality": 0.7182880965291975,
+      "area": 14834.135650614277,
+      "sharpness": 331.64872327802505,
+      "det_score": 0.7876504063606262
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Suraj Adhikari",
+      "confidence": 0.06948858880776615,
+      "quality": 0.6671185306576558,
+      "area": 12542.9686511904,
+      "sharpness": 228.45456708041553,
+      "det_score": 0.7754873037338257
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Abhishek Abhishek",
+      "confidence": 0.0648402662484507,
+      "quality": 0.6683859275276514,
+      "area": 9434.670776993036,
+      "sharpness": 300.7147240450697,
+      "det_score": 0.7537689805030823
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.03232204945090291,
+      "quality": 0.6854906767554619,
+      "area": 11665.554510867223,
+      "sharpness": 318.73223282677054,
+      "det_score": 0.7433943152427673
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Devtanu Barman",
+      "confidence": 0.08664323976020867,
+      "quality": 0.6415437249762522,
+      "area": 8037.684559121728,
+      "sharpness": 301.60681622176,
+      "det_score": 0.6899482011795044
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Manaswi Goyal",
+      "confidence": 0.05553835267800445,
+      "quality": 0.6887678424701537,
+      "area": 8256.990166425705,
+      "sharpness": 755.9888311991909,
+      "det_score": 0.6782957315444946
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Manas Patil",
+      "confidence": 0.05331413544654202,
+      "quality": 0.6756809747598624,
+      "area": 7614.651609033346,
+      "sharpness": 647.3220566608973,
+      "det_score": 0.6749906539916992
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.04484572892087871,
+      "quality": 0.6964630458267235,
+      "area": 5340.203093856573,
+      "sharpness": 1235.1315270242715,
+      "det_score": 0.6698873043060303
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Ayush Singh",
+      "confidence": 0.06639591699134462,
+      "quality": 0.6554697393292321,
+      "area": 7014.087334156036,
+      "sharpness": 532.5451232634173,
+      "det_score": 0.6695066094398499
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Amresh Jha",
+      "confidence": 0.07709442560793173,
+      "quality": 0.679990727256071,
+      "area": 8998.78990983963,
+      "sharpness": 604.5642920033591,
+      "det_score": 0.6693384051322937
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Jadhav Shubham Sudhakar",
+      "confidence": 0.058397072729574166,
+      "quality": 0.6268508656434375,
+      "area": 5937.627250850201,
+      "sharpness": 492.92490557288926,
+      "det_score": 0.6251088976860046
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.03248965552885594,
+      "quality": 0.5864627467611457,
+      "area": 5208.465321302414,
+      "sharpness": 319.21428078650115,
+      "det_score": 0.613757848739624
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.029505738285062075,
+      "quality": 0.6405004752011502,
+      "area": 5737.964846134186,
+      "sharpness": 688.1943647185228,
+      "det_score": 0.5991580486297607
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.029059154354710695,
+      "quality": 0.5867058608460314,
+      "area": 16249.260262012482,
+      "sharpness": 140.19604307950277,
+      "det_score": 0.5713834762573242
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.03791279485158048,
+      "quality": 0.6074439299069754,
+      "area": 5435.053956985474,
+      "sharpness": 823.5715027371896,
+      "det_score": 0.5054434537887573
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.02335715202514103,
+      "quality": 0.557069177562292,
+      "area": 4654.217604517937,
+      "sharpness": 361.3046569782307,
+      "det_score": 0.49383705854415894
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.027946720695511792,
+      "quality": 0.5330567224029322,
+      "area": 3830.118014663458,
+      "sharpness": 384.43697416926335,
+      "det_score": 0.4692542552947998
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.02520450998953169,
+      "quality": 0.5424366750298555,
+      "area": 4135.908377677202,
+      "sharpness": 561.9934650273615,
+      "det_score": 0.43184980750083923
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.02581308165876438,
+      "quality": 0.5454918997585938,
+      "area": 5342.765809386969,
+      "sharpness": 572.8589846725637,
+      "det_score": 0.40540003776550293
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Nistala Sreechandana",
+      "confidence": 0.052010538499279294,
+      "quality": 0.5766974959959641,
+      "area": 6769.3858730793,
+      "sharpness": 844.2709345793481,
+      "det_score": 0.3855607509613037
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.025349114988256812,
+      "quality": 0.5355369959181513,
+      "area": 4157.28963765502,
+      "sharpness": 747.0208475596024,
+      "det_score": 0.36424756050109863
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.02398932416610022,
+      "quality": 0.47254382867055567,
+      "area": 5980.794174551964,
+      "sharpness": 348.2542171209605,
+      "det_score": 0.27903568744659424
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.027049430423145025,
+      "quality": 0.5955546462719963,
+      "area": 7634.631592035294,
+      "sharpness": 2841.80888807133,
+      "det_score": 0.2167808711528778
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.025596513491037844,
+      "quality": 0.4496837663183968,
+      "area": 4580.972549557686,
+      "sharpness": 479.7307191479383,
+      "det_score": 0.17277279496192932
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.024243611422672142,
+      "quality": 0.43142856127659257,
+      "area": 11996.838021278381,
+      "sharpness": 186.68973930998433,
+      "det_score": 0.16975009441375732
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.023904318467059375,
+      "quality": 0.34396545600674755,
+      "area": 4700.237415134907,
+      "sharpness": 109.78264250148634,
+      "det_score": 0.16878584027290344
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.023794169470955383,
+      "quality": 0.48739063927456655,
+      "area": 6763.6274266541,
+      "sharpness": 670.443658165174,
+      "det_score": 0.15724524855613708
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.025129105777130224,
+      "quality": 0.5041583270202374,
+      "area": 13740.227061748505,
+      "sharpness": 577.758488090159,
+      "det_score": 0.14661920070648193
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.022774565908345257,
+      "quality": 0.44120222533743586,
+      "area": 9584.629336953163,
+      "sharpness": 322.1733555076442,
+      "det_score": 0.14523041248321533
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.024833183124195964,
+      "quality": 0.4147684950121126,
+      "area": 5373.51847755909,
+      "sharpness": 312.9620509874906,
+      "det_score": 0.14201241731643677
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.024114098652595988,
+      "quality": 0.3288005163751423,
+      "area": 10269.886542320251,
+      "sharpness": 57.95474693387159,
+      "det_score": 0.13855212926864624
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.02552940772066544,
+      "quality": 0.4596457766950212,
+      "area": 8905.041963628493,
+      "sharpness": 428.2581528792992,
+      "det_score": 0.1368306577205658
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.024207961843052298,
+      "quality": 0.4537042805915868,
+      "area": 4445.137454330921,
+      "sharpness": 732.5328057283951,
+      "det_score": 0.130804181098938
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.026350571305047647,
+      "quality": 0.46099652304789585,
+      "area": 3707.730835624039,
+      "sharpness": 1042.386691174868,
+      "det_score": 0.12109848856925964
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.024228279455338737,
+      "quality": 0.5306441170372641,
+      "area": 6793.369776010513,
+      "sharpness": 1791.3434805565619,
+      "det_score": 0.11895716190338135
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.024874506653695637,
+      "quality": 0.4737352713743297,
+      "area": 4346.875584572554,
+      "sharpness": 1063.5490441125614,
+      "det_score": 0.1173357367515564
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.023405408733064837,
+      "quality": 0.4979687659909553,
+      "area": 5303.352162837982,
+      "sharpness": 1385.106814497387,
+      "det_score": 0.11332544684410095
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.023952857810500088,
+      "quality": 0.38326863043740866,
+      "area": 6729.230900645256,
+      "sharpness": 189.39580615204315,
+      "det_score": 0.11307218670845032
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.024732387055547603,
+      "quality": 0.48310293872058735,
+      "area": 52740.97338330746,
+      "sharpness": 149.9305820749531,
+      "det_score": 0.11107832193374634
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.024946524902719012,
+      "quality": 0.4646111998316727,
+      "area": 6638.099873363972,
+      "sharpness": 730.2729427090632,
+      "det_score": 0.10884273052215576
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.02634049514894489,
+      "quality": 0.4856378471652033,
+      "area": 11299.398472309113,
+      "sharpness": 663.8736613941651,
+      "det_score": 0.10849526524543762
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.023823124657488592,
+      "quality": 0.42486574553777023,
+      "area": 11219.167861496215,
+      "sharpness": 251.19772754928405,
+      "det_score": 0.10328319668769836
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.02418606971696666,
+      "quality": 0.42987350789551604,
+      "area": 12244.444691427518,
+      "sharpness": 247.05713522857704,
+      "det_score": 0.10309392213821411
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.0259956769605752,
+      "quality": 0.43701343045105234,
+      "area": 5453.77881705761,
+      "sharpness": 601.9718079858897,
+      "det_score": 0.10163155198097229
+    },
+    {
+      "img_file": "Image_12.JPG",
+      "label": "Unknown",
+      "confidence": 0.02682649794670873,
+      "quality": 0.40200800556902555,
+      "area": 438.474859111011,
+      "sharpness": 214.71762437673132,
+      "det_score": 0.5231042504310608
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.029900536434588936,
+      "quality": 0.6372472874438897,
+      "area": 22715.868775591254,
+      "sharpness": 42.31723572220807,
+      "det_score": 0.8975663781166077
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.026089643274316277,
+      "quality": 0.6762464630787985,
+      "area": 11538.574102759361,
+      "sharpness": 136.88754712930537,
+      "det_score": 0.8855052590370178
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.027890408242177332,
+      "quality": 0.6425050142253987,
+      "area": 11029.651129312813,
+      "sharpness": 88.08730612496093,
+      "det_score": 0.8847997188568115
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.027580854950218864,
+      "quality": 0.645534357265499,
+      "area": 9082.971785902977,
+      "sharpness": 118.15366886473619,
+      "det_score": 0.8649401068687439
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.024514638908658785,
+      "quality": 0.6372150909552554,
+      "area": 6955.793363779783,
+      "sharpness": 136.3769013376118,
+      "det_score": 0.8614681959152222
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.028698397797261348,
+      "quality": 0.6666751533767494,
+      "area": 12554.534599632025,
+      "sharpness": 119.4670604331867,
+      "det_score": 0.8523167371749878
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.025432885333961146,
+      "quality": 0.6391210674752699,
+      "area": 5397.501111060381,
+      "sharpness": 185.23798515220986,
+      "det_score": 0.8358653783798218
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.02572848463539176,
+      "quality": 0.6174198307647625,
+      "area": 3879.711333781481,
+      "sharpness": 190.9560606510373,
+      "det_score": 0.8269662857055664
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.025038704257459885,
+      "quality": 0.6193539654881235,
+      "area": 5429.879119515419,
+      "sharpness": 164.61952043691474,
+      "det_score": 0.8077720999717712
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.029376609542320964,
+      "quality": 0.6103438816814056,
+      "area": 7482.666230704635,
+      "sharpness": 93.01501132037177,
+      "det_score": 0.8039290904998779
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.024939221904839066,
+      "quality": 0.6001955481147712,
+      "area": 4363.34299595654,
+      "sharpness": 141.30038947282856,
+      "det_score": 0.7985385656356812
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.02496556160470919,
+      "quality": 0.5920341063095178,
+      "area": 3512.738764375448,
+      "sharpness": 169.65187303674483,
+      "det_score": 0.7811819911003113
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.02418674392723557,
+      "quality": 0.5994307305039926,
+      "area": 5719.299173235893,
+      "sharpness": 131.1863558327884,
+      "det_score": 0.7721191644668579
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.023483620653220738,
+      "quality": 0.5568866266863063,
+      "area": 4930.405128411949,
+      "sharpness": 78.28034781753512,
+      "det_score": 0.7660123109817505
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.02408897241049264,
+      "quality": 0.5442775793534815,
+      "area": 2522.317317724228,
+      "sharpness": 184.01122795231922,
+      "det_score": 0.6837944388389587
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.025229925831497385,
+      "quality": 0.5632613431461431,
+      "area": 3142.2969815135,
+      "sharpness": 200.3915183267587,
+      "det_score": 0.6774929761886597
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.025801353331109302,
+      "quality": 0.5440131014467795,
+      "area": 3078.3440057635307,
+      "sharpness": 203.70749465811966,
+      "det_score": 0.629021167755127
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.024639098307936876,
+      "quality": 0.5342922680605182,
+      "area": 2826.9566857218742,
+      "sharpness": 219.42845092886685,
+      "det_score": 0.5993303060531616
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.02566602676504822,
+      "quality": 0.5419661617589494,
+      "area": 3957.3738253712654,
+      "sharpness": 199.39200120140387,
+      "det_score": 0.5954257249832153
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.025404664387177044,
+      "quality": 0.5058809919378452,
+      "area": 2563.524940609932,
+      "sharpness": 251.21309382086167,
+      "det_score": 0.5279611349105835
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.026328959407221207,
+      "quality": 0.4889270882190715,
+      "area": 3280.1427130401134,
+      "sharpness": 165.26233803906493,
+      "det_score": 0.5030698180198669
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.025743628581663246,
+      "quality": 0.3856319921960481,
+      "area": 1944.018583893776,
+      "sharpness": 291.424479,
+      "det_score": 0.21344876289367676
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.026044511958873962,
+      "quality": 0.3901172781997698,
+      "area": 2550.6620329022408,
+      "sharpness": 250.06421916592723,
+      "det_score": 0.2123223841190338
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.02683424992894231,
+      "quality": 0.41247053397913164,
+      "area": 5555.411317288876,
+      "sharpness": 264.22869586780786,
+      "det_score": 0.1810344159603119
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.02533005663991548,
+      "quality": 0.33080803350300503,
+      "area": 3051.772743701935,
+      "sharpness": 118.0158649860165,
+      "det_score": 0.1602112352848053
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.02331354012752391,
+      "quality": 0.3076223944315215,
+      "area": 1933.735035419464,
+      "sharpness": 129.33466081769822,
+      "det_score": 0.11757037043571472
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.0265582426403127,
+      "quality": 0.34844486489025245,
+      "area": 3007.7878326177597,
+      "sharpness": 213.12005288488928,
+      "det_score": 0.10604995489120483
+    },
+    {
+      "img_file": "Image_2.JPG",
+      "label": "Unknown",
+      "confidence": 0.02475607958711541,
+      "quality": 0.3185254727066796,
+      "area": 4244.854588843882,
+      "sharpness": 102.67066256503561,
+      "det_score": 0.10276004672050476
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.03149718236082747,
+      "quality": 0.6689295720610038,
+      "area": 21566.390807121992,
+      "sharpness": 63.709898172776725,
+      "det_score": 0.8941234350204468
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.029059860821078407,
+      "quality": 0.6558212363330185,
+      "area": 21479.782042622566,
+      "sharpness": 60.11811482583363,
+      "det_score": 0.8817234635353088
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.02550075590663985,
+      "quality": 0.6433547469661968,
+      "area": 9800.393298268318,
+      "sharpness": 93.82097057039842,
+      "det_score": 0.8781417608261108
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.023211230686268926,
+      "quality": 0.6513529145083622,
+      "area": 5363.274325996637,
+      "sharpness": 206.72690465582536,
+      "det_score": 0.8492939472198486
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.034292929699444544,
+      "quality": 0.5966068672691599,
+      "area": 19245.228247374296,
+      "sharpness": 25.122560109696035,
+      "det_score": 0.8487609028816223
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.02547200173779226,
+      "quality": 0.6626982265865549,
+      "area": 8744.473080217838,
+      "sharpness": 163.0903686298896,
+      "det_score": 0.8396424055099487
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.027283045976386186,
+      "quality": 0.6384118406797701,
+      "area": 8639.724635601044,
+      "sharpness": 118.84491219008264,
+      "det_score": 0.8344377875328064
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.023918726731618125,
+      "quality": 0.645857654003246,
+      "area": 9117.346776366234,
+      "sharpness": 144.2247843842783,
+      "det_score": 0.8305028676986694
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.02489877328055699,
+      "quality": 0.6287124698354752,
+      "area": 4642.514275878668,
+      "sharpness": 173.02075096793044,
+      "det_score": 0.8198989629745483
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.024110472293501918,
+      "quality": 0.6425743208597263,
+      "area": 5217.234867095947,
+      "sharpness": 222.9009591932592,
+      "det_score": 0.811503529548645
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.024260240229730678,
+      "quality": 0.6156404129023341,
+      "area": 3584.774607539177,
+      "sharpness": 213.37634045676782,
+      "det_score": 0.8109270930290222
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.024636411230819815,
+      "quality": 0.5844967786506222,
+      "area": 4950.621258214116,
+      "sharpness": 101.1299303244165,
+      "det_score": 0.8067505359649658
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.024868295591442068,
+      "quality": 0.6020829450182175,
+      "area": 5657.520386815071,
+      "sharpness": 117.99643235071804,
+      "det_score": 0.802011251449585
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.029730706354471774,
+      "quality": 0.6340309649000256,
+      "area": 7855.103284388781,
+      "sharpness": 160.19383690883404,
+      "det_score": 0.7935770153999329
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.02557276879214163,
+      "quality": 0.6153807424379962,
+      "area": 3834.782176196575,
+      "sharpness": 215.74334269684988,
+      "det_score": 0.7694988250732422
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.028416853554095844,
+      "quality": 0.6156738988633133,
+      "area": 5252.150532156229,
+      "sharpness": 199.9788490754438,
+      "det_score": 0.766747236251831
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.02644919497745105,
+      "quality": 0.5568462062909354,
+      "area": 3490.490734755993,
+      "sharpness": 128.47119010955907,
+      "det_score": 0.7381618618965149
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.02337370443562314,
+      "quality": 0.5799568704759938,
+      "area": 2847.695858180523,
+      "sharpness": 218.97550813763377,
+      "det_score": 0.7309645414352417
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.0224435605672952,
+      "quality": 0.5677755207921821,
+      "area": 2568.5116782188416,
+      "sharpness": 240.06086444513102,
+      "det_score": 0.7056123614311218
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.025485530272693967,
+      "quality": 0.5542299344914532,
+      "area": 3810.8609108626842,
+      "sharpness": 159.84186660410174,
+      "det_score": 0.6611737608909607
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.02425243083621213,
+      "quality": 0.5575901520055163,
+      "area": 4951.802735865116,
+      "sharpness": 149.8779341116402,
+      "det_score": 0.6526117920875549
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.024726260262834848,
+      "quality": 0.5912553988220454,
+      "area": 3733.686606258154,
+      "sharpness": 321.8721867094233,
+      "det_score": 0.6523193120956421
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.02381068786320544,
+      "quality": 0.548430200013585,
+      "area": 3211.678272194229,
+      "sharpness": 172.83111987501903,
+      "det_score": 0.651138424873352
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.02481458232788981,
+      "quality": 0.5294619577695993,
+      "area": 2622.9214915037155,
+      "sharpness": 204.51487749233806,
+      "det_score": 0.6122274398803711
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.02609875703193041,
+      "quality": 0.5321277276370614,
+      "area": 3722.623319193721,
+      "sharpness": 180.16133655511658,
+      "det_score": 0.6040807962417603
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.023527851193645633,
+      "quality": 0.5328940777283543,
+      "area": 2799.424831330776,
+      "sharpness": 265.46649856662356,
+      "det_score": 0.5785864591598511
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.024137053682327478,
+      "quality": 0.49915725740732203,
+      "area": 2512.137781172991,
+      "sharpness": 302.3159101788864,
+      "det_score": 0.48253506422042847
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.02407849564775279,
+      "quality": 0.45887457297796,
+      "area": 3062.0022261738777,
+      "sharpness": 217.3471320077108,
+      "det_score": 0.3953269124031067
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.025047086745038694,
+      "quality": 0.37652391875130464,
+      "area": 4051.7535120248795,
+      "sharpness": 68.15838128684733,
+      "det_score": 0.3234609365463257
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.023746218015212043,
+      "quality": 0.3748544719372689,
+      "area": 3258.136078119278,
+      "sharpness": 204.82495621301774,
+      "det_score": 0.189753919839859
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.02641187391182639,
+      "quality": 0.39830440036314885,
+      "area": 4824.925968170166,
+      "sharpness": 194.6406853732639,
+      "det_score": 0.1841447651386261
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.0264483986287606,
+      "quality": 0.4042511662054723,
+      "area": 2913.109963417053,
+      "sharpness": 367.16573018426556,
+      "det_score": 0.1512165367603302
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.025654526070438242,
+      "quality": 0.39165503337312485,
+      "area": 4507.004154443741,
+      "sharpness": 263.90255744281774,
+      "det_score": 0.13974449038505554
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.023861108890928715,
+      "quality": 0.33072271214631005,
+      "area": 3699.598777770996,
+      "sharpness": 112.40881662268409,
+      "det_score": 0.12206882238388062
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.026284518941087357,
+      "quality": 0.3302892435411481,
+      "area": 5196.689961493015,
+      "sharpness": 101.3867097821764,
+      "det_score": 0.1172594428062439
+    },
+    {
+      "img_file": "Image_3.JPG",
+      "label": "Unknown",
+      "confidence": 0.024538124279848667,
+      "quality": 0.3438971864863366,
+      "area": 3825.6177164912224,
+      "sharpness": 149.83162055243827,
+      "det_score": 0.11311560869216919
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.02723220678895379,
+      "quality": 0.6464769784298837,
+      "area": 8992.415223121643,
+      "sharpness": 105.08213572191681,
+      "det_score": 0.849205493927002
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.03142986260921522,
+      "quality": 0.6247470184374095,
+      "area": 6877.248427659273,
+      "sharpness": 125.8679129594623,
+      "det_score": 0.8340795040130615
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.038659647629381295,
+      "quality": 0.6309612050806797,
+      "area": 7359.698933959007,
+      "sharpness": 128.2554358040177,
+      "det_score": 0.8328448534011841
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.03037910038354448,
+      "quality": 0.6621817592843283,
+      "area": 6532.736653711647,
+      "sharpness": 290.8383774988623,
+      "det_score": 0.7869635224342346
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.02743970071624284,
+      "quality": 0.6452658623483836,
+      "area": 4344.98728454113,
+      "sharpness": 387.6533261461223,
+      "det_score": 0.7698380947113037
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.029714424506819066,
+      "quality": 0.619347761016398,
+      "area": 5620.3190932273865,
+      "sharpness": 182.38387996826916,
+      "det_score": 0.7595104575157166
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.025950288203296833,
+      "quality": 0.6002593383390536,
+      "area": 2752.142853885889,
+      "sharpness": 309.97718871988127,
+      "det_score": 0.7392252683639526
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.029270074820259676,
+      "quality": 0.5727448375852013,
+      "area": 1921.192889213562,
+      "sharpness": 313.5261159763313,
+      "det_score": 0.7130638360977173
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.03926108945685387,
+      "quality": 0.6116994210805964,
+      "area": 2382.6402448117733,
+      "sharpness": 517.8589872569046,
+      "det_score": 0.7032515406608582
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.025771989703466305,
+      "quality": 0.6078513678069042,
+      "area": 2990.534007549286,
+      "sharpness": 386.83447988888884,
+      "det_score": 0.7026870846748352
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.025414344661628552,
+      "quality": 0.5975266444513421,
+      "area": 3245.03649263829,
+      "sharpness": 312.250862673373,
+      "det_score": 0.6811131238937378
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.028192246716928018,
+      "quality": 0.5719169316971907,
+      "area": 2199.077861458063,
+      "sharpness": 331.82558199538533,
+      "det_score": 0.6747512817382812
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.030757687930563056,
+      "quality": 0.5861349363468914,
+      "area": 2617.892504096031,
+      "sharpness": 375.10749854491365,
+      "det_score": 0.6685899496078491
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.027669510824658728,
+      "quality": 0.5790462004794649,
+      "area": 4009.484064172022,
+      "sharpness": 242.39402977508155,
+      "det_score": 0.6555463671684265
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.025382477741996503,
+      "quality": 0.5624938667687004,
+      "area": 1733.3406101316214,
+      "sharpness": 483.39310805738165,
+      "det_score": 0.6305644512176514
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.027553591794109208,
+      "quality": 0.5327785715236457,
+      "area": 1344.2830577492714,
+      "sharpness": 387.48240831329895,
+      "det_score": 0.6086167097091675
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.02396044664690777,
+      "quality": 0.5435216290486937,
+      "area": 1444.5533482432365,
+      "sharpness": 461.0940483132028,
+      "det_score": 0.6000441312789917
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.02494183839322278,
+      "quality": 0.5490143498456742,
+      "area": 1565.414613634348,
+      "sharpness": 534.4398658741046,
+      "det_score": 0.5838913917541504
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.024344653784825077,
+      "quality": 0.5301345320192818,
+      "area": 2025.2508062720299,
+      "sharpness": 360.43069756824303,
+      "det_score": 0.569728434085846
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.024054813476739864,
+      "quality": 0.4983920312523257,
+      "area": 1946.6515949852765,
+      "sharpness": 292.18564425998267,
+      "det_score": 0.5116119980812073
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.02572511449318103,
+      "quality": 0.5200705270167322,
+      "area": 1366.2622427344322,
+      "sharpness": 586.1380535111539,
+      "det_score": 0.5012856721878052
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.026352349430023844,
+      "quality": 0.5292261494298692,
+      "area": 1800.4042625427246,
+      "sharpness": 506.712287039225,
+      "det_score": 0.5003892779350281
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.026640149827309653,
+      "quality": 0.5115889464490245,
+      "area": 2398.6846992373466,
+      "sharpness": 333.40538675861825,
+      "det_score": 0.49574199318885803
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.026169046666851072,
+      "quality": 0.5124130433707156,
+      "area": 2798.2887350320816,
+      "sharpness": 348.95932099166833,
+      "det_score": 0.4709113836288452
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.025470766168365272,
+      "quality": 0.5163355066125778,
+      "area": 6028.027011156082,
+      "sharpness": 273.86213313446746,
+      "det_score": 0.40543675422668457
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.027120774116189482,
+      "quality": 0.4847826366951338,
+      "area": 2660.297972112894,
+      "sharpness": 388.703557078746,
+      "det_score": 0.3860340118408203
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.026135968652411527,
+      "quality": 0.4577878615541789,
+      "area": 2798.8241209983826,
+      "sharpness": 231.6840461852293,
+      "det_score": 0.3846874237060547
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.02530920593301881,
+      "quality": 0.429833855978202,
+      "area": 1608.6768333613873,
+      "sharpness": 262.6168630751964,
+      "det_score": 0.37193965911865234
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.024548960376305735,
+      "quality": 0.45562307602136104,
+      "area": 1571.5257378518581,
+      "sharpness": 463.3813273739248,
+      "det_score": 0.35227495431900024
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.02495493729411086,
+      "quality": 0.43034171186549625,
+      "area": 1290.4823724031448,
+      "sharpness": 553.3633911730604,
+      "det_score": 0.2863355278968811
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.025317982331008886,
+      "quality": 0.42313427734852577,
+      "area": 1724.118077158928,
+      "sharpness": 503.047834615965,
+      "det_score": 0.24226409196853638
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.025326085468796895,
+      "quality": 0.3977139008168323,
+      "area": 5136.668294668198,
+      "sharpness": 124.20356602520631,
+      "det_score": 0.24002811312675476
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.02343519829385034,
+      "quality": 0.4452323084484404,
+      "area": 2133.904456615448,
+      "sharpness": 664.4667918556166,
+      "det_score": 0.2278342843055725
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.02359845959832946,
+      "quality": 0.4037519924656932,
+      "area": 1962.2810291349888,
+      "sharpness": 368.4929818304873,
+      "det_score": 0.21535485982894897
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.023898330237442388,
+      "quality": 0.3967600178399773,
+      "area": 1774.3043018206954,
+      "sharpness": 370.08163813610645,
+      "det_score": 0.21094951033592224
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.026308820947528358,
+      "quality": 0.3278920057838751,
+      "area": 836.4555031061172,
+      "sharpness": 271.5547768163266,
+      "det_score": 0.2065129280090332
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.024333309744107884,
+      "quality": 0.38960252152497726,
+      "area": 1160.7991931438446,
+      "sharpness": 505.70203521075325,
+      "det_score": 0.20554578304290771
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.025059948014029793,
+      "quality": 0.4311271889783421,
+      "area": 6478.488444328308,
+      "sharpness": 195.09555019718792,
+      "det_score": 0.1980075240135193
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.024549327254926912,
+      "quality": 0.40258233997919746,
+      "area": 1705.5100579857826,
+      "sharpness": 451.43765242720195,
+      "det_score": 0.19340279698371887
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.027397658410060796,
+      "quality": 0.3009270660494505,
+      "area": 1418.3254019021988,
+      "sharpness": 137.1434259978501,
+      "det_score": 0.15690642595291138
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.023570357469421033,
+      "quality": 0.3974643199415139,
+      "area": 2928.8995017409325,
+      "sharpness": 389.4490051770731,
+      "det_score": 0.14930862188339233
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.02404434766922737,
+      "quality": 0.3016898586216916,
+      "area": 1487.5987567901611,
+      "sharpness": 134.38686626914142,
+      "det_score": 0.1435661017894745
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.0248008665522804,
+      "quality": 0.3808441473422796,
+      "area": 1782.7276942133904,
+      "sharpness": 486.16430882067954,
+      "det_score": 0.14066386222839355
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.025073323553678695,
+      "quality": 0.37268557916500333,
+      "area": 1535.4533981382847,
+      "sharpness": 429.4143409512565,
+      "det_score": 0.13926172256469727
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.023762192478021377,
+      "quality": 0.379148278035789,
+      "area": 1828.983181655407,
+      "sharpness": 388.4741773983932,
+      "det_score": 0.13792285323143005
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.024619674506513835,
+      "quality": 0.3729920961308981,
+      "area": 1339.3629706799984,
+      "sharpness": 467.44233564013837,
+      "det_score": 0.13565286993980408
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.025880177052109096,
+      "quality": 0.2634290719010776,
+      "area": 1716.4469077289104,
+      "sharpness": 73.80921042638714,
+      "det_score": 0.12969249486923218
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.025754989431561136,
+      "quality": 0.4094827286936978,
+      "area": 5360.921380877495,
+      "sharpness": 347.00877622416664,
+      "det_score": 0.11824482679367065
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.02558335920450866,
+      "quality": 0.373959013913536,
+      "area": 2245.433807373047,
+      "sharpness": 346.6866121104089,
+      "det_score": 0.11757534742355347
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.02434297186701921,
+      "quality": 0.3874485824206067,
+      "area": 1610.3109528422356,
+      "sharpness": 593.9157887517147,
+      "det_score": 0.11545729637145996
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.024099457129230593,
+      "quality": 0.3555757518079847,
+      "area": 2709.681445002556,
+      "sharpness": 232.2775152297247,
+      "det_score": 0.11508247256278992
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.025542741393380766,
+      "quality": 0.3720405878897566,
+      "area": 3388.946068882942,
+      "sharpness": 256.6906584228181,
+      "det_score": 0.11345061659812927
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.02570430169237557,
+      "quality": 0.33460969601043467,
+      "area": 2697.325159549713,
+      "sharpness": 174.90632801545777,
+      "det_score": 0.10793912410736084
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.025513063025769608,
+      "quality": 0.3019846704943225,
+      "area": 1351.4458812773228,
+      "sharpness": 176.06733413866766,
+      "det_score": 0.10760295391082764
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.02657313726063221,
+      "quality": 0.3911735833619889,
+      "area": 5276.633535493165,
+      "sharpness": 257.96422470028097,
+      "det_score": 0.10506439208984375
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.026894546429408105,
+      "quality": 0.3841574465536786,
+      "area": 4495.7073937654495,
+      "sharpness": 276.3835425841321,
+      "det_score": 0.10457974672317505
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.023736700668565043,
+      "quality": 0.3576811889397981,
+      "area": 2117.229007668793,
+      "sharpness": 319.2972632653061,
+      "det_score": 0.10141909122467041
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.02402255904315224,
+      "quality": 0.6420117006215148,
+      "area": 715.1177933812141,
+      "sharpness": 1046.3090302021403,
+      "det_score": 0.8041502237319946
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.02814657883056604,
+      "quality": 0.6074837195337673,
+      "area": 973.6175178289413,
+      "sharpness": 832.9717523038627,
+      "det_score": 0.7163079977035522
+    },
+    {
+      "img_file": "Image_4.JPG",
+      "label": "Unknown",
+      "confidence": 0.024701212803029476,
+      "quality": 0.5156375677557108,
+      "area": 1602.1243734955788,
+      "sharpness": 447.4134383608816,
+      "det_score": 0.5490102171897888
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Shrutija Swain",
+      "confidence": 0.08084633581387958,
+      "quality": 0.7025339505690278,
+      "area": 65480.02948437631,
+      "sharpness": 47.057229840511546,
+      "det_score": 0.8894933462142944
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Rownak Tiwari",
+      "confidence": 0.06197860017052662,
+      "quality": 0.7024156332706047,
+      "area": 29670.647524535656,
+      "sharpness": 117.15125963343594,
+      "det_score": 0.8643851280212402
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Manit Jhajharia",
+      "confidence": 0.06895912801649787,
+      "quality": 0.6999925416119892,
+      "area": 21804.170993089676,
+      "sharpness": 142.93795407160204,
+      "det_score": 0.8608181476593018
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Chhavi Yadav",
+      "confidence": 0.0588655790316054,
+      "quality": 0.7060172293195812,
+      "area": 10227.419432401657,
+      "sharpness": 288.60004421487406,
+      "det_score": 0.8583946228027344
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Ganesh Yadawate",
+      "confidence": 0.07530659402763927,
+      "quality": 0.7005180505278431,
+      "area": 14512.515908181667,
+      "sharpness": 210.90672978219737,
+      "det_score": 0.8561624884605408
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.04572730583095625,
+      "quality": 0.7507627958049993,
+      "area": 12508.468061551452,
+      "sharpness": 464.2217507753784,
+      "det_score": 0.8489248752593994
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.04851928437226491,
+      "quality": 0.7013821940116096,
+      "area": 15149.881432056427,
+      "sharpness": 218.63942175121076,
+      "det_score": 0.8389949202537537
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Suraj Adhikari",
+      "confidence": 0.06516944611651282,
+      "quality": 0.7127402630238433,
+      "area": 16370.881948038936,
+      "sharpness": 251.85770733167254,
+      "det_score": 0.8335447311401367
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Sameer Anand Jha",
+      "confidence": 0.06930201972997824,
+      "quality": 0.7073659470430436,
+      "area": 14594.275168061256,
+      "sharpness": 245.5582459367894,
+      "det_score": 0.8304382562637329
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Lohitaksh Mahajan",
+      "confidence": 0.052519804729759034,
+      "quality": 0.6980811027604559,
+      "area": 13616.728945732117,
+      "sharpness": 246.16404689783818,
+      "det_score": 0.8010742664337158
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Rajeswar Banerjee",
+      "confidence": 0.0640835306359648,
+      "quality": 0.7525069292191454,
+      "area": 11113.44216555357,
+      "sharpness": 852.7593560877175,
+      "det_score": 0.7902698516845703
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Pyla Ramya",
+      "confidence": 0.05120032406753807,
+      "quality": 0.6825386868738593,
+      "area": 6147.192792892456,
+      "sharpness": 514.9423142563426,
+      "det_score": 0.7736769318580627
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Ayush Singh",
+      "confidence": 0.061329965536443286,
+      "quality": 0.6928730815991477,
+      "area": 7817.595700711012,
+      "sharpness": 467.3106049530031,
+      "det_score": 0.7699349522590637
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Manaswi Goyal",
+      "confidence": 0.06007560283912055,
+      "quality": 0.7043028894026346,
+      "area": 9052.871174573898,
+      "sharpness": 736.7895386823044,
+      "det_score": 0.7145795226097107
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Manas Patil",
+      "confidence": 0.05891252027347612,
+      "quality": 0.6705739325201258,
+      "area": 6823.71250295639,
+      "sharpness": 503.1274740732191,
+      "det_score": 0.7114831805229187
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Yashasvee Vijay Taiwade",
+      "confidence": 0.05201380535905525,
+      "quality": 0.6450816346350855,
+      "area": 5915.8154311180115,
+      "sharpness": 423.921290791386,
+      "det_score": 0.7105500102043152
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Devtanu Barman",
+      "confidence": 0.0914122106380361,
+      "quality": 0.6404142725855025,
+      "area": 8912.238004237413,
+      "sharpness": 294.71478596072,
+      "det_score": 0.6831802725791931
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.047995171136532705,
+      "quality": 0.6969421601268236,
+      "area": 6347.923915088177,
+      "sharpness": 1101.6306214514711,
+      "det_score": 0.6561641693115234
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Amresh Jha",
+      "confidence": 0.06469598258277261,
+      "quality": 0.657090477966086,
+      "area": 10042.036200106144,
+      "sharpness": 490.5004863778377,
+      "det_score": 0.6437476277351379
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.03800265678507881,
+      "quality": 0.6067479194318214,
+      "area": 4689.494040489197,
+      "sharpness": 567.2927602627691,
+      "det_score": 0.585691511631012
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Jadhav Shubham Sudhakar",
+      "confidence": 0.05195880593772575,
+      "quality": 0.6017519346204732,
+      "area": 5997.292824447155,
+      "sharpness": 462.25916657114084,
+      "det_score": 0.5625579357147217
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.04090207738410541,
+      "quality": 0.6183141732135105,
+      "area": 4971.749603569508,
+      "sharpness": 771.5478802274442,
+      "det_score": 0.5543785095214844
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.029118715885589078,
+      "quality": 0.6072213797330435,
+      "area": 5173.563441038132,
+      "sharpness": 771.1043467455621,
+      "det_score": 0.5124902129173279
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Gurbani Jeet Sunil",
+      "confidence": 0.058782155794057316,
+      "quality": 0.5733364781985062,
+      "area": 9457.605348823126,
+      "sharpness": 389.57374569619344,
+      "det_score": 0.4713960886001587
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.024921988154627008,
+      "quality": 0.5614669562174692,
+      "area": 4296.17472243309,
+      "sharpness": 630.2272507501111,
+      "det_score": 0.4544835090637207
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.024831835464754207,
+      "quality": 0.5065113864293336,
+      "area": 4082.3082849383354,
+      "sharpness": 412.50574814805316,
+      "det_score": 0.3866361081600189
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Nistala Sreechandana",
+      "confidence": 0.05892023279892997,
+      "quality": 0.567959573725495,
+      "area": 6052.008585035801,
+      "sharpness": 1006.5355067495409,
+      "det_score": 0.35539668798446655
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.026027996759109377,
+      "quality": 0.5411666439420475,
+      "area": 4348.209994375706,
+      "sharpness": 1322.0545920590953,
+      "det_score": 0.2776266932487488
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.022876344014677818,
+      "quality": 0.3910386100375578,
+      "area": 2701.9877139925957,
+      "sharpness": 382.213850617284,
+      "det_score": 0.1522071361541748
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.024583587235719503,
+      "quality": 0.44189702451050206,
+      "area": 5274.042495131493,
+      "sharpness": 471.4924961828412,
+      "det_score": 0.15144428610801697
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.02397451323825975,
+      "quality": 0.3796220753317029,
+      "area": 8721.650058984756,
+      "sharpness": 134.89502826448012,
+      "det_score": 0.12497976422309875
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.024549889476515062,
+      "quality": 0.47252835552624506,
+      "area": 5705.364868581295,
+      "sharpness": 795.6015201993122,
+      "det_score": 0.12121906876564026
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.025550742751951742,
+      "quality": 0.45405176555017146,
+      "area": 3494.366074472666,
+      "sharpness": 943.2689651185063,
+      "det_score": 0.11886364221572876
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.02483402839981794,
+      "quality": 0.38646247494068586,
+      "area": 7669.995542764664,
+      "sharpness": 200.98057696440188,
+      "det_score": 0.11657246947288513
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.02424665052034062,
+      "quality": 0.42628344709578514,
+      "area": 14836.157256633043,
+      "sharpness": 201.1436924622204,
+      "det_score": 0.11341935396194458
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.024809643536123627,
+      "quality": 0.45393052161146696,
+      "area": 6331.602044671774,
+      "sharpness": 573.5473645129393,
+      "det_score": 0.1124509871006012
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.024217211692764362,
+      "quality": 0.4034874433279893,
+      "area": 9413.682367414236,
+      "sharpness": 195.00638446381373,
+      "det_score": 0.10914185643196106
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.023137594303088475,
+      "quality": 0.4801582071223494,
+      "area": 6365.992593348026,
+      "sharpness": 894.2410048235536,
+      "det_score": 0.10820075869560242
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.025166596956118052,
+      "quality": 0.46689843419127985,
+      "area": 8919.226806044579,
+      "sharpness": 646.8204211894865,
+      "det_score": 0.10537376999855042
+    },
+    {
+      "img_file": "Image_5.JPG",
+      "label": "Unknown",
+      "confidence": 0.02470089067731379,
+      "quality": 0.5017086154409032,
+      "area": 6191.228246033192,
+      "sharpness": 1334.7168015136883,
+      "det_score": 0.1029026210308075
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Tarshit Sehgal",
+      "confidence": 0.07824908358861861,
+      "quality": 0.7128947980083008,
+      "area": 66106.58520421386,
+      "sharpness": 64.51273316604292,
+      "det_score": 0.9005662202835083
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Shrutija Swain",
+      "confidence": 0.08020796553180871,
+      "quality": 0.68971546683917,
+      "area": 44755.86146265268,
+      "sharpness": 53.123211714066784,
+      "det_score": 0.8859007358551025
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Rownak Tiwari",
+      "confidence": 0.05324603985763088,
+      "quality": 0.7191133658014702,
+      "area": 35705.31396865845,
+      "sharpness": 104.25338320226835,
+      "det_score": 0.8798909187316895
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Jyoti Jyoti",
+      "confidence": 0.05219954653978374,
+      "quality": 0.6925870028911154,
+      "area": 30382.96982355416,
+      "sharpness": 89.25420145268019,
+      "det_score": 0.8748385906219482
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Anish Mayanache",
+      "confidence": 0.06203967016586123,
+      "quality": 0.716768950163007,
+      "area": 21309.532552935183,
+      "sharpness": 162.68902325622273,
+      "det_score": 0.8746503591537476
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Manit Jhajharia",
+      "confidence": 0.07525645343143997,
+      "quality": 0.7212162793802099,
+      "area": 18924.628311097622,
+      "sharpness": 209.02178759039413,
+      "det_score": 0.8695141077041626
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Santosh Singh",
+      "confidence": 0.07816439730567848,
+      "quality": 0.684337873821134,
+      "area": 16846.220327340066,
+      "sharpness": 126.65153790036575,
+      "det_score": 0.8616701364517212
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Ganesh Yadawate",
+      "confidence": 0.07080200596216947,
+      "quality": 0.7110669502589573,
+      "area": 16275.275194644928,
+      "sharpness": 229.63390500798857,
+      "det_score": 0.8405568599700928
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Suraj Adhikari",
+      "confidence": 0.07018130212838852,
+      "quality": 0.7230347577718558,
+      "area": 11447.21678107977,
+      "sharpness": 380.48324684639255,
+      "det_score": 0.8403557538986206
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Jadhav Jay Karbhari",
+      "confidence": 0.06680074669451548,
+      "quality": 0.6961619404604192,
+      "area": 13585.163134127855,
+      "sharpness": 198.25335621755602,
+      "det_score": 0.8379654288291931
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Sameer Anand Jha",
+      "confidence": 0.06157890049894793,
+      "quality": 0.7287089113518671,
+      "area": 19027.93501317501,
+      "sharpness": 281.4676176796798,
+      "det_score": 0.8350620269775391
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.047689148248213686,
+      "quality": 0.7217320941731076,
+      "area": 12906.34503877163,
+      "sharpness": 339.97535775662635,
+      "det_score": 0.8338037729263306
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Gurbani Jeet Sunil",
+      "confidence": 0.09146143716310585,
+      "quality": 0.7214936766023712,
+      "area": 8583.74371893704,
+      "sharpness": 497.0847017327011,
+      "det_score": 0.8272031545639038
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Shreeram Anil Jadhav",
+      "confidence": 0.05992979340033629,
+      "quality": 0.6773943876760591,
+      "area": 14930.75250788033,
+      "sharpness": 150.36259774453228,
+      "det_score": 0.820966362953186
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Yashasvee Vijay Taiwade",
+      "confidence": 0.0525853057850747,
+      "quality": 0.6704268959641675,
+      "area": 9230.106300354004,
+      "sharpness": 231.756937640178,
+      "det_score": 0.8167937994003296
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.04196396425798951,
+      "quality": 0.6903195269157251,
+      "area": 7567.391349077225,
+      "sharpness": 363.7994268369373,
+      "det_score": 0.8018858432769775
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Rajeswar Banerjee",
+      "confidence": 0.0626201533421328,
+      "quality": 0.7672302863503379,
+      "area": 9972.085332155228,
+      "sharpness": 1066.9042593530635,
+      "det_score": 0.7986535429954529
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Shaurya Goyal",
+      "confidence": 0.07448337645467488,
+      "quality": 0.7015292572626753,
+      "area": 9210.791255921125,
+      "sharpness": 387.0603737737284,
+      "det_score": 0.7960023880004883
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Abhishek Abhishek",
+      "confidence": 0.06528832700502174,
+      "quality": 0.6710451854692008,
+      "area": 7260.805473327637,
+      "sharpness": 401.8581383677301,
+      "det_score": 0.7575377225875854
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.039042392374132144,
+      "quality": 0.7013211283776137,
+      "area": 9641.37469008565,
+      "sharpness": 551.0999476694127,
+      "det_score": 0.7226632237434387
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Amresh Jha",
+      "confidence": 0.079293367652139,
+      "quality": 0.6782730141535729,
+      "area": 9812.854218184948,
+      "sharpness": 447.95819199095195,
+      "det_score": 0.7157791256904602
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.026962952205918225,
+      "quality": 0.6548533837415904,
+      "area": 9170.320259571075,
+      "sharpness": 291.89452342641243,
+      "det_score": 0.715327799320221
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Nistala Sreechandana",
+      "confidence": 0.06529664895800642,
+      "quality": 0.6864364035123779,
+      "area": 9200.305296421051,
+      "sharpness": 564.6642649384831,
+      "det_score": 0.7094755172729492
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.0346991726600101,
+      "quality": 0.6471153665127727,
+      "area": 7073.9546620845795,
+      "sharpness": 410.8174288959157,
+      "det_score": 0.6902364492416382
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.04304588677384915,
+      "quality": 0.6937191000000151,
+      "area": 4873.521130532026,
+      "sharpness": 1181.031074862068,
+      "det_score": 0.6852779984474182
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.03147854490827438,
+      "quality": 0.660613362855506,
+      "area": 7264.087837591767,
+      "sharpness": 490.0377706089586,
+      "det_score": 0.6781414747238159
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.042386937520183944,
+      "quality": 0.6279834440890217,
+      "area": 8266.406621815637,
+      "sharpness": 291.7642596073766,
+      "det_score": 0.6730957627296448
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Ayush Singh",
+      "confidence": 0.053271944904004366,
+      "quality": 0.6350051043368743,
+      "area": 6720.855578005314,
+      "sharpness": 500.1214120013518,
+      "det_score": 0.6393563747406006
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Devtanu Barman",
+      "confidence": 0.09018104458544167,
+      "quality": 0.6187815879194218,
+      "area": 6201.664329349995,
+      "sharpness": 433.37570104429574,
+      "det_score": 0.6058244109153748
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Manas Patil",
+      "confidence": 0.050667301928056026,
+      "quality": 0.6248408625783295,
+      "area": 6733.094462633133,
+      "sharpness": 495.419595034297,
+      "det_score": 0.595081090927124
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.02580903690126899,
+      "quality": 0.5509747897385766,
+      "area": 5623.279125988483,
+      "sharpness": 333.36726545337075,
+      "det_score": 0.4982597231864929
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Jadhav Shubham Sudhakar",
+      "confidence": 0.05982551190117116,
+      "quality": 0.5719353757461116,
+      "area": 4558.998793244362,
+      "sharpness": 677.9443315855452,
+      "det_score": 0.46730077266693115
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.027987189994389858,
+      "quality": 0.4468483268790243,
+      "area": 6289.311064958572,
+      "sharpness": 174.7925133738059,
+      "det_score": 0.31032317876815796
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.029924408267122046,
+      "quality": 0.48715127624056076,
+      "area": 5305.590757787228,
+      "sharpness": 456.0784162466214,
+      "det_score": 0.2771525979042053
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.02523282698137534,
+      "quality": 0.4858823916505658,
+      "area": 9555.243146717548,
+      "sharpness": 311.09852230598125,
+      "det_score": 0.27396902441978455
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.025059287110161612,
+      "quality": 0.4907654114313401,
+      "area": 10904.579226702452,
+      "sharpness": 371.58655889806533,
+      "det_score": 0.22768953442573547
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.02327367910201845,
+      "quality": 0.5367705101323235,
+      "area": 6719.627401828766,
+      "sharpness": 1054.4379807582243,
+      "det_score": 0.22096863389015198
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.023855137345777922,
+      "quality": 0.41241861402577246,
+      "area": 5088.8503074646,
+      "sharpness": 221.37773422241213,
+      "det_score": 0.20821335911750793
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.024219400928361594,
+      "quality": 0.4908826609921311,
+      "area": 7868.327180147171,
+      "sharpness": 565.0948929221541,
+      "det_score": 0.17921683192253113
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.023845447772870402,
+      "quality": 0.37254797767089903,
+      "area": 10297.160359025002,
+      "sharpness": 94.40895739438737,
+      "det_score": 0.1734391450881958
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.02426860438656167,
+      "quality": 0.4571889156715828,
+      "area": 13460.94756102562,
+      "sharpness": 197.93647954278424,
+      "det_score": 0.16290250420570374
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.024365268471453396,
+      "quality": 0.5414644077034908,
+      "area": 3763.953764617443,
+      "sharpness": 2573.261110786083,
+      "det_score": 0.15158823132514954
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.024253098195240148,
+      "quality": 0.4274679978227351,
+      "area": 3993.8378197550774,
+      "sharpness": 442.06693582029897,
+      "det_score": 0.15049609541893005
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.026154441739596954,
+      "quality": 0.47181161500070085,
+      "area": 12910.316037416458,
+      "sharpness": 329.29538221375185,
+      "det_score": 0.1395277976989746
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.02454265446125099,
+      "quality": 0.4938444960256707,
+      "area": 9715.165831208229,
+      "sharpness": 699.9472529092104,
+      "det_score": 0.13946324586868286
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.02538785187356357,
+      "quality": 0.46803124830580056,
+      "area": 5430.115189880133,
+      "sharpness": 801.4485442790625,
+      "det_score": 0.12758955359458923
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.025625356814832835,
+      "quality": 0.4083173050559258,
+      "area": 9218.95780302491,
+      "sharpness": 208.19201655683216,
+      "det_score": 0.12610125541687012
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.02369989817953715,
+      "quality": 0.49449429669636336,
+      "area": 9144.388821601868,
+      "sharpness": 763.999321684953,
+      "det_score": 0.11612385511398315
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.02516609176686725,
+      "quality": 0.3950996931481047,
+      "area": 8680.290260282345,
+      "sharpness": 190.43140048979592,
+      "det_score": 0.11440128087997437
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.024795555331324635,
+      "quality": 0.4965351832211067,
+      "area": 7696.149950623512,
+      "sharpness": 983.4602040350795,
+      "det_score": 0.11381584405899048
+    },
+    {
+      "img_file": "Image_6.JPG",
+      "label": "Unknown",
+      "confidence": 0.02527493628538671,
+      "quality": 0.4838157880996503,
+      "area": 5063.02119448781,
+      "sharpness": 1230.577664359725,
+      "det_score": 0.10649392008781433
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Shreya Nigam",
+      "confidence": 0.07756615114386803,
+      "quality": 0.7491942081270151,
+      "area": 93615.11293444037,
+      "sharpness": 67.44886107412887,
+      "det_score": 0.9127788543701172
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Shrutija Swain",
+      "confidence": 0.07697286423141377,
+      "quality": 0.6844903023057727,
+      "area": 50099.490814208984,
+      "sharpness": 41.131918348287904,
+      "det_score": 0.9053595662117004
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Tarshit Sehgal",
+      "confidence": 0.07691755620910415,
+      "quality": 0.6912737766248714,
+      "area": 53547.63201069832,
+      "sharpness": 63.75354889286324,
+      "det_score": 0.8828456401824951
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Manit Jhajharia",
+      "confidence": 0.06932874657852046,
+      "quality": 0.6979784595721155,
+      "area": 25636.435104370117,
+      "sharpness": 96.892470079834,
+      "det_score": 0.8809956312179565
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Rishabh Bhardwaj",
+      "confidence": 0.0610977634594632,
+      "quality": 0.761686045054054,
+      "area": 17766.700248390436,
+      "sharpness": 356.142558822753,
+      "det_score": 0.880488395690918
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Santosh Singh",
+      "confidence": 0.07979511611452501,
+      "quality": 0.7079117254602808,
+      "area": 12584.756035804749,
+      "sharpness": 237.09460029365536,
+      "det_score": 0.8611882328987122
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Pratham Manish Shah",
+      "confidence": 0.07910731716908988,
+      "quality": 0.7316086098151491,
+      "area": 33731.15304142237,
+      "sharpness": 201.48255695977218,
+      "det_score": 0.8485870957374573
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Jyoti Jyoti",
+      "confidence": 0.05522543182067032,
+      "quality": 0.6989895476830326,
+      "area": 19687.238057971,
+      "sharpness": 175.04153257268047,
+      "det_score": 0.8453633189201355
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.041315200671083345,
+      "quality": 0.7280913819349412,
+      "area": 13865.191563606262,
+      "sharpness": 300.290692771199,
+      "det_score": 0.8407331109046936
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Ayush Singh",
+      "confidence": 0.06063896445947158,
+      "quality": 0.6849468967644935,
+      "area": 10920.773887395859,
+      "sharpness": 209.3773308046261,
+      "det_score": 0.838471531867981
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Suraj Adhikari",
+      "confidence": 0.07994911606225849,
+      "quality": 0.6977162526107945,
+      "area": 13421.199471473694,
+      "sharpness": 256.76227404082925,
+      "det_score": 0.8162250518798828
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Anish Mayanache",
+      "confidence": 0.06563869334681303,
+      "quality": 0.7298661219542562,
+      "area": 13426.5706025064,
+      "sharpness": 485.94885912698413,
+      "det_score": 0.7982889413833618
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.02411800423813118,
+      "quality": 0.6714155199963996,
+      "area": 12690.908967256546,
+      "sharpness": 200.03664073547816,
+      "det_score": 0.788692831993103
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Maitreya Shelare",
+      "confidence": 0.056957596706951705,
+      "quality": 0.7215213886895551,
+      "area": 9300.371007353067,
+      "sharpness": 588.4833715825876,
+      "det_score": 0.7729402780532837
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Jadhav Jay Karbhari",
+      "confidence": 0.061055250290594484,
+      "quality": 0.6986861236823521,
+      "area": 8168.647483825684,
+      "sharpness": 502.14876370425304,
+      "det_score": 0.7624242305755615
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Shreeram Anil Jadhav",
+      "confidence": 0.06024278363817655,
+      "quality": 0.6795998331097586,
+      "area": 8439.46054893732,
+      "sharpness": 517.7489252170822,
+      "det_score": 0.7106634378433228
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.0330142167077149,
+      "quality": 0.667650336782521,
+      "area": 9684.586428664625,
+      "sharpness": 356.4940088390542,
+      "det_score": 0.7098124027252197
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Devtanu Barman",
+      "confidence": 0.08447015241535843,
+      "quality": 0.6377814086383454,
+      "area": 10485.018693983555,
+      "sharpness": 215.80575585399447,
+      "det_score": 0.7041237354278564
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.04618310612816469,
+      "quality": 0.6322742593903949,
+      "area": 7680.274999380112,
+      "sharpness": 268.74845190191957,
+      "det_score": 0.6942343711853027
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Shaurya Goyal",
+      "confidence": 0.07207310436318733,
+      "quality": 0.6785297160287963,
+      "area": 9222.2130176723,
+      "sharpness": 563.994068883545,
+      "det_score": 0.673643946647644
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Gurbani Jeet Sunil",
+      "confidence": 0.09097960187357937,
+      "quality": 0.6815123737860204,
+      "area": 8290.615418851376,
+      "sharpness": 676.2494402525766,
+      "det_score": 0.6702731847763062
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.04556118562541108,
+      "quality": 0.6744419804014409,
+      "area": 7678.028271853924,
+      "sharpness": 594.3551143757356,
+      "det_score": 0.6682186126708984
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Abhishek Abhishek",
+      "confidence": 0.0747469120005686,
+      "quality": 0.6372918059874149,
+      "area": 6472.668838977814,
+      "sharpness": 498.1150367668302,
+      "det_score": 0.6406316161155701
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.03633138789701642,
+      "quality": 0.6393863304593328,
+      "area": 5185.923491835594,
+      "sharpness": 762.7377445391186,
+      "det_score": 0.5968122482299805
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.04799763537086633,
+      "quality": 0.6221796488128284,
+      "area": 6019.459854662418,
+      "sharpness": 748.3271315867524,
+      "det_score": 0.5380967855453491
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.024944433292254813,
+      "quality": 0.5576262944678414,
+      "area": 8796.340095698833,
+      "sharpness": 560.0301391919119,
+      "det_score": 0.3467877507209778
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.024389145365308302,
+      "quality": 0.5183203806130456,
+      "area": 8618.237055391073,
+      "sharpness": 485.6073614087741,
+      "det_score": 0.27661630511283875
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.02690137540058549,
+      "quality": 0.45076856450535496,
+      "area": 11806.708168029785,
+      "sharpness": 251.38253036205978,
+      "det_score": 0.1700175702571869
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.024634516424152687,
+      "quality": 0.5292029417878757,
+      "area": 7064.020769834518,
+      "sharpness": 1261.518856767608,
+      "det_score": 0.16343650221824646
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.024107212931335217,
+      "quality": 0.42110828631464464,
+      "area": 6076.678253412247,
+      "sharpness": 268.42809774018536,
+      "det_score": 0.1592276692390442
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.024056878145387615,
+      "quality": 0.46199292617368937,
+      "area": 7958.032698725816,
+      "sharpness": 491.7277740618556,
+      "det_score": 0.13826799392700195
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.024965735171336812,
+      "quality": 0.3548958891031988,
+      "area": 4331.6358959674835,
+      "sharpness": 171.17592183908047,
+      "det_score": 0.1257336437702179
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.025532876347537203,
+      "quality": 0.48903817961310353,
+      "area": 9979.359595477581,
+      "sharpness": 593.8219079930402,
+      "det_score": 0.12395519018173218
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.023991108503941518,
+      "quality": 0.3892851299950028,
+      "area": 9717.072070598602,
+      "sharpness": 151.00767222984302,
+      "det_score": 0.11341950297355652
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.02477403809421597,
+      "quality": 0.43297913354690876,
+      "area": 10143.439708705992,
+      "sharpness": 281.6833232654334,
+      "det_score": 0.11035898327827454
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.023559483784694676,
+      "quality": 0.4488318757830339,
+      "area": 14163.929811477661,
+      "sharpness": 330.0841161035713,
+      "det_score": 0.11017638444900513
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.02605986404705602,
+      "quality": 0.4895574364843254,
+      "area": 9724.29791688919,
+      "sharpness": 667.6236568974354,
+      "det_score": 0.10814902186393738
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.023813809161914806,
+      "quality": 0.29486069887518923,
+      "area": 10126.318211317062,
+      "sharpness": 42.11179134385235,
+      "det_score": 0.10510188341140747
+    },
+    {
+      "img_file": "Image_7.JPG",
+      "label": "Unknown",
+      "confidence": 0.027012016094466792,
+      "quality": 0.45772276551369157,
+      "area": 7827.103978455067,
+      "sharpness": 632.1168561169936,
+      "det_score": 0.1007566750049591
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Shreya Nigam",
+      "confidence": 0.07338926165898256,
+      "quality": 0.70584414287563,
+      "area": 72858.93716847897,
+      "sharpness": 51.66068863184658,
+      "det_score": 0.9038615226745605
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Tarshit Sehgal",
+      "confidence": 0.0770980301080938,
+      "quality": 0.6784953589637516,
+      "area": 68944.83408164978,
+      "sharpness": 37.63138476419442,
+      "det_score": 0.8809754848480225
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Baral Prathmesh Santosh",
+      "confidence": 0.06495275180472794,
+      "quality": 0.681326771685515,
+      "area": 23470.063304387033,
+      "sharpness": 93.57293384700817,
+      "det_score": 0.8725184202194214
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Anish Mayanache",
+      "confidence": 0.05327012801210679,
+      "quality": 0.7092521640168016,
+      "area": 14741.825403213501,
+      "sharpness": 206.56520183067303,
+      "det_score": 0.8647150993347168
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Jyoti Jyoti",
+      "confidence": 0.05392761865869007,
+      "quality": 0.6727482106287848,
+      "area": 22064.915828704834,
+      "sharpness": 91.45089445582802,
+      "det_score": 0.8636006116867065
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Pratham Manish Shah",
+      "confidence": 0.07505186285711545,
+      "quality": 0.7277439741009405,
+      "area": 28335.11651480198,
+      "sharpness": 226.95159532054015,
+      "det_score": 0.8567751049995422
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Rishabh Bhardwaj",
+      "confidence": 0.05597730398422944,
+      "quality": 0.7580737216199606,
+      "area": 14446.184511780739,
+      "sharpness": 496.9949389446017,
+      "det_score": 0.8510900139808655
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Ayush Ashish Kumar",
+      "confidence": 0.062348126535847335,
+      "quality": 0.6877906173859653,
+      "area": 38261.73270136863,
+      "sharpness": 83.86770594874406,
+      "det_score": 0.849669337272644
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Shaurya Goyal",
+      "confidence": 0.06219657685027003,
+      "quality": 0.6998550614809482,
+      "area": 10766.843390464783,
+      "sharpness": 249.95555465375287,
+      "det_score": 0.8485982418060303
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Santosh Singh",
+      "confidence": 0.07292414184273689,
+      "quality": 0.6693898159956106,
+      "area": 14640.05586975813,
+      "sharpness": 121.945959006318,
+      "det_score": 0.8343284130096436
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Jadhav Jay Karbhari",
+      "confidence": 0.06327051299661636,
+      "quality": 0.6811887391076131,
+      "area": 9155.1148853302,
+      "sharpness": 246.04909222948436,
+      "det_score": 0.8172616362571716
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Atharva Uday Jaltare",
+      "confidence": 0.06086966274199681,
+      "quality": 0.6975364996317184,
+      "area": 11092.286721169949,
+      "sharpness": 338.73485387564045,
+      "det_score": 0.8047186136245728
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Soumya Gour",
+      "confidence": 0.05229706982389496,
+      "quality": 0.679381861264546,
+      "area": 16643.43174597621,
+      "sharpness": 154.1646401944434,
+      "det_score": 0.8007238507270813
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Unknown",
+      "confidence": 0.02401929505487574,
+      "quality": 0.6988374383848819,
+      "area": 11859.893169492483,
+      "sharpness": 354.919654689334,
+      "det_score": 0.7862914800643921
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Gurbani Jeet Sunil",
+      "confidence": 0.08603736412348299,
+      "quality": 0.6643897731374981,
+      "area": 9806.76198899746,
+      "sharpness": 227.22823660075875,
+      "det_score": 0.779331386089325
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Saurabh Gupta",
+      "confidence": 0.071581823456222,
+      "quality": 0.6478128790664404,
+      "area": 10432.952031046152,
+      "sharpness": 171.16389503161855,
+      "det_score": 0.7720553874969482
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Abhishek Abhishek",
+      "confidence": 0.07402896100635017,
+      "quality": 0.6314825028323565,
+      "area": 8562.1921646595,
+      "sharpness": 196.3808729231539,
+      "det_score": 0.7257780432701111
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Unknown",
+      "confidence": 0.03650744039743821,
+      "quality": 0.6408655883260495,
+      "area": 6984.3311467170715,
+      "sharpness": 337.855745019771,
+      "det_score": 0.6934082508087158
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Maitreya Shelare",
+      "confidence": 0.05537829154971236,
+      "quality": 0.6814403137676773,
+      "area": 7180.94792675972,
+      "sharpness": 739.5962968702169,
+      "det_score": 0.6732639670372009
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Unknown",
+      "confidence": 0.04674011229923961,
+      "quality": 0.658500032621546,
+      "area": 6886.767318606377,
+      "sharpness": 559.0307912413358,
+      "det_score": 0.668147087097168
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Shreeram Anil Jadhav",
+      "confidence": 0.062220469446907296,
+      "quality": 0.623463174084906,
+      "area": 9000.843252837658,
+      "sharpness": 306.7069396359039,
+      "det_score": 0.6248003840446472
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Unknown",
+      "confidence": 0.034883407889735485,
+      "quality": 0.6191679497628987,
+      "area": 8400.427286759019,
+      "sharpness": 418.3498592686102,
+      "det_score": 0.5819420218467712
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Unknown",
+      "confidence": 0.02681060449806087,
+      "quality": 0.4883908484121536,
+      "area": 9086.350793659687,
+      "sharpness": 795.4924762208739,
+      "det_score": 0.11007386445999146
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Unknown",
+      "confidence": 0.02543317893187247,
+      "quality": 0.41220731501099395,
+      "area": 7241.486760795116,
+      "sharpness": 280.0100209773694,
+      "det_score": 0.1082310676574707
+    },
+    {
+      "img_file": "Image_8.JPG",
+      "label": "Unknown",
+      "confidence": 0.024642209073192926,
+      "quality": 0.358552045201245,
+      "area": 7599.269845485687,
+      "sharpness": 139.0459497434892,
+      "det_score": 0.10195255279541016
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Shreya Nigam",
+      "confidence": 0.07827526269560099,
+      "quality": 0.7196411881618205,
+      "area": 71112.35451042652,
+      "sharpness": 67.67220020410419,
+      "det_score": 0.8988087177276611
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Tarshit Sehgal",
+      "confidence": 0.07833959293231313,
+      "quality": 0.7094937570303591,
+      "area": 68539.82353162766,
+      "sharpness": 59.650467409115095,
+      "det_score": 0.887752890586853
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Baral Prathmesh Santosh",
+      "confidence": 0.06519789994421457,
+      "quality": 0.688231917750451,
+      "area": 21790.94044752419,
+      "sharpness": 93.9843435497235,
+      "det_score": 0.8851255178451538
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Jyoti Jyoti",
+      "confidence": 0.05693894212323061,
+      "quality": 0.7048065086265576,
+      "area": 21071.266907572746,
+      "sharpness": 138.03231490150083,
+      "det_score": 0.8843756914138794
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Pratham Manish Shah",
+      "confidence": 0.08719499164955095,
+      "quality": 0.7550715539932583,
+      "area": 28497.710709273815,
+      "sharpness": 296.69742360176883,
+      "det_score": 0.882006049156189
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Ayush Ashish Kumar",
+      "confidence": 0.06670237507844065,
+      "quality": 0.7138461663826969,
+      "area": 36548.476729124784,
+      "sharpness": 124.30052203322045,
+      "det_score": 0.8661507368087769
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Rishabh Bhardwaj",
+      "confidence": 0.051812786253011556,
+      "quality": 0.7544677897158494,
+      "area": 14800.281971216202,
+      "sharpness": 442.40606145797466,
+      "det_score": 0.8593342304229736
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Anish Mayanache",
+      "confidence": 0.05798232627693258,
+      "quality": 0.7355048590216566,
+      "area": 14415.086802303791,
+      "sharpness": 338.916977849431,
+      "det_score": 0.8579189777374268
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Gurbani Jeet Sunil",
+      "confidence": 0.09008171022462508,
+      "quality": 0.7195986783371602,
+      "area": 10455.391900897026,
+      "sharpness": 368.45129757447603,
+      "det_score": 0.8414009809494019
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Soumya Gour",
+      "confidence": 0.05101694328148532,
+      "quality": 0.6974951209799727,
+      "area": 16622.476744949818,
+      "sharpness": 164.27973952225452,
+      "det_score": 0.8407199382781982
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Santosh Singh",
+      "confidence": 0.0841559720613076,
+      "quality": 0.6877886794657561,
+      "area": 14310.998139858246,
+      "sharpness": 162.33828728384864,
+      "det_score": 0.835028886795044
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Shreeram Anil Jadhav",
+      "confidence": 0.05827615718437426,
+      "quality": 0.7265329238377666,
+      "area": 9930.346549749374,
+      "sharpness": 480.6798078361104,
+      "det_score": 0.8127120733261108
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Atharva Uday Jaltare",
+      "confidence": 0.06650407866066448,
+      "quality": 0.7347544057184202,
+      "area": 12267.71860282123,
+      "sharpness": 523.0652437248051,
+      "det_score": 0.8087829351425171
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Abhishek Abhishek",
+      "confidence": 0.0718673681482078,
+      "quality": 0.6820152771130851,
+      "area": 7918.70094537735,
+      "sharpness": 348.64318977528336,
+      "det_score": 0.7924842834472656
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Unknown",
+      "confidence": 0.023978794736091463,
+      "quality": 0.7125800535013435,
+      "area": 12056.35860531032,
+      "sharpness": 482.7081806021935,
+      "det_score": 0.7645843029022217
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Saurabh Gupta",
+      "confidence": 0.07308612276790064,
+      "quality": 0.6632843286926855,
+      "area": 11185.200738877058,
+      "sharpness": 226.59405152920095,
+      "det_score": 0.7480848431587219
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Jadhav Jay Karbhari",
+      "confidence": 0.06667808364535627,
+      "quality": 0.662421828369631,
+      "area": 9658.070771694183,
+      "sharpness": 324.8451947905816,
+      "det_score": 0.7115474939346313
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Shaurya Goyal",
+      "confidence": 0.0630566447264013,
+      "quality": 0.6598376553839038,
+      "area": 10103.758004784584,
+      "sharpness": 353.36164464637613,
+      "det_score": 0.6854243278503418
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Unknown",
+      "confidence": 0.03285472650246064,
+      "quality": 0.6573352626383611,
+      "area": 6921.22734926641,
+      "sharpness": 528.1196138045055,
+      "det_score": 0.666302502155304
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Maitreya Shelare",
+      "confidence": 0.056536917907356314,
+      "quality": 0.677137973140388,
+      "area": 6149.339582204819,
+      "sharpness": 881.3037596388021,
+      "det_score": 0.6489636301994324
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Unknown",
+      "confidence": 0.04304230832672424,
+      "quality": 0.6394667049746738,
+      "area": 7902.172566175461,
+      "sharpness": 552.8205177498255,
+      "det_score": 0.5908961296081543
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Unknown",
+      "confidence": 0.04785153397588158,
+      "quality": 0.6473873984472415,
+      "area": 7278.885254859924,
+      "sharpness": 751.3376182780116,
+      "det_score": 0.5732320547103882
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Unknown",
+      "confidence": 0.025792613360912927,
+      "quality": 0.3794667232939123,
+      "area": 11301.580251455307,
+      "sharpness": 97.73581007058563,
+      "det_score": 0.14573344588279724
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Unknown",
+      "confidence": 0.02470396955265554,
+      "quality": 0.4467797486773741,
+      "area": 11290.352390572429,
+      "sharpness": 339.46737576077663,
+      "det_score": 0.12301990389823914
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Unknown",
+      "confidence": 0.02458218961686589,
+      "quality": 0.42704209220288003,
+      "area": 7111.7371644973755,
+      "sharpness": 405.984512457629,
+      "det_score": 0.11684507131576538
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Unknown",
+      "confidence": 0.025809435728042535,
+      "quality": 0.4333782871662083,
+      "area": 8470.12336730957,
+      "sharpness": 361.1008332721664,
+      "det_score": 0.10919687151908875
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Unknown",
+      "confidence": 0.023865994874833273,
+      "quality": 0.35840171333696574,
+      "area": 210.45995442569256,
+      "sharpness": 186.40023750537455,
+      "det_score": 0.5184841156005859
+    },
+    {
+      "img_file": "Image_9.JPG",
+      "label": "Unknown",
+      "confidence": 0.02319991247528924,
+      "quality": 0.48243117195468904,
+      "area": 553.6262130439281,
+      "sharpness": 677.4987517146776,
+      "det_score": 0.5465946197509766
+    }
+  ]
+}

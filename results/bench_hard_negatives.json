@@ -1,0 +1,132 @@
+{
+  "top_10_confusable_pairs": [
+    {
+      "student_a": "Gogineni Venkat Sumanth",
+      "student_b": "Jadhav Shubham Sudhakar",
+      "cosine_sim": 0.38186025237646587
+    },
+    {
+      "student_a": "Akarsh Saxena",
+      "student_b": "Manaswi Goyal",
+      "cosine_sim": 0.3490864807676963
+    },
+    {
+      "student_a": "Baral Prathmesh Santosh",
+      "student_b": "Rownak Tiwari",
+      "cosine_sim": 0.3440027016574935
+    },
+    {
+      "student_a": "Aboli Ganesh Malshikare",
+      "student_b": "Rajeswar Banerjee",
+      "cosine_sim": 0.3387407924633459
+    },
+    {
+      "student_a": "Jadhav Shubham Sudhakar",
+      "student_b": "Mihir Gajanan Wani",
+      "cosine_sim": 0.32391651091410745
+    },
+    {
+      "student_a": "Rownak Tiwari",
+      "student_b": "Santosh Singh",
+      "cosine_sim": 0.32357314782498653
+    },
+    {
+      "student_a": "Srushti Rajwade",
+      "student_b": "Yashasvee Vijay Taiwade",
+      "cosine_sim": 0.32352565343660444
+    },
+    {
+      "student_a": "K. P. Lakshmeesh",
+      "student_b": "Krunal Vaghela",
+      "cosine_sim": 0.3211941686935759
+    },
+    {
+      "student_a": "Moon Aman Milind",
+      "student_b": "Saurabh Gupta",
+      "cosine_sim": 0.3192423632696119
+    },
+    {
+      "student_a": "Ajinkya Prashant Pawar",
+      "student_b": "Pulkit Pulkit",
+      "cosine_sim": 0.3173124758460403
+    }
+  ],
+  "loo_before": {
+    "accuracy": 1.0,
+    "avg_margin": 0.07226726061198839,
+    "min_margin": 0.022512963283804307
+  },
+  "loo_after": {
+    "accuracy": 0.9991596638655462,
+    "avg_margin": 0.4332510143718206,
+    "min_margin": 0.0013679921373106613
+  },
+  "classroom_before": {
+    "tp": 38,
+    "fp": 0,
+    "fn": 9,
+    "precision": 1.0,
+    "recall": 0.8085106382978723,
+    "f1": 0.8941176470588235
+  },
+  "classroom_after": {
+    "tp": 39,
+    "fp": 1,
+    "fn": 8,
+    "precision": 0.975,
+    "recall": 0.8297872340425532,
+    "f1": 0.896551724137931
+  },
+  "top_10_runner_up_confusions": [
+    {
+      "true": "Akarsh Saxena",
+      "runner_up": "Aman Russell",
+      "count": 5
+    },
+    {
+      "true": "Arjun Singh",
+      "runner_up": "Saurabh Gupta",
+      "count": 5
+    },
+    {
+      "true": "Atharva Uday Jaltare",
+      "runner_up": "Arjun Singh",
+      "count": 5
+    },
+    {
+      "true": "Deepak Kumar",
+      "runner_up": "Saurabh Gupta",
+      "count": 5
+    },
+    {
+      "true": "Devesh Soni",
+      "runner_up": "Arjun Singh",
+      "count": 5
+    },
+    {
+      "true": "Devtanu Barman",
+      "runner_up": "Aman Russell",
+      "count": 5
+    },
+    {
+      "true": "Jadhav Jay Karbhari",
+      "runner_up": "Arjun Singh",
+      "count": 5
+    },
+    {
+      "true": "Jadhav Shubham Sudhakar",
+      "runner_up": "Gogineni Venkat Sumanth",
+      "count": 5
+    },
+    {
+      "true": "Jyoti Jyoti",
+      "runner_up": "Nistala Sreechandana",
+      "count": 5
+    },
+    {
+      "true": "Kamalesh Barman",
+      "runner_up": "Aman Russell",
+      "count": 5
+    }
+  ]
+}

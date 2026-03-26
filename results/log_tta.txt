@@ -1,0 +1,53 @@
+======================================================================
+TEST-TIME AUGMENTATION BENCHMARK
+======================================================================
+Model loaded: 58 students
+
+  Image_1.JPG: 38 faces
+Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+find model: /Users/manitjhajharia/.insightface/models/buffalo_l/1k3d68.onnx landmark_3d_68 ['None', 3, 192, 192] 0.0 1.0
+Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+find model: /Users/manitjhajharia/.insightface/models/buffalo_l/2d106det.onnx landmark_2d_106 ['None', 3, 192, 192] 0.0 1.0
+Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+find model: /Users/manitjhajharia/.insightface/models/buffalo_l/det_10g.onnx detection [1, 3, '?', '?'] 127.5 128.0
+Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+find model: /Users/manitjhajharia/.insightface/models/buffalo_l/genderage.onnx genderage ['None', 3, 96, 96] 0.0 1.0
+Applied providers: ['CPUExecutionProvider'], with options: {'CPUExecutionProvider': {}}
+find model: /Users/manitjhajharia/.insightface/models/buffalo_l/w600k_r50.onnx recognition ['None', 3, 112, 112] 127.5 127.5
+set det-size: (640, 640)
+
+  Image_10.JPG: 30 faces
+
+  Image_11.JPG: 55 faces
+
+  Image_12.JPG: 56 faces
+
+  Image_2.JPG: 28 faces
+
+  Image_3.JPG: 36 faces
+
+  Image_4.JPG: 60 faces
+
+  Image_5.JPG: 40 faces
+
+  Image_6.JPG: 51 faces
+
+  Image_7.JPG: 39 faces
+
+  Image_8.JPG: 25 faces
+
+  Image_9.JPG: 28 faces
+
+======================================================================
+TEST-TIME AUGMENTATION RESULTS
+======================================================================
+  Total faces: 486, TTA success: 61.5%
+  Avg confidence delta: -0.0129, Label changes: 147
+
+  Method            TP   FP   FN   Recall     Prec       F1
+  -------------------------------------------------------
+  Baseline          38    0    9   80.9%  100.0%   89.4%
+  TTA                7    0   40   14.9%  100.0%   25.9%
+======================================================================
+
+Results saved to /Users/manitjhajharia/Desktop/Sem 6/EE610/Project/results/bench_tta.json

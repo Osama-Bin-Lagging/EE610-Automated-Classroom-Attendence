@@ -1,0 +1,168 @@
+{
+  "arcface_baseline": {
+    "tp": 38,
+    "fp": 0,
+    "fn": 9,
+    "precision": 1.0,
+    "recall": 0.8085106382978723,
+    "f1": 0.8941176470588235,
+    "missed": [
+      "Ankit Raj",
+      "Divig Bansal",
+      "K. P. Lakshmeesh",
+      "Kamalesh Barman",
+      "Moon Aman Milind",
+      "Pulkit Pulkit",
+      "Samyak Parakh",
+      "Shaik Rehna Afroz",
+      "Vishwam Hemang Patel"
+    ],
+    "false_positives": []
+  },
+  "adaface_only": {
+    "tp": 36,
+    "fp": 0,
+    "fn": 11,
+    "precision": 1.0,
+    "recall": 0.7659574468085106,
+    "f1": 0.8674698795180723,
+    "missed": [
+      "Ankit Raj",
+      "Devesh Soni",
+      "Divig Bansal",
+      "K. P. Lakshmeesh",
+      "Kamalesh Barman",
+      "Moon Aman Milind",
+      "Pulkit Pulkit",
+      "Pyla Ramya",
+      "Samyak Parakh",
+      "Shaik Rehna Afroz",
+      "Vishwam Hemang Patel"
+    ],
+    "false_positives": []
+  },
+  "ensemble": {
+    "tp": 36,
+    "fp": 0,
+    "fn": 11,
+    "precision": 1.0,
+    "recall": 0.7659574468085106,
+    "f1": 0.8674698795180723,
+    "missed": [
+      "Ankit Raj",
+      "Devesh Soni",
+      "Divig Bansal",
+      "K. P. Lakshmeesh",
+      "Kamalesh Barman",
+      "Moon Aman Milind",
+      "Pulkit Pulkit",
+      "Pyla Ramya",
+      "Samyak Parakh",
+      "Shaik Rehna Afroz",
+      "Vishwam Hemang Patel"
+    ],
+    "false_positives": []
+  },
+  "adaface_threshold_sweep": [
+    {
+      "threshold": 0.01,
+      "tp": 44,
+      "fp": 5,
+      "fn": 3,
+      "precision": 0.8979591836734694,
+      "recall": 0.9361702127659575,
+      "f1": 0.9166666666666666,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": [
+        "Akarsh Saxena",
+        "Aman Russell",
+        "Arjun Singh",
+        "Deepak Kumar",
+        "Gogineni Venkat Sumanth"
+      ]
+    },
+    {
+      "threshold": 0.02,
+      "tp": 44,
+      "fp": 5,
+      "fn": 3,
+      "precision": 0.8979591836734694,
+      "recall": 0.9361702127659575,
+      "f1": 0.9166666666666666,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": [
+        "Akarsh Saxena",
+        "Aman Russell",
+        "Arjun Singh",
+        "Deepak Kumar",
+        "Gogineni Venkat Sumanth"
+      ]
+    },
+    {
+      "threshold": 0.03,
+      "tp": 44,
+      "fp": 3,
+      "fn": 3,
+      "precision": 0.9361702127659575,
+      "recall": 0.9361702127659575,
+      "f1": 0.9361702127659575,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": [
+        "Akarsh Saxena",
+        "Aman Russell",
+        "Arjun Singh"
+      ]
+    },
+    {
+      "threshold": 0.04,
+      "tp": 42,
+      "fp": 0,
+      "fn": 5,
+      "precision": 1.0,
+      "recall": 0.8936170212765957,
+      "f1": 0.9438202247191011,
+      "missed": [
+        "Ankit Raj",
+        "Devesh Soni",
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": []
+    },
+    {
+      "threshold": 0.05,
+      "tp": 37,
+      "fp": 0,
+      "fn": 10,
+      "precision": 1.0,
+      "recall": 0.7872340425531915,
+      "f1": 0.880952380952381,
+      "missed": [
+        "Ankit Raj",
+        "Devesh Soni",
+        "Divig Bansal",
+        "K. P. Lakshmeesh",
+        "Kamalesh Barman",
+        "Moon Aman Milind",
+        "Pyla Ramya",
+        "Samyak Parakh",
+        "Shaik Rehna Afroz",
+        "Vishwam Hemang Patel"
+      ],
+      "false_positives": []
+    }
+  ]
+}

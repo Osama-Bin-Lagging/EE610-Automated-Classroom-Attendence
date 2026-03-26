@@ -1,0 +1,409 @@
+{
+  "threshold_sweep": [
+    {
+      "threshold": 0.01,
+      "tp": 44,
+      "fp": 4,
+      "fn": 3,
+      "precision": 0.9166666666666666,
+      "recall": 0.9361702127659575,
+      "f1": 0.9263157894736843,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": [
+        "Akarsh Saxena",
+        "Aman Russell",
+        "Arjun Singh",
+        "Gogineni Venkat Sumanth"
+      ]
+    },
+    {
+      "threshold": 0.02,
+      "tp": 44,
+      "fp": 4,
+      "fn": 3,
+      "precision": 0.9166666666666666,
+      "recall": 0.9361702127659575,
+      "f1": 0.9263157894736843,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": [
+        "Akarsh Saxena",
+        "Aman Russell",
+        "Arjun Singh",
+        "Gogineni Venkat Sumanth"
+      ]
+    },
+    {
+      "threshold": 0.025,
+      "tp": 44,
+      "fp": 4,
+      "fn": 3,
+      "precision": 0.9166666666666666,
+      "recall": 0.9361702127659575,
+      "f1": 0.9263157894736843,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": [
+        "Akarsh Saxena",
+        "Aman Russell",
+        "Arjun Singh",
+        "Gogineni Venkat Sumanth"
+      ]
+    },
+    {
+      "threshold": 0.03,
+      "tp": 44,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9361702127659575,
+      "f1": 0.967032967032967,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": []
+    },
+    {
+      "threshold": 0.035,
+      "tp": 44,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9361702127659575,
+      "f1": 0.967032967032967,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": []
+    },
+    {
+      "threshold": 0.04,
+      "tp": 43,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.9148936170212766,
+      "f1": 0.9555555555555556,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind",
+        "Vishwam Hemang Patel"
+      ],
+      "false_positives": []
+    },
+    {
+      "threshold": 0.045,
+      "tp": 40,
+      "fp": 0,
+      "fn": 7,
+      "precision": 1.0,
+      "recall": 0.851063829787234,
+      "f1": 0.9195402298850576,
+      "missed": [
+        "Ankit Raj",
+        "Divig Bansal",
+        "K. P. Lakshmeesh",
+        "Kamalesh Barman",
+        "Moon Aman Milind",
+        "Shaik Rehna Afroz",
+        "Vishwam Hemang Patel"
+      ],
+      "false_positives": []
+    },
+    {
+      "threshold": 0.05,
+      "tp": 39,
+      "fp": 0,
+      "fn": 8,
+      "precision": 1.0,
+      "recall": 0.8297872340425532,
+      "f1": 0.9069767441860465,
+      "missed": [
+        "Ankit Raj",
+        "Divig Bansal",
+        "K. P. Lakshmeesh",
+        "Kamalesh Barman",
+        "Moon Aman Milind",
+        "Samyak Parakh",
+        "Shaik Rehna Afroz",
+        "Vishwam Hemang Patel"
+      ],
+      "false_positives": []
+    }
+  ],
+  "adaptive_threshold": [
+    {
+      "multiplier": 0.5,
+      "tp": 44,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9361702127659575,
+      "f1": 0.967032967032967,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": []
+    },
+    {
+      "multiplier": 0.6,
+      "tp": 44,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9361702127659575,
+      "f1": 0.967032967032967,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": []
+    },
+    {
+      "multiplier": 0.7,
+      "tp": 44,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9361702127659575,
+      "f1": 0.967032967032967,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": []
+    },
+    {
+      "multiplier": 0.8,
+      "tp": 44,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9361702127659575,
+      "f1": 0.967032967032967,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": []
+    }
+  ],
+  "cosine_fallback": [
+    {
+      "cos_threshold": 0.35,
+      "n_fallback_recoveries": 66,
+      "tp": 44,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9361702127659575,
+      "f1": 0.967032967032967,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": []
+    },
+    {
+      "cos_threshold": 0.4,
+      "n_fallback_recoveries": 57,
+      "tp": 44,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9361702127659575,
+      "f1": 0.967032967032967,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": []
+    },
+    {
+      "cos_threshold": 0.45,
+      "n_fallback_recoveries": 45,
+      "tp": 44,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9361702127659575,
+      "f1": 0.967032967032967,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": []
+    },
+    {
+      "cos_threshold": 0.5,
+      "n_fallback_recoveries": 38,
+      "tp": 44,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9361702127659575,
+      "f1": 0.967032967032967,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": []
+    },
+    {
+      "cos_threshold": 0.55,
+      "n_fallback_recoveries": 31,
+      "tp": 44,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9361702127659575,
+      "f1": 0.967032967032967,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": []
+    },
+    {
+      "cos_threshold": 0.6,
+      "n_fallback_recoveries": 22,
+      "tp": 42,
+      "fp": 0,
+      "fn": 5,
+      "precision": 1.0,
+      "recall": 0.8936170212765957,
+      "f1": 0.9438202247191011,
+      "missed": [
+        "Divig Bansal",
+        "K. P. Lakshmeesh",
+        "Kamalesh Barman",
+        "Moon Aman Milind",
+        "Vishwam Hemang Patel"
+      ],
+      "false_positives": []
+    }
+  ],
+  "combined": [
+    {
+      "svm_threshold": 0.03,
+      "cos_threshold": 0.5,
+      "tp": 44,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9361702127659575,
+      "f1": 0.967032967032967,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": []
+    },
+    {
+      "svm_threshold": 0.03,
+      "cos_threshold": 0.45,
+      "tp": 44,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9361702127659575,
+      "f1": 0.967032967032967,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": []
+    },
+    {
+      "svm_threshold": 0.035,
+      "cos_threshold": 0.5,
+      "tp": 44,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9361702127659575,
+      "f1": 0.967032967032967,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": []
+    },
+    {
+      "svm_threshold": 0.035,
+      "cos_threshold": 0.45,
+      "tp": 44,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9361702127659575,
+      "f1": 0.967032967032967,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": []
+    },
+    {
+      "svm_threshold": 0.04,
+      "cos_threshold": 0.5,
+      "tp": 44,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9361702127659575,
+      "f1": 0.967032967032967,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": []
+    },
+    {
+      "svm_threshold": 0.04,
+      "cos_threshold": 0.45,
+      "tp": 44,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.9361702127659575,
+      "f1": 0.967032967032967,
+      "missed": [
+        "Divig Bansal",
+        "Kamalesh Barman",
+        "Moon Aman Milind"
+      ],
+      "false_positives": []
+    }
+  ]
+}

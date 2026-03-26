@@ -1,0 +1,62 @@
+[
+  {
+    "k": 1,
+    "n_trials": 5,
+    "loo_mean": null,
+    "loo_std": null,
+    "recall_mean": 0.0,
+    "recall_std": 0.0,
+    "precision_mean": 0.0,
+    "precision_std": 0.0,
+    "f1_mean": 0.0,
+    "f1_std": 0.0
+  },
+  {
+    "k": 2,
+    "n_trials": 5,
+    "loo_mean": 1.0,
+    "loo_std": 0.0,
+    "recall_mean": 0.6042553191489362,
+    "recall_std": 0.056453187920942956,
+    "precision_mean": 0.9928571428571429,
+    "precision_std": 0.01428571428571428,
+    "f1_mean": 0.74983451026489,
+    "f1_std": 0.044779125822555894
+  },
+  {
+    "k": 3,
+    "n_trials": 5,
+    "loo_mean": 1.0,
+    "loo_std": 0.0,
+    "recall_mean": 0.548936170212766,
+    "recall_std": 0.047385228619829974,
+    "precision_mean": 1.0,
+    "precision_std": 0.0,
+    "f1_mean": 0.707565071105399,
+    "f1_std": 0.0401058637881829
+  },
+  {
+    "k": 4,
+    "n_trials": 5,
+    "loo_mean": 1.0,
+    "loo_std": 0.0,
+    "recall_mean": 0.7191489361702128,
+    "recall_std": 0.02481256125466084,
+    "precision_mean": 1.0,
+    "precision_std": 0.0,
+    "f1_mean": 0.8363899656577438,
+    "f1_std": 0.016885582342193634
+  },
+  {
+    "k": 5,
+    "n_trials": 1,
+    "loo_mean": 1.0,
+    "loo_std": 0.0,
+    "recall_mean": 0.8297872340425532,
+    "recall_std": 0.0,
+    "precision_mean": 1.0,
+    "precision_std": 0.0,
+    "f1_mean": 0.9069767441860465,
+    "f1_std": 0.0
+  }
+]
