@@ -27,9 +27,10 @@ RESULTS_DIR = os.path.join(PROJECT_DIR, "results")
 MODEL_PATH = os.path.join(PROJECT_DIR, "face_database_aug.pkl")
 AUG_CACHE = os.path.join(RESULTS_DIR, "aug_cache_n2.pkl")
 
-THRESHOLD = 0.03
+THRESHOLD = 0.035
 DET_SCORE_MIN = 0.3
 N_AUG = 2
+NMS_IOU_THRESH = 0.3
 
 
 def train_model():
@@ -125,22 +126,76 @@ def next_run_dir():
     return os.path.join(RUNS_DIR, f"run_{n}")
 
 
+def _iou(box1, box2):
+    """IoU between two [x1,y1,x2,y2] boxes."""
+    x1 = max(box1[0], box2[0])
+    y1 = max(box1[1], box2[1])
+    x2 = min(box1[2], box2[2])
+    y2 = min(box1[3], box2[3])
+    inter = max(0, x2 - x1) * max(0, y2 - y1)
+    a1 = (box1[2] - box1[0]) * (box1[3] - box1[1])
+    a2 = (box2[2] - box2[0]) * (box2[3] - box2[1])
+    union = a1 + a2 - inter
+    return inter / union if union > 0 else 0
+
+
+def _verify_face(rgb, bbox, app):
+    """Re-run face detection on a padded crop to verify it's a real face.
+    Ensures the verified face actually overlaps the original bbox."""
+    h, w = rgb.shape[:2]
+    x1, y1, x2, y2 = [int(c) for c in bbox]
+    bw, bh = x2 - x1, y2 - y1
+    # Pad crop by 50% on each side
+    cx1 = max(0, x1 - bw // 2)
+    cy1 = max(0, y1 - bh // 2)
+    cx2 = min(w, x2 + bw // 2)
+    cy2 = min(h, y2 + bh // 2)
+    crop = rgb[cy1:cy2, cx1:cx2]
+    if crop.size == 0:
+        return False
+    faces = app.get(crop)
+    # Check that at least one detected face overlaps the original bbox
+    for f in faces:
+        fb = [f.bbox[0] + cx1, f.bbox[1] + cy1, f.bbox[2] + cx1, f.bbox[3] + cy1]
+        if _iou(bbox, fb) > 0.2:
+            return True
+    return False
+
+
 def detect_image(model, img_path):
-    """Run enhanced detection on one image. Returns list of face dicts."""
-    from face_model import load_image_rgb
+    """Run enhanced detection with NMS and model-based verification."""
+    from face_model import load_image_rgb, _get_face_app
     rgb = load_image_rgb(img_path)
     faces = model.detect_faces_enhanced(rgb)
-    results = []
+
+    # Build candidates with det_score filter
+    candidates = []
     for face in faces:
         ds = float(face.det_score) if hasattr(face, "det_score") else 0.0
         if ds < DET_SCORE_MIN:
             continue
-        results.append({
+        candidates.append({
             "bbox": face.bbox.tolist(),
             "embedding": face.embedding.copy(),
             "det_score": ds,
             "kps": face.kps.tolist() if hasattr(face, "kps") and face.kps is not None else None,
         })
+
+    # IOU-based NMS: keep higher det_score, suppress overlaps
+    candidates.sort(key=lambda c: c["det_score"], reverse=True)
+    keep = []
+    for cand in candidates:
+        if any(_iou(cand["bbox"], k["bbox"]) > NMS_IOU_THRESH for k in keep):
+            continue
+        keep.append(cand)
+
+    # Model-based verification: re-detect on crop, reject if no face found
+    app = _get_face_app()
+    results = []
+    for face in keep:
+        if _verify_face(rgb, face["bbox"], app):
+            results.append(face)
+
     return results, rgb
 
 

@@ -9,14 +9,19 @@ import warnings
 warnings.filterwarnings("ignore")
 
 import os
+import sys
 import json
 import cv2
 import numpy as np
+
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, PROJECT_DIR)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from face_model import FaceRecognitionModel, load_image_rgb
 from benchmark_detection import load_ground_truth, VAL_DIR
 from cache_detections import load_cache
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 RESULTS_DIR = os.path.join(PROJECT_DIR, "results")
 
 

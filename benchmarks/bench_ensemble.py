@@ -11,17 +11,22 @@ import warnings
 warnings.filterwarnings("ignore")
 
 import os
+import sys
 import json
 import numpy as np
 import torch
 from PIL import Image, ImageOps
 from sklearn.svm import SVC
 from sklearn.preprocessing import LabelEncoder
+
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, PROJECT_DIR)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from face_model import FaceRecognitionModel, load_image_rgb, _get_face_app
 from benchmark_detection import load_ground_truth, VAL_DIR, DATASET_DIR
 from cache_detections import load_cache
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 RESULTS_DIR = os.path.join(PROJECT_DIR, "results")
 
 

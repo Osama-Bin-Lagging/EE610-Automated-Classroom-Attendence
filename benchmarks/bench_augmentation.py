@@ -20,12 +20,16 @@ from PIL import Image, ImageOps
 from sklearn.svm import SVC
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import StratifiedKFold
+
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, PROJECT_DIR)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from face_model import FaceRecognitionModel
 from benchmark_detection import load_ground_truth, DATASET_DIR
 from augment import generate_augmented_images
 from cache_detections import load_cache
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 RESULTS_DIR = os.path.join(PROJECT_DIR, "results")
 
 

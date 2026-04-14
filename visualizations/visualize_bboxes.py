@@ -11,13 +11,18 @@ import warnings
 warnings.filterwarnings("ignore")
 
 import os
+import sys
 import cv2
 import numpy as np
+
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, PROJECT_DIR)
+sys.path.insert(0, os.path.join(PROJECT_DIR, "benchmarks"))
+
 from face_model import FaceRecognitionModel, load_image_rgb
 from cache_detections import load_cache
 from benchmark_detection import VAL_DIR
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 OUT_DIR = os.path.join(PROJECT_DIR, "results", "bbox_overlay")
 
 

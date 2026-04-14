@@ -8,16 +8,19 @@ import warnings
 warnings.filterwarnings("ignore")
 
 import os
+import sys
 import cv2
 import numpy as np
 import streamlit as st
 from PIL import Image
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, PROJECT_DIR)
+sys.path.insert(0, os.path.join(PROJECT_DIR, "benchmarks"))
+
 from face_model import FaceRecognitionModel, load_image_rgb
 from cache_detections import load_cache
 from benchmark_detection import load_ground_truth, VAL_DIR
 from reid import PersonReIdentifier, EmbeddingOnlyReIdentifier, cosine_similarity
-
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 st.set_page_config(page_title="Re-ID Visual Tester", layout="wide")
 st.title("Cross-Image Person Re-ID — Visual Tester")
@@ -169,10 +172,10 @@ with tab_compare:
     col_svm, col_reid = st.columns(2)
     with col_svm:
         st.caption(f"**SVM-only** — {sum(1 for l,_ in svm_labels if l[0]!='?')} recognized")
-        st.image(draw_faces(bgr, dets, svm_labels), use_container_width=True)
+        st.image(draw_faces(bgr, dets, svm_labels), width="stretch")
     with col_reid:
         st.caption(f"**Re-ID** — {sum(1 for l,_ in reid_labels if l[0]!='#' and l[0]!='?')} recognized")
-        st.image(draw_faces(bgr, dets, reid_labels), use_container_width=True)
+        st.image(draw_faces(bgr, dets, reid_labels), width="stretch")
 
 # ── Tab 2: Person Set browser ────────────────────────────────────────────────
 
@@ -315,7 +318,7 @@ with tab_images:
         else:
             labels.append(("?", (128, 128, 128)))
 
-    st.image(draw_faces(bgr, dets, labels), use_container_width=True)
+    st.image(draw_faces(bgr, dets, labels), width="stretch")
 
     # Face detail list
     st.caption(f"{len(dets)} faces detected")

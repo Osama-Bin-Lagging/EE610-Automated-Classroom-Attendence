@@ -16,9 +16,13 @@ import cv2
 import numpy as np
 import openpyxl
 from PIL import Image, ImageOps
+
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, PROJECT_DIR)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from face_model import FaceRecognitionModel, _get_face_app
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 VAL_DIR = os.path.join(PROJECT_DIR, "val_data")
 DATASET_DIR = os.path.join(PROJECT_DIR, "course_project_dataset")
 OUTPUT_DIR = os.path.join(PROJECT_DIR, "outputs", "detection_benchmark")

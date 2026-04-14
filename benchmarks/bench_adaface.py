@@ -26,11 +26,16 @@ from sklearn.svm import SVC
 from sklearn.preprocessing import LabelEncoder
 from insightface.utils import face_align
 
+
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, PROJECT_DIR)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    sys.path.insert(0, ADAFACE_DIR)
+
 from face_model import FaceRecognitionModel, load_image_rgb, _get_face_app
 from cache_detections import load_cache
 from benchmark_detection import load_ground_truth, VAL_DIR, DATASET_DIR
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 RESULTS_DIR = os.path.join(PROJECT_DIR, "results")
 ADAFACE_DIR = os.path.join(PROJECT_DIR, "adaface_repo")
 ADAFACE_CKPT = os.path.join(ADAFACE_DIR, "pretrained", "adaface_ir50_ms1mv2.ckpt")
@@ -38,7 +43,6 @@ ADAFACE_CKPT = os.path.join(ADAFACE_DIR, "pretrained", "adaface_ir50_ms1mv2.ckpt
 
 def load_adaface_model():
     """Load AdaFace IR50 model."""
-    sys.path.insert(0, ADAFACE_DIR)
     import net
     model = net.build_model("ir_50")
     statedict = torch.load(ADAFACE_CKPT, map_location="cpu", weights_only=False)["state_dict"]

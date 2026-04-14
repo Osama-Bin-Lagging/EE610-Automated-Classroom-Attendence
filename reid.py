@@ -571,7 +571,13 @@ class PersonReIdentifier:
                         continue
 
                     dist = cosine_distance(ps_i.mean_embedding, ps_j.mean_embedding)
-                    if dist < self.merge_threshold:
+                    # Use looser threshold for unknown-to-unknown merges
+                    both_unknown = (
+                        (not ps_i.label or ps_i.label.startswith("Unknown")) and
+                        (not ps_j.label or ps_j.label.startswith("Unknown"))
+                    )
+                    thresh = self.merge_threshold * 1.25 if both_unknown else self.merge_threshold
+                    if dist < thresh:
                         merge_pairs.append((i, j, dist))
 
             if not merge_pairs:

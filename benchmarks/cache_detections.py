@@ -14,12 +14,17 @@ import warnings
 warnings.filterwarnings("ignore")
 
 import os
+import sys
 import pickle
 import numpy as np
+
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, PROJECT_DIR)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
 from face_model import FaceRecognitionModel, load_image_rgb
 from benchmark_detection import VAL_DIR, DATASET_DIR
 
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 RESULTS_DIR = os.path.join(PROJECT_DIR, "results")
 CACHE_PATH = os.path.join(RESULTS_DIR, "detection_cache.pkl")
 
